@@ -349,7 +349,23 @@
     }
 
     /* ==========================================================================
-       3. HERO SECTION (HERO 이미지 표시 최적화 적용)
+       [신규 추가] 0. TOP MAIN IMAGE (1.jpg 단독 대형 이미지 섹션)
+       ========================================================================== */
+    .top-main-image {
+      width: 100%;
+      background-color: var(--bg-main);
+      padding-top: var(--header-height); /* 상단 고정 헤더에 이미지가 가려지지 않도록 안전 공간 확보 */
+      position: relative;
+    }
+
+    .top-main-image img {
+      display: block;
+      width: 100%;
+      height: auto; /* 원본 비율 완벽 유지 및 무왜곡 */
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION (기존 메인 화면 - 100% 원본 유지)
        ========================================================================== */
     .hero {
       position: relative;
@@ -359,7 +375,7 @@
       justify-content: center;
       padding-top: calc(var(--header-height) + 40px);
       padding-bottom: 80px;
-      background: #0B0E14;
+      background: radial-gradient(circle at 50% 20%, rgba(24, 33, 49, 0.8) 0%, rgba(11, 14, 20, 1) 90%);
       overflow: hidden;
     }
 
@@ -370,11 +386,10 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-      opacity: 0.68; /* 사진이 어둡지 않고 선명하게 보이도록 최적화 */
+      opacity: 0.38;
       background-image: url('images/hero.jpg');
       background-size: cover;
-      background-position: center center; /* 사진 전체 주요 건물이 잘리지 않고 균형 있게 표시 */
-      background-repeat: no-repeat;
+      background-position: center 30%;
     }
 
     .hero-bg-overlay {
@@ -383,8 +398,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      /* 텍스트 가독성을 보장하면서 사진을 최대한 돋보이게 하는 최소한의 오버레이 */
-      background: linear-gradient(180deg, rgba(11,14,20,0.35) 0%, rgba(11,14,20,0.7) 65%, rgba(11,14,20,0.95) 100%);
+      background: linear-gradient(180deg, rgba(11,14,20,0.45) 0%, rgba(11,14,20,0.92) 85%, rgba(11,14,20,1) 100%);
       z-index: 2;
     }
 
@@ -1273,10 +1287,17 @@
   </div>
 
   <!-- ==========================================================================
-       1. HERO SECTION
+       [신규 추가] 최상단 1.jpg 단독 대형 이미지 섹션 (정상 문서 흐름 / 겹침 없음)
+       ========================================================================== -->
+  <section class="top-main-image">
+    <img src="images/1.jpg" alt="더샵 오산역 아크시티 메인 이미지">
+  </section>
+
+  <!-- ==========================================================================
+       1. HERO SECTION (기존 메인 화면 - images/hero.jpg 및 텍스트 100% 유지)
        ========================================================================== -->
   <section class="hero" id="hero">
-    <!-- HERO BACKGROUND IMAGE (업로드 이미지: hero.jpg 그대로 적용) -->
+    <!-- HERO BACKGROUND IMAGE (제공 이미지: images/hero.jpg 그대로 유지) -->
     <div class="hero-bg"></div>
     <div class="hero-bg-overlay"></div>
 
