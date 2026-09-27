@@ -16,7 +16,7 @@
   <!-- Fonts (Pretendard & Cormorant Garamond for Luxury Styling) -->
   <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -349,7 +349,7 @@
     }
 
     /* ==========================================================================
-       3. HERO SECTION
+       3. HERO SECTION (HERO 이미지 표시 최적화 적용)
        ========================================================================== */
     .hero {
       position: relative;
@@ -359,7 +359,7 @@
       justify-content: center;
       padding-top: calc(var(--header-height) + 40px);
       padding-bottom: 80px;
-      background: radial-gradient(circle at 50% 20%, rgba(24, 33, 49, 0.8) 0%, rgba(11, 14, 20, 1) 90%);
+      background: #0B0E14;
       overflow: hidden;
     }
 
@@ -370,10 +370,11 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-      opacity: 0.38;
+      opacity: 0.68; /* 사진이 어둡지 않고 선명하게 보이도록 최적화 */
       background-image: url('images/hero.jpg');
       background-size: cover;
-      background-position: center 30%;
+      background-position: center center; /* 사진 전체 주요 건물이 잘리지 않고 균형 있게 표시 */
+      background-repeat: no-repeat;
     }
 
     .hero-bg-overlay {
@@ -382,7 +383,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(11,14,20,0.45) 0%, rgba(11,14,20,0.92) 85%, rgba(11,14,20,1) 100%);
+      /* 텍스트 가독성을 보장하면서 사진을 최대한 돋보이게 하는 최소한의 오버레이 */
+      background: linear-gradient(180deg, rgba(11,14,20,0.35) 0%, rgba(11,14,20,0.7) 65%, rgba(11,14,20,0.95) 100%);
       z-index: 2;
     }
 
@@ -1274,7 +1276,7 @@
        1. HERO SECTION
        ========================================================================== -->
   <section class="hero" id="hero">
-    <!-- HERO BACKGROUND IMAGE (제공 이미지: images/hero.jpg) -->
+    <!-- HERO BACKGROUND IMAGE (업로드 이미지: hero.jpg 그대로 적용) -->
     <div class="hero-bg"></div>
     <div class="hero-bg-overlay"></div>
 
