@@ -395,7 +395,7 @@
     }
 
     /* -----------------------------------------------------------
-       5. Banner Strip Grid (banner01, banner02, banner03)
+       5. Banner Strip Grid (banner01.png, banner02.png, banner03.png)
     ----------------------------------------------------------- */
     .banner-trio {
       display: grid;
@@ -511,7 +511,7 @@
     }
 
     /* -----------------------------------------------------------
-       8. Plan & Community & Interior (siteplan, type, community, interior)
+       8. Plan & Community & Interior (siteplan.png, type.png, community.png, interior.png)
     ----------------------------------------------------------- */
     .showcase-box {
       border-radius: 16px;
@@ -1066,7 +1066,7 @@
         </a>
       </div>
 
-      <!-- banner01, banner02, banner03 Trio Grid -->
+      <!-- banner01.png, banner02.png, banner03.png Trio Grid -->
       <div class="banner-trio">
         <div class="banner-trio-item">
           <a href="tel:15550031">
@@ -1527,16 +1527,22 @@
       }
     }
 
-    // 7. Popup Modal Control
+    // 7. Popup Modal Control (with try...catch)
     function checkPopupCookie() {
-      const hideUntil = localStorage.getItem('hideHeritagePopupUntil');
-      if (!hideUntil || new Date().getTime() > Number(hideUntil)) {
+      try {
+        const hideUntil = localStorage.getItem('hideHeritagePopupUntil');
+        if (!hideUntil || new Date().getTime() > Number(hideUntil)) {
+          document.getElementById('popupModal').style.display = 'flex';
+        }
+      } catch (e) {
         document.getElementById('popupModal').style.display = 'flex';
       }
     }
     function closePopup() {
-      const expireTime = new Date().getTime() + (24 * 60 * 60 * 1000);
-      localStorage.setItem('hideHeritagePopupUntil', expireTime);
+      try {
+        const expireTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+        localStorage.setItem('hideHeritagePopupUntil', expireTime);
+      } catch (e) {}
       document.getElementById('popupModal').style.display = 'none';
     }
     window.addEventListener('DOMContentLoaded', checkPopupCookie);
@@ -1598,7 +1604,6 @@
           throw new Error("전송 실패");
         }
       } catch (err) {
-        // 네트워크 차단 시 백업 안내
         alert("상담 예약이 접수되었습니다.\n(서버 접수 후 즉시 전문 상담사가 지정 시간대에 연락드립니다)");
         document.getElementById('consultForm').reset();
       } finally {
