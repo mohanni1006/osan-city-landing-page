@@ -9,11 +9,11 @@
   <meta name="description" content="병점역 新주거타운의 중심! 1,783세대 매머드급 대단지 자이. 계약금 500만원, 입주시까지 5%, 26층 스카이라운지 특화.">
   <meta name="keywords" content="오산헤리티지자이, 병점역 자이, 오산자이, 병점역 아파트, GTX-C 병점역, 오산헤리티지자이 분양가, 모델하우스">
 
-  <!-- Open Graph -->
+  <!-- Open Graph (대표 이미지 6.jpg 적용) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="오산헤리티지자이 | 공식 분양홍보관">
   <meta property="og:description" content="1,783세대 랜드마크 대단지 자이. 계약금 500만원 정액제, 입주시까지 5% 확정!">
-  <meta property="og:image" content="main.jpg">
+  <meta property="og:image" content="6.jpg">
   <meta property="og:url" content="https://www.xi.co.kr/osxi">
 
   <style>
@@ -108,7 +108,7 @@
       position: sticky;
       top: 0;
       z-index: 999;
-      background: rgba(0, 0, 0, 0.92);
+      background: rgba(0, 0, 0, 0.94);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-dark);
       transition: all 0.3s;
@@ -206,59 +206,86 @@
     }
 
     /* -----------------------------------------------------------
-       3. Hero Section (main.jpg)
+       3. 최상단 main.jpg 영역
+    ----------------------------------------------------------- */
+    .top-visual-banner {
+      width: 100%;
+      background: #000;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-dark);
+      text-align: center;
+    }
+    .top-visual-inner {
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto;
+    }
+    .main-top-img {
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* -----------------------------------------------------------
+       4. 메인 HERO 섹션 (문구 4배 확대 & 단순 정보 카드)
     ----------------------------------------------------------- */
     #hero {
       position: relative;
-      background: url('main.jpg') no-repeat center top / cover;
-      min-height: 85vh;
+      background: linear-gradient(180deg, #06080d 0%, #0c121d 60%, #000000 100%);
+      padding: 65px 20px 75px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 100px 20px 80px;
-    }
-    #hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.75) 80%, #000 100%);
+      border-bottom: 1px solid var(--border-dark);
     }
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 900px;
+      max-width: 1100px;
+      width: 100%;
     }
+
+    /* 핵심 문구 3개: 2줄 표시 & 기존 크기 4배(반응형) */
     .hero-badge-row {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
-    .hero-tag {
-      background: rgba(0, 0, 0, 0.65);
-      backdrop-filter: blur(8px);
-      border: 1px solid var(--gold-primary);
+    .hero-tag-large {
+      background: rgba(14, 20, 32, 0.88);
+      backdrop-filter: blur(10px);
+      border: 2px solid var(--gold-primary);
+      border-radius: 16px;
+      padding: 18px 24px;
       color: var(--gold-light);
-      font-size: 13px;
-      font-weight: 700;
-      padding: 6px 14px;
-      border-radius: 30px;
+      font-size: clamp(26px, 3.8vw, 52px); /* 기존 13px의 4배(52px) 기준 반응형 */
+      font-weight: 900;
+      line-height: 1.32;
+      text-align: center;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(197, 160, 89, 0.12);
+      flex: 1 1 300px;
+      max-width: 350px;
     }
-    .hero-slogan {
-      font-family: Georgia, serif;
-      font-style: italic;
-      font-size: 32px;
-      color: var(--gold-light);
+
+    /* Lead the Change 삭제 후 공간 보존용 요소 */
+    .hero-slogan-spacer {
+      height: 44px;
+      visibility: hidden;
       margin-bottom: 8px;
-      letter-spacing: 1px;
     }
+
     .hero-title {
-      font-size: clamp(28px, 5.5vw, 56px);
+      font-size: clamp(28px, 5.2vw, 54px);
       font-weight: 900;
       color: #fff;
-      line-height: 1.25;
+      line-height: 1.28;
       text-shadow: 0 4px 20px rgba(0,0,0,0.8);
       margin-bottom: 16px;
     }
@@ -267,52 +294,56 @@
       color: #e2e8f0;
       font-weight: 400;
       margin-bottom: 35px;
-      line-height: 1.6;
+      line-height: 1.65;
     }
-    .hero-cta-group {
+
+    /* 기존 버튼 대체: 기능 없는 단순 정보 배너 (기존 2배 크기) */
+    .hero-info-group {
       display: flex;
       justify-content: center;
-      gap: 16px;
+      gap: 20px;
       flex-wrap: wrap;
     }
-    .btn-hero-primary {
-      background: linear-gradient(135deg, #c5a059, #9a7632);
-      color: #000;
-      font-size: 18px;
+    .hero-info-card {
+      padding: 18px 36px;
+      border-radius: 20px;
+      min-width: 250px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      cursor: default;
+      user-select: none;
+    }
+    .hero-info-card.primary {
+      background: linear-gradient(135deg, rgba(197, 160, 89, 0.22), rgba(154, 118, 50, 0.35));
+      border: 2px solid var(--gold-primary);
+    }
+    .hero-info-card.secondary {
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    .hero-info-card .info-sub {
+      font-size: clamp(16px, 2vw, 22px);
+      color: #cbd5e1;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .hero-info-card .info-main {
+      font-size: clamp(24px, 3.2vw, 36px); /* 기존 폰트 대비 2배 확대 */
+      color: var(--gold-light);
       font-weight: 900;
-      padding: 16px 36px;
-      border-radius: 40px;
-      box-shadow: 0 8px 24px rgba(197, 160, 89, 0.4);
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: transform 0.2s, box-shadow 0.2s;
+      line-height: 1.3;
+      margin-top: 4px;
     }
-    .btn-hero-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(197, 160, 89, 0.6);
-    }
-    .btn-hero-secondary {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
-      color: #fff;
-      font-size: 17px;
-      font-weight: 700;
-      padding: 16px 32px;
-      border-radius: 40px;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .btn-hero-secondary:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: translateY(-3px);
+    .hero-info-card.secondary .info-main {
+      color: #ffffff;
     }
 
     /* -----------------------------------------------------------
-       4. Key Highlights & Numbers (main-img.png & Stat Cards)
+       5. Key Highlights & Numbers (대표 이미지 6.jpg)
     ----------------------------------------------------------- */
     .section-dark {
       background-color: var(--bg-black);
@@ -381,6 +412,7 @@
       color: var(--text-muted);
     }
 
+    /* 대표 프리뷰 카드 (6.jpg 적용) */
     .main-feature-card {
       max-width: 1100px;
       margin: 0 auto 50px;
@@ -392,11 +424,11 @@
     }
     .main-feature-card img {
       width: 100%;
+      height: auto;
+      display: block;
     }
 
-    /* -----------------------------------------------------------
-       5. Banner Strip Grid (banner01.png, banner02.png, banner03.png)
-    ----------------------------------------------------------- */
+    /* 배너 3종 그리드 */
     .banner-trio {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -416,49 +448,78 @@
     }
 
     /* -----------------------------------------------------------
-       6. Interactive Location & Life Tabs (2.jpg, 3.jpg, 4.jpg, 5.jpg)
+       6. SPECIAL BENEFIT 4
     ----------------------------------------------------------- */
-    .tab-nav-bar {
+    .showcase-box {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      box-shadow: 0 15px 45px rgba(0,0,0,0.9);
+      background: #080a0f;
+    }
+
+    /* -----------------------------------------------------------
+       7. 2.jpg / 3.jpg / 4.jpg / 5.jpg 자동 슬라이드
+    ----------------------------------------------------------- */
+    .auto-slider-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      box-shadow: 0 16px 45px rgba(0,0,0,0.9);
+      background: #080a0f;
+      position: relative;
+    }
+    .slider-track {
+      position: relative;
+      width: 100%;
+      min-height: 240px;
+    }
+    .slide-item {
+      display: none;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .slide-item.active {
+      display: block;
+      opacity: 1;
+    }
+    .slide-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .slider-indicators {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      margin-bottom: 30px;
+      gap: 8px;
+      padding: 14px 10px;
+      background: #0c1018;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
       flex-wrap: wrap;
     }
-    .tab-btn {
-      background: #121622;
-      border: 1px solid var(--border-dark);
+    .slider-indicators .indicator {
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: #141b27;
       color: #94a3b8;
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 700;
-      padding: 12px 24px;
-      border-radius: 30px;
-      transition: all 0.2s;
+      cursor: pointer;
+      transition: all 0.25s;
+      border: 1px solid var(--border-dark);
+      user-select: none;
     }
-    .tab-btn.active, .tab-btn:hover {
+    .slider-indicators .indicator.active {
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
       color: #000;
       border-color: var(--gold-light);
     }
-    .tab-panel {
-      display: none;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border-dark);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.9);
-      background: #080a0f;
-    }
-    .tab-panel.active {
-      display: block;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
 
     /* -----------------------------------------------------------
-       7. Overview (summary.png + Spec Table)
+       8. Overview (summary.png + Spec Table)
     ----------------------------------------------------------- */
     .overview-frame {
       border-radius: 16px;
@@ -508,17 +569,6 @@
       font-size: 12px;
       margin: 2px 4px 2px 0;
       font-weight: 600;
-    }
-
-    /* -----------------------------------------------------------
-       8. Plan & Community & Interior (siteplan.png, type.png, community.png, interior.png)
-    ----------------------------------------------------------- */
-    .showcase-box {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border-dark);
-      box-shadow: 0 15px 45px rgba(0,0,0,0.9);
-      background: #080a0f;
     }
 
     /* -----------------------------------------------------------
@@ -574,7 +624,7 @@
     }
 
     /* -----------------------------------------------------------
-       10. Reservation Form Section (Email forward to mohanni1006@gmail.com)
+       10. Reservation Form Section (Email forward)
     ----------------------------------------------------------- */
     #reservation {
       background: linear-gradient(180deg, #05070a 0%, #0c121d 50%, #000000 100%);
@@ -787,7 +837,7 @@
     .floating-nav {
       position: fixed;
       right: 20px;
-      bottom: 90px;
+      bottom: 85px;
       z-index: 990;
       display: flex;
       flex-direction: column;
@@ -819,30 +869,61 @@
       font-weight: 800;
     }
 
-    /* Mobile Sticky Bottom Bar (mo-quick-bottom.jpg) */
-    .mobile-bottom-bar {
+    /* 신규 하단 고정 2버튼 (mo-quick-bottom.jpg 완전 대체, 50:50 분할) */
+    .fixed-bottom-bar {
       display: none;
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
       z-index: 1000;
+      height: 60px;
       background: #080b11;
       border-top: 1px solid rgba(197, 160, 89, 0.5);
       box-shadow: 0 -4px 20px rgba(0,0,0,0.9);
     }
-    .mobile-bottom-bar a {
-      display: block;
-      width: 100%;
+    .btn-bottom-action {
+      flex: 1 1 50%;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: none;
+      user-select: none;
+      transition: background 0.2s;
     }
-    .mobile-bottom-bar img {
-      width: 100%;
-      max-height: 60px;
-      object-fit: cover;
+    .btn-bottom-action.call {
+      background: #0f1420;
+      color: var(--gold-light);
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-bottom-action.call svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--gold-primary);
+    }
+    .btn-bottom-action.call:active {
+      background: #192133;
+    }
+    .btn-bottom-action.reserve {
+      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+      color: #000;
+    }
+    .btn-bottom-action.reserve svg {
+      width: 20px;
+      height: 20px;
+      fill: #000;
+    }
+    .btn-bottom-action.reserve:active {
+      opacity: 0.9;
     }
 
     /* -----------------------------------------------------------
-       13. Popup Modal (popup.jpg)
+       13. Popup Modal (닫기 버튼 단일화, 영구 숨김 제거)
     ----------------------------------------------------------- */
     .popup-overlay {
       position: fixed;
@@ -873,23 +954,21 @@
       border-top: 1px solid #1a2233;
       background: #0e1420;
     }
-    .popup-actions button {
+    .popup-actions .btn-popup-close {
       flex: 1;
-      padding: 14px 10px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #cbd5e1;
-      text-align: center;
-      transition: background 0.2s;
-    }
-    .popup-actions button:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
-    }
-    .popup-actions button.call-now {
-      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-      color: #000;
+      padding: 15px 10px;
+      font-size: 15px;
       font-weight: 800;
+      color: #e2e8f0;
+      background: #141b27;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .popup-actions .btn-popup-close:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
     }
 
     /* -----------------------------------------------------------
@@ -925,6 +1004,9 @@
     }
 
     @media (max-width: 768px) {
+      body {
+        padding-bottom: 60px; /* 하단 고정바로 인한 푸터 가림 방지 */
+      }
       .section-dark {
         padding: 55px 0;
       }
@@ -940,8 +1022,8 @@
       .reservation-card {
         padding: 30px 18px;
       }
-      .mobile-bottom-bar {
-        display: block;
+      .fixed-bottom-bar {
+        display: flex;
       }
       .floating-nav {
         bottom: 75px;
@@ -958,6 +1040,10 @@
       }
       .nav-actions .btn-header-sms {
         display: none;
+      }
+      .hero-tag-large {
+        max-width: 100%;
+        flex: 1 1 100%;
       }
     }
   </style>
@@ -1007,33 +1093,53 @@
     </div>
   </header>
 
-  <!-- 1. HERO SECTION (main.jpg) -->
+  <!-- 1. 페이지 최상단 main.jpg 배치 영역 -->
+  <section class="top-visual-banner">
+    <div class="top-visual-inner">
+      <img src="main.jpg" alt="오산헤리티지자이 최상단 메인 투시도">
+    </div>
+  </section>
+
+  <!-- 2. 메인 HERO 섹션 -->
   <section id="hero">
     <div class="hero-content">
+      <!-- 핵심 문구 3개: 2줄 개행 & 4배 확대 -->
       <div class="hero-badge-row">
-        <span class="hero-tag">총 1,783세대 매머드급 대단지</span>
-        <span class="hero-tag">GS건설 1군 자이(Xi) 랜드마크</span>
-        <span class="hero-tag">GTX-C 병점역 연장 수혜</span>
+        <div class="hero-tag-large">
+          총 1,783세대<br>매머드급 대단지
+        </div>
+        <div class="hero-tag-large">
+          GS건설 1군<br>Xi 랜드마크
+        </div>
+        <div class="hero-tag-large">
+          GTX-C 노선<br>병점역 연장 수혜
+        </div>
       </div>
-      <p class="hero-slogan">Lead the Change</p>
+
+      <!-- Lead the Change 텍스트 제거 및 높이 유지 영역 -->
+      <div class="hero-slogan-spacer" aria-hidden="true"></div>
+
       <h1 class="hero-title">병점역 新주거타운의 중심<br>오산헤리티지자이</h1>
       <p class="hero-desc">
         계약금 500만원으로 완성하는 동탄생활권 특급 주거 벨트<br>
         26층 스카이라운지와 단지 앞 1만평 체육공원을 품은 명품 라이프
       </p>
-      <div class="hero-cta-group">
-        <a href="tel:15550031" class="btn-hero-primary" title="1555-0031 즉시 전화연결">
-          <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          전화 상담 1555-0031
-        </a>
-        <a href="#reservation" class="btn-hero-secondary">
-          원하는 시간 상담예약
-        </a>
+
+      <!-- 버튼 기능 제거 후 2줄 표시 & 기존 2배 크기 정보 배너 -->
+      <div class="hero-info-group">
+        <div class="hero-info-card primary">
+          <span class="info-sub">입주전까지</span>
+          <span class="info-main">계약금 5%</span>
+        </div>
+        <div class="hero-info-card secondary">
+          <span class="info-sub">1차 계약금</span>
+          <span class="info-main">500만원</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. 핵심 정보 & 통계 지표 (main-img.png + Stat Cards) -->
+  <!-- 3. 핵심 정보 & 통계 지표 (대표 프리뷰 이미지 6.jpg 사용) -->
   <section class="section-dark">
     <div class="container">
       <div class="stat-cards-grid">
@@ -1059,14 +1165,12 @@
         </div>
       </div>
 
-      <!-- main-img.png feature card -->
+      <!-- 대표 프리뷰 이미지 6.jpg 배치 -->
       <div class="main-feature-card">
-        <a href="tel:15550031" title="1555-0031 전화상담 연결">
-          <img src="main-img.png" alt="오산헤리티지자이 500만원 계약가능 초등학교 도보권 1호선 병점역 역세권">
-        </a>
+        <img src="6.jpg" alt="오산헤리티지자이 1783세대 단지 전경 대표 프리뷰">
       </div>
 
-      <!-- banner01.png, banner02.png, banner03.png Trio Grid -->
+      <!-- banner01.png, banner02.png, banner03.png 그리드 -->
       <div class="banner-trio">
         <div class="banner-trio-item">
           <a href="tel:15550031">
@@ -1087,7 +1191,7 @@
     </div>
   </section>
 
-  <!-- 3. SPECIAL BENEFIT 4 (benefit.png) -->
+  <!-- 4. SPECIAL BENEFIT 4 (benefit.png) -->
   <section id="premium" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1103,7 +1207,7 @@
     </div>
   </section>
 
-  <!-- 4. 입지 & 생활 인프라 탭 (2.jpg, 3.jpg, 4.jpg, 5.jpg) -->
+  <!-- 5. 2.jpg / 3.jpg / 4.jpg / 5.jpg 자동 슬라이드 (2초 주기 무한 반복) -->
   <section id="location" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1112,31 +1216,32 @@
         <p class="desc-head">원하시는 테마를 클릭하시면 상세 인프라를 확인하실 수 있습니다</p>
       </div>
 
-      <div class="tab-nav-bar">
-        <button class="tab-btn active" onclick="switchTab(0)">미래가치 (VALUE)</button>
-        <button class="tab-btn" onclick="switchTab(1)">광역교통 (TRAFFIC)</button>
-        <button class="tab-btn" onclick="switchTab(2)">교육환경 (EDUCATION)</button>
-        <button class="tab-btn" onclick="switchTab(3)">그린라이프 (LIFE)</button>
-      </div>
-
-      <div class="tab-content-wrap">
-        <div class="tab-panel active" id="tab0">
-          <img src="2.jpg" alt="더 커질 병점역 미래가치 GTX-C 동탄트램 1호선 연장">
+      <div class="auto-slider-container">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slide-item active">
+            <img src="2.jpg" alt="더 커질 병점역 미래가치 GTX-C 동탄트램 1호선 연장">
+          </div>
+          <div class="slide-item">
+            <img src="3.jpg" alt="쾌속 광역 교통망 수도권제2순환고속 오산화성고속">
+          </div>
+          <div class="slide-item">
+            <img src="4.jpg" alt="탁월한 교육 인프라 양산1초 양산중 세마중고">
+          </div>
+          <div class="slide-item">
+            <img src="5.jpg" alt="센트럴 그린라이프 병점복합타운 1만평 체육공원">
+          </div>
         </div>
-        <div class="tab-panel" id="tab1">
-          <img src="3.jpg" alt="쾌속 광역 교통망 수도권제2순환고속 오산화성고속">
-        </div>
-        <div class="tab-panel" id="tab2">
-          <img src="4.jpg" alt="탁월한 교육 인프라 양산1초 양산중 세마중고">
-        </div>
-        <div class="tab-panel" id="tab3">
-          <img src="5.jpg" alt="센트럴 그린라이프 병점복합타운 1만평 체육공원">
+        <div class="slider-indicators" id="sliderIndicators">
+          <span class="indicator active" onclick="goToSlide(0)">미래가치</span>
+          <span class="indicator" onclick="goToSlide(1)">광역교통</span>
+          <span class="indicator" onclick="goToSlide(2)">교육환경</span>
+          <span class="indicator" onclick="goToSlide(3)">그린라이프</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. 사업개요 (summary.png + Spec Table) -->
+  <!-- 6. 사업개요 (summary.png + Spec Table) -->
   <section id="overview" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1195,7 +1300,7 @@
     </div>
   </section>
 
-  <!-- 6. 단지배치도 (siteplan.png) -->
+  <!-- 7. 단지배치도 (siteplan.png) -->
   <section id="siteplan" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1209,7 +1314,7 @@
     </div>
   </section>
 
-  <!-- 7. 세대평면 (type.png) -->
+  <!-- 8. 세대평면 (type.png) -->
   <section id="types" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1223,7 +1328,7 @@
     </div>
   </section>
 
-  <!-- 8. 커뮤니티 (community.png) -->
+  <!-- 9. 커뮤니티 (community.png) -->
   <section id="community" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1237,7 +1342,7 @@
     </div>
   </section>
 
-  <!-- 9. 인테리어 갤러리 (interior.png) -->
+  <!-- 10. 인테리어 갤러리 (interior.png) -->
   <section id="interior" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1251,7 +1356,7 @@
     </div>
   </section>
 
-  <!-- 10. FAQ 섹션 -->
+  <!-- 11. FAQ 섹션 -->
   <section id="faq" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1314,7 +1419,7 @@
     </div>
   </section>
 
-  <!-- 11. 최종 상담 예약 (Email 전달 to mohanni1006@gmail.com) -->
+  <!-- 12. 최종 상담 예약 (Email 전달) -->
   <section id="reservation">
     <div class="container">
       <div class="reservation-card">
@@ -1440,20 +1545,24 @@
     <a href="#hero" class="btn-float top" title="맨 위로 이동">TOP</a>
   </div>
 
-  <!-- Mobile Fixed Bottom Bar (mo-quick-bottom.jpg) -->
-  <div class="mobile-bottom-bar">
-    <a href="tel:15550031" title="1555-0031 즉시 전화연결">
-      <img src="mo-quick-bottom.jpg" alt="1783세대 대단지 동탄생활권 아파트 4천만원대로 내집마련 전화걸기">
+  <!-- 신규 하단 고정바 (mo-quick-bottom.jpg 제거 후 50:50 분할) -->
+  <div class="fixed-bottom-bar" id="fixedBottomBar">
+    <a href="tel:15550031" class="btn-bottom-action call" title="1555-0031 전화상담 연결">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span>전화상담</span>
+    </a>
+    <a href="#reservation" class="btn-bottom-action reserve" title="상담 예약 이동">
+      <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 4H7v-2h2v2zm4-4h-2v2h2v-2z"/></svg>
+      <span>상담예약</span>
     </a>
   </div>
 
-  <!-- Special Benefit Popup Modal (popup.jpg) -->
-  <div class="popup-overlay" id="popupModal" style="display:none;">
+  <!-- Special Benefit Popup Modal (항상 표시, 닫기 버튼 단일화) -->
+  <div class="popup-overlay" id="popupModal">
     <div class="popup-box">
       <img src="popup.jpg" alt="파격 조건변경 입주시까지 계약금 5% 계약고객 백화점 상품권 100만원 증정">
       <div class="popup-actions">
-        <button type="button" onclick="closePopup()">오늘 하루 닫기</button>
-        <button type="button" class="call-now" onclick="location.href='tel:15550031'">📞 전화상담 (1555-0031)</button>
+        <button type="button" class="btn-popup-close" onclick="closePopup()">닫기</button>
       </div>
     </div>
   </div>
@@ -1463,26 +1572,48 @@
     // 1. Mobile Menu Toggle
     const menuToggle = document.getElementById('menuToggle');
     const mainHeader = document.getElementById('main-header');
-    menuToggle.addEventListener('click', function() {
-      mainHeader.classList.toggle('mobile-active');
-    });
+    if (menuToggle && mainHeader) {
+      menuToggle.addEventListener('click', function() {
+        mainHeader.classList.toggle('mobile-active');
+      });
+    }
 
     document.querySelectorAll('.nav-menu a').forEach(link => {
       link.addEventListener('click', () => {
-        mainHeader.classList.remove('mobile-active');
+        if (mainHeader) mainHeader.classList.remove('mobile-active');
       });
     });
 
-    // 2. Interactive Location Tabs
-    function switchTab(index) {
-      const buttons = document.querySelectorAll('.tab-btn');
-      const panels = document.querySelectorAll('.tab-panel');
-      buttons.forEach((btn, i) => {
-        btn.classList.toggle('active', i === index);
+    // 2. 자동 슬라이드 (2초 간격 무한 반복: 2.jpg -> 3.jpg -> 4.jpg -> 5.jpg)
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+    const indicators = document.querySelectorAll('.slider-indicators .indicator');
+    const totalSlides = slides.length;
+    let slideTimer = null;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
       });
-      panels.forEach((p, i) => {
-        p.classList.toggle('active', i === index);
+      indicators.forEach((ind, i) => {
+        ind.classList.toggle('active', i === index);
       });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentSlide + 1) % totalSlides;
+      showSlide(nextIndex);
+    }
+
+    function startSlideInterval() {
+      if (slideTimer) clearInterval(slideTimer);
+      slideTimer = setInterval(nextSlide, 2000); // 정확히 2초 간격
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+      startSlideInterval(); // 사용자가 테마를 누른 뒤에도 2초 주기 계속 유지
     }
 
     // 3. FAQ Accordion Toggle
@@ -1527,27 +1658,31 @@
       }
     }
 
-    // 7. Popup Modal Control (with try...catch)
-    function checkPopupCookie() {
-      try {
-        const hideUntil = localStorage.getItem('hideHeritagePopupUntil');
-        if (!hideUntil || new Date().getTime() > Number(hideUntil)) {
-          document.getElementById('popupModal').style.display = 'flex';
-        }
-      } catch (e) {
-        document.getElementById('popupModal').style.display = 'flex';
+    // 7. 팝업창 제어: 페이지 방문마다 무조건 표시, 닫기는 현재 페이지만 적용 (localStorage 미사용)
+    function openPopup() {
+      const modal = document.getElementById('popupModal');
+      if (modal) {
+        modal.style.display = 'flex';
       }
     }
-    function closePopup() {
-      try {
-        const expireTime = new Date().getTime() + (24 * 60 * 60 * 1000);
-        localStorage.setItem('hideHeritagePopupUntil', expireTime);
-      } catch (e) {}
-      document.getElementById('popupModal').style.display = 'none';
-    }
-    window.addEventListener('DOMContentLoaded', checkPopupCookie);
 
-    // 8. Secure Asynchronous Form Submission (Forward to mohanni1006@gmail.com)
+    function closePopup() {
+      const modal = document.getElementById('popupModal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // 8. 페이지 로드 초기화
+    window.addEventListener('DOMContentLoaded', function() {
+      // 팝업 항상 띄우기
+      openPopup();
+      // 슬라이드 첫 시작 (2.jpg) 및 2초 타이머 개시
+      showSlide(0);
+      startSlideInterval();
+    });
+
+    // 9. 예약 신청 전송 기능 (기존 FormSubmit 유지)
     async function submitReservation(event) {
       event.preventDefault();
 
