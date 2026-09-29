@@ -9,7 +9,7 @@
   <meta name="description" content="병점역 新주거타운의 중심! 1,783세대 매머드급 대단지 자이. 계약금 500만원, 입주시까지 5%, 26층 스카이라운지 특화.">
   <meta name="keywords" content="오산헤리티지자이, 병점역 자이, 오산자이, 병점역 아파트, GTX-C 병점역, 오산헤리티지자이 분양가, 모델하우스">
 
-  <!-- Open Graph (대표 이미지 6.jpg 적용) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="오산헤리티지자이 | 공식 분양홍보관">
   <meta property="og:description" content="1,783세대 랜드마크 대단지 자이. 계약금 500만원 정액제, 입주시까지 5% 확정!">
@@ -230,17 +230,25 @@
     }
 
     /* -----------------------------------------------------------
-       4. 메인 HERO 섹션 (문구 4배 확대 & 단순 정보 카드)
+       4. 메인 HERO 섹션 (배경: 6.jpg & 핵심 문구 25% 축소 반영)
     ----------------------------------------------------------- */
     #hero {
       position: relative;
-      background: linear-gradient(180deg, #06080d 0%, #0c121d 60%, #000000 100%);
-      padding: 65px 20px 75px;
+      background: url('6.jpg') no-repeat center center / cover;
+      min-height: 80vh;
+      padding: 85px 20px 95px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       border-bottom: 1px solid var(--border-dark);
+    }
+    #hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(5, 8, 14, 0.82) 55%, #000000 100%);
+      z-index: 1;
     }
     .hero-content {
       position: relative;
@@ -249,7 +257,7 @@
       width: 100%;
     }
 
-    /* 핵심 문구 3개: 2줄 표시 & 기존 크기 4배(반응형) */
+    /* 핵심 문구 3개: 2줄 개행 & 글씨 크기 25% 축소 (clamp 20px ~ 39px) */
     .hero-badge-row {
       display: flex;
       justify-content: center;
@@ -261,17 +269,17 @@
       background: rgba(14, 20, 32, 0.88);
       backdrop-filter: blur(10px);
       border: 2px solid var(--gold-primary);
-      border-radius: 16px;
-      padding: 18px 24px;
+      border-radius: 14px;
+      padding: 14px 20px;
       color: var(--gold-light);
-      font-size: clamp(26px, 3.8vw, 52px); /* 기존 13px의 4배(52px) 기준 반응형 */
+      font-size: clamp(20px, 2.85vw, 39px); /* 기존 52px 대비 25% 축소 */
       font-weight: 900;
-      line-height: 1.32;
+      line-height: 1.34;
       text-align: center;
       text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9);
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(197, 160, 89, 0.12);
-      flex: 1 1 300px;
-      max-width: 350px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(197, 160, 89, 0.12);
+      flex: 1 1 260px;
+      max-width: 320px;
     }
 
     /* Lead the Change 삭제 후 공간 보존용 요소 */
@@ -286,7 +294,7 @@
       font-weight: 900;
       color: #fff;
       line-height: 1.28;
-      text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+      text-shadow: 0 4px 20px rgba(0,0,0,0.85);
       margin-bottom: 16px;
     }
     .hero-desc {
@@ -295,9 +303,10 @@
       font-weight: 400;
       margin-bottom: 35px;
       line-height: 1.65;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
     }
 
-    /* 기존 버튼 대체: 기능 없는 단순 정보 배너 (기존 2배 크기) */
+    /* 기존 버튼 대체: 2줄 표시 단순 정보 배너 */
     .hero-info-group {
       display: flex;
       justify-content: center;
@@ -318,12 +327,12 @@
       user-select: none;
     }
     .hero-info-card.primary {
-      background: linear-gradient(135deg, rgba(197, 160, 89, 0.22), rgba(154, 118, 50, 0.35));
+      background: linear-gradient(135deg, rgba(197, 160, 89, 0.28), rgba(154, 118, 50, 0.4));
       border: 2px solid var(--gold-primary);
     }
     .hero-info-card.secondary {
-      background: rgba(255, 255, 255, 0.08);
-      border: 2px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.35);
     }
     .hero-info-card .info-sub {
       font-size: clamp(16px, 2vw, 22px);
@@ -332,7 +341,7 @@
       line-height: 1.3;
     }
     .hero-info-card .info-main {
-      font-size: clamp(24px, 3.2vw, 36px); /* 기존 폰트 대비 2배 확대 */
+      font-size: clamp(24px, 3.2vw, 36px);
       color: var(--gold-light);
       font-weight: 900;
       line-height: 1.3;
@@ -343,7 +352,7 @@
     }
 
     /* -----------------------------------------------------------
-       5. Key Highlights & Numbers (대표 이미지 6.jpg)
+       5. Key Highlights & Numbers (main-img.png & Stat Cards)
     ----------------------------------------------------------- */
     .section-dark {
       background-color: var(--bg-black);
@@ -412,7 +421,6 @@
       color: var(--text-muted);
     }
 
-    /* 대표 프리뷰 카드 (6.jpg 적용) */
     .main-feature-card {
       max-width: 1100px;
       margin: 0 auto 50px;
@@ -428,7 +436,6 @@
       display: block;
     }
 
-    /* 배너 3종 그리드 */
     .banner-trio {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -869,7 +876,7 @@
       font-weight: 800;
     }
 
-    /* 신규 하단 고정 2버튼 (mo-quick-bottom.jpg 완전 대체, 50:50 분할) */
+    /* 하단 고정 2버튼 (50:50 분할) */
     .fixed-bottom-bar {
       display: none;
       position: fixed;
@@ -923,7 +930,7 @@
     }
 
     /* -----------------------------------------------------------
-       13. Popup Modal (닫기 버튼 단일화, 영구 숨김 제거)
+       13. Popup Modal (닫기 버튼 단일화, 방문마다 표시)
     ----------------------------------------------------------- */
     .popup-overlay {
       position: fixed;
@@ -1005,7 +1012,7 @@
 
     @media (max-width: 768px) {
       body {
-        padding-bottom: 60px; /* 하단 고정바로 인한 푸터 가림 방지 */
+        padding-bottom: 60px;
       }
       .section-dark {
         padding: 55px 0;
@@ -1100,10 +1107,10 @@
     </div>
   </section>
 
-  <!-- 2. 메인 HERO 섹션 -->
+  <!-- 2. 메인 HERO 섹션 (배경: 6.jpg & 25% 축소된 3대 문구) -->
   <section id="hero">
     <div class="hero-content">
-      <!-- 핵심 문구 3개: 2줄 개행 & 4배 확대 -->
+      <!-- 핵심 문구 3개: 2줄 개행 & 25% 크기 축소 반영 -->
       <div class="hero-badge-row">
         <div class="hero-tag-large">
           총 1,783세대<br>매머드급 대단지
@@ -1125,7 +1132,7 @@
         26층 스카이라운지와 단지 앞 1만평 체육공원을 품은 명품 라이프
       </p>
 
-      <!-- 버튼 기능 제거 후 2줄 표시 & 기존 2배 크기 정보 배너 -->
+      <!-- 버튼 기능 제거 후 2줄 표시 정보 카드 -->
       <div class="hero-info-group">
         <div class="hero-info-card primary">
           <span class="info-sub">입주전까지</span>
@@ -1139,7 +1146,7 @@
     </div>
   </section>
 
-  <!-- 3. 핵심 정보 & 통계 지표 (대표 프리뷰 이미지 6.jpg 사용) -->
+  <!-- 3. 핵심 정보 & 통계 지표 -->
   <section class="section-dark">
     <div class="container">
       <div class="stat-cards-grid">
@@ -1165,12 +1172,12 @@
         </div>
       </div>
 
-      <!-- 대표 프리뷰 이미지 6.jpg 배치 -->
+      <!-- 메인 피처 카드 (main-img.png) -->
       <div class="main-feature-card">
-        <img src="6.jpg" alt="오산헤리티지자이 1783세대 단지 전경 대표 프리뷰">
+        <img src="main-img.png" alt="오산헤리티지자이 500만원 계약가능 초등학교 도보권 1호선 병점역 역세권">
       </div>
 
-      <!-- banner01.png, banner02.png, banner03.png 그리드 -->
+      <!-- 배너 3종 그리드 -->
       <div class="banner-trio">
         <div class="banner-trio-item">
           <a href="tel:15550031">
@@ -1545,7 +1552,7 @@
     <a href="#hero" class="btn-float top" title="맨 위로 이동">TOP</a>
   </div>
 
-  <!-- 신규 하단 고정바 (mo-quick-bottom.jpg 제거 후 50:50 분할) -->
+  <!-- 하단 고정바 (50:50 분할) -->
   <div class="fixed-bottom-bar" id="fixedBottomBar">
     <a href="tel:15550031" class="btn-bottom-action call" title="1555-0031 전화상담 연결">
       <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -1608,12 +1615,12 @@
 
     function startSlideInterval() {
       if (slideTimer) clearInterval(slideTimer);
-      slideTimer = setInterval(nextSlide, 2000); // 정확히 2초 간격
+      slideTimer = setInterval(nextSlide, 2000);
     }
 
     function goToSlide(index) {
       showSlide(index);
-      startSlideInterval(); // 사용자가 테마를 누른 뒤에도 2초 주기 계속 유지
+      startSlideInterval();
     }
 
     // 3. FAQ Accordion Toggle
@@ -1658,7 +1665,7 @@
       }
     }
 
-    // 7. 팝업창 제어: 페이지 방문마다 무조건 표시, 닫기는 현재 페이지만 적용 (localStorage 미사용)
+    // 7. 팝업창 제어: 페이지 방문마다 무조건 표시, 닫기는 현재 페이지만 적용
     function openPopup() {
       const modal = document.getElementById('popupModal');
       if (modal) {
@@ -1675,9 +1682,7 @@
 
     // 8. 페이지 로드 초기화
     window.addEventListener('DOMContentLoaded', function() {
-      // 팝업 항상 띄우기
       openPopup();
-      // 슬라이드 첫 시작 (2.jpg) 및 2초 타이머 개시
       showSlide(0);
       startSlideInterval();
     });
