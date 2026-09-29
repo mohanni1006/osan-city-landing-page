@@ -175,22 +175,6 @@
     .btn-header-call:hover {
       transform: translateY(-2px);
     }
-    .btn-header-sms {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 8px 14px;
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: background 0.2s;
-    }
-    .btn-header-sms:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
 
     .mobile-menu-toggle {
       display: none;
@@ -230,7 +214,7 @@
     }
 
     /* -----------------------------------------------------------
-       4. 메인 HERO 섹션 (배경: 6.jpg & 반응형 가로 정렬 레이아웃)
+       4. 메인 HERO 섹션 (배경: 6.jpg & 모바일 가로 정렬 지원)
     ----------------------------------------------------------- */
     #hero {
       position: relative;
@@ -257,7 +241,7 @@
       width: 100%;
     }
 
-    /* 상단 핵심 3개 박스: PC 기본 */
+    /* 상단 핵심 3개 박스 */
     .hero-badge-row {
       display: flex;
       justify-content: center;
@@ -306,7 +290,7 @@
       text-shadow: 0 2px 10px rgba(0,0,0,0.8);
     }
 
-    /* 하단 계약 정보 2개 박스: PC 기본 */
+    /* 하단 계약 정보 2개 박스 */
     .hero-info-group {
       display: flex;
       justify-content: center;
@@ -355,7 +339,7 @@
     }
 
     /* -----------------------------------------------------------
-       5. Key Highlights & Numbers (main-img.png & Stat Cards)
+       5. Key Highlights & Numbers (Stat Cards & Banner Trio)
     ----------------------------------------------------------- */
     .section-dark {
       background-color: var(--bg-black);
@@ -422,21 +406,6 @@
     .stat-info {
       font-size: 13px;
       color: var(--text-muted);
-    }
-
-    .main-feature-card {
-      max-width: 1100px;
-      margin: 0 auto 50px;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border-dark);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.8);
-      background: #0d1118;
-    }
-    .main-feature-card img {
-      width: 100%;
-      height: auto;
-      display: block;
     }
 
     .banner-trio {
@@ -634,7 +603,7 @@
     }
 
     /* -----------------------------------------------------------
-       10. Reservation Form Section (Email forward)
+       10. Reservation Form Section
     ----------------------------------------------------------- */
     #reservation {
       background: linear-gradient(180deg, #05070a 0%, #0c121d 50%, #000000 100%);
@@ -782,29 +751,13 @@
       color: var(--gold-light);
       font-size: 18px;
       font-weight: 800;
-      padding: 12px 28px;
+      padding: 12px 32px;
       border-radius: 30px;
       transition: all 0.2s;
     }
     .btn-action-call:hover {
       background: var(--gold-primary);
       color: #000;
-    }
-    .btn-action-sms {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #141b27;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
-      font-size: 16px;
-      font-weight: 700;
-      padding: 12px 26px;
-      border-radius: 30px;
-      transition: all 0.2s;
-    }
-    .btn-action-sms:hover {
-      background: rgba(255, 255, 255, 0.15);
     }
 
     /* -----------------------------------------------------------
@@ -1021,7 +974,7 @@
         padding: 50px 12px 65px;
       }
 
-      /* 핵심 3대 박스: 모바일에서 가로 한 줄(3등분) 나열 & 텍스트 비율 최적화 */
+      /* 핵심 3대 박스: 모바일 가로 1줄 나열 */
       .hero-badge-row {
         display: flex;
         flex-wrap: nowrap;
@@ -1041,7 +994,7 @@
         white-space: nowrap;
       }
 
-      /* 계약 정보 2개 박스: 모바일에서 가로 한 줄(50:50) 나열 & 최적 크기 조정 */
+      /* 계약 정보 2개 박스: 모바일 가로 1줄(50:50) 나열 */
       .hero-info-group {
         display: flex;
         flex-wrap: nowrap;
@@ -1098,9 +1051,6 @@
         border-right: none;
         background: #151e2c;
       }
-      .nav-actions .btn-header-sms {
-        display: none;
-      }
     }
   </style>
 </head>
@@ -1138,7 +1088,6 @@
             <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
             1555-0031
           </a>
-          <a href="javascript:sendSms();" class="btn-header-sms" title="문자로 상담하기">문자상담</a>
           <button class="mobile-menu-toggle" id="menuToggle" aria-label="메뉴 열기">
             <span></span>
             <span></span>
@@ -1159,7 +1108,7 @@
   <!-- 2. 메인 HERO 섹션 (배경: 6.jpg & 모바일 가로 1줄 정렬 지원) -->
   <section id="hero">
     <div class="hero-content">
-      <!-- 핵심 문구 3개: 모바일에서도 가로 한 줄로 나열 -->
+      <!-- 핵심 문구 3개: 가로 한 줄 나열 -->
       <div class="hero-badge-row">
         <div class="hero-tag-large">
           총 1,783세대<br>매머드급 대단지
@@ -1181,7 +1130,7 @@
         26층 스카이라운지와 단지 앞 1만평 체육공원을 품은 명품 라이프
       </p>
 
-      <!-- 계약 혜택 2개 박스: 모바일에서도 가로 한 줄(50:50)로 나열 -->
+      <!-- 계약 혜택 2개 박스: 가로 한 줄(50:50) 나열 -->
       <div class="hero-info-group">
         <div class="hero-info-card primary">
           <span class="info-sub">입주전까지</span>
@@ -1219,11 +1168,6 @@
           <div class="stat-number">26층 / 1만평</div>
           <div class="stat-info">스카이라운지 & 단지 앞 체육공원</div>
         </div>
-      </div>
-
-      <!-- 메인 피처 카드 (main-img.png) -->
-      <div class="main-feature-card">
-        <img src="main-img.png" alt="오산헤리티지자이 500만원 계약가능 초등학교 도보권 1호선 병점역 역세권">
       </div>
 
       <!-- 배너 3종 그리드 -->
@@ -1475,7 +1419,7 @@
     </div>
   </section>
 
-  <!-- 12. 최종 상담 예약 (Email 전달) -->
+  <!-- 12. 최종 상담 예약 -->
   <section id="reservation">
     <div class="container">
       <div class="reservation-card">
@@ -1551,16 +1495,13 @@
           </button>
         </form>
 
-        <!-- Direct CTA -->
+        <!-- Direct CTA (전화 연결 단일 버튼) -->
         <div class="direct-call-box">
           <p class="direct-call-title">기다림 없이 지금 즉시 상담을 원하시나요?</p>
           <div class="direct-call-btns">
             <a href="tel:15550031" class="btn-action-call" title="1555-0031 전화상담 연결">
               <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-              📞 1555-0031
-            </a>
-            <a href="javascript:sendSms();" class="btn-action-sms" title="문자로 상담하기">
-              💬 문자로 상담하기
+              📞 대표문의 1555-0031
             </a>
           </div>
         </div>
@@ -1703,18 +1644,7 @@
       });
     }
 
-    // 6. SMS Trigger
-    function sendSms() {
-      const text = encodeURIComponent("오산 헤리티지 자이 상담 문의");
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      if (isIOS) {
-        window.location.href = "sms:15550031&body=" + text;
-      } else {
-        window.location.href = "sms:15550031?body=" + text;
-      }
-    }
-
-    // 7. 팝업창 제어: 페이지 방문마다 무조건 표시, 닫기는 현재 페이지만 적용
+    // 6. 팝업창 제어: 페이지 방문마다 무조건 표시, 닫기는 현재 페이지만 적용
     function openPopup() {
       const modal = document.getElementById('popupModal');
       if (modal) {
@@ -1729,14 +1659,14 @@
       }
     }
 
-    // 8. 페이지 로드 초기화
+    // 7. 페이지 로드 초기화
     window.addEventListener('DOMContentLoaded', function() {
       openPopup();
       showSlide(0);
       startSlideInterval();
     });
 
-    // 9. 예약 신청 전송 기능 (기존 FormSubmit 유지)
+    // 8. 예약 신청 전송 기능
     async function submitReservation(event) {
       event.preventDefault();
 
