@@ -230,7 +230,7 @@
     }
 
     /* -----------------------------------------------------------
-       4. 메인 HERO 섹션 (배경: 6.jpg & 핵심 문구 25% 축소 반영)
+       4. 메인 HERO 섹션 (배경: 6.jpg & 반응형 가로 정렬 레이아웃)
     ----------------------------------------------------------- */
     #hero {
       position: relative;
@@ -257,40 +257,40 @@
       width: 100%;
     }
 
-    /* 핵심 문구 3개: 2줄 개행 & 글씨 크기 25% 축소 (clamp 20px ~ 39px) */
+    /* 상단 핵심 3개 박스: PC 기본 */
     .hero-badge-row {
       display: flex;
       justify-content: center;
       gap: 16px;
-      flex-wrap: wrap;
       margin-bottom: 25px;
+      width: 100%;
     }
     .hero-tag-large {
       background: rgba(14, 20, 32, 0.88);
       backdrop-filter: blur(10px);
       border: 2px solid var(--gold-primary);
       border-radius: 14px;
-      padding: 14px 20px;
+      padding: 14px 16px;
       color: var(--gold-light);
-      font-size: clamp(20px, 2.85vw, 36px); /* 기존 52px 대비 25% 축소 */
+      font-size: clamp(18px, 2.3vw, 32px);
       font-weight: 900;
       line-height: 1.34;
       text-align: center;
       text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9);
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(197, 160, 89, 0.12);
-      flex: 1 1 260px;
-      max-width: 320px;
+      flex: 1 1 0;
+      min-width: 0;
     }
 
     /* Lead the Change 삭제 후 공간 보존용 요소 */
     .hero-slogan-spacer {
-      height: 40px;
+      height: 38px;
       visibility: hidden;
       margin-bottom: 8px;
     }
 
     .hero-title {
-      font-size: clamp(28px, 5.2vw, 50px);
+      font-size: clamp(26px, 5vw, 50px);
       font-weight: 900;
       color: #fff;
       line-height: 1.28;
@@ -298,25 +298,28 @@
       margin-bottom: 16px;
     }
     .hero-desc {
-      font-size: clamp(15px, 2.2vw, 20px);
+      font-size: clamp(14px, 2vw, 19px);
       color: #e2e8f0;
       font-weight: 400;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
       line-height: 1.65;
       text-shadow: 0 2px 10px rgba(0,0,0,0.8);
     }
 
-    /* 기존 버튼 대체: 2줄 표시 단순 정보 배너 */
+    /* 하단 계약 정보 2개 박스: PC 기본 */
     .hero-info-group {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      gap: 18px;
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
     }
     .hero-info-card {
-      padding: 18px 36px;
-      border-radius: 20px;
-      min-width: 250px;
+      padding: 16px 20px;
+      border-radius: 18px;
+      flex: 1 1 0;
+      min-width: 0;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -335,13 +338,13 @@
       border: 2px solid rgba(255, 255, 255, 0.35);
     }
     .hero-info-card .info-sub {
-      font-size: clamp(16px, 2vw, 20px);
+      font-size: clamp(15px, 1.8vw, 19px);
       color: #cbd5e1;
       font-weight: 600;
       line-height: 1.3;
     }
     .hero-info-card .info-main {
-      font-size: clamp(24px, 3.2vw, 34px);
+      font-size: clamp(22px, 2.7vw, 32px);
       color: var(--gold-light);
       font-weight: 900;
       line-height: 1.3;
@@ -979,7 +982,7 @@
     }
 
     /* -----------------------------------------------------------
-       14. Responsive Media Queries
+       14. Responsive Media Queries (모바일 최적화)
     ----------------------------------------------------------- */
     @media (max-width: 992px) {
       .nav-menu {
@@ -1014,6 +1017,56 @@
       body {
         padding-bottom: 60px;
       }
+      #hero {
+        padding: 50px 12px 65px;
+      }
+
+      /* 핵심 3대 박스: 모바일에서 가로 한 줄(3등분) 나열 & 텍스트 비율 최적화 */
+      .hero-badge-row {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 6px;
+        margin-bottom: 18px;
+        width: 100%;
+      }
+      .hero-tag-large {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 10px 3px;
+        border-radius: 10px;
+        border-width: 1.5px;
+        font-size: clamp(10.5px, 2.95vw, 13.5px);
+        line-height: 1.28;
+        letter-spacing: -0.4px;
+        white-space: nowrap;
+      }
+
+      /* 계약 정보 2개 박스: 모바일에서 가로 한 줄(50:50) 나열 & 최적 크기 조정 */
+      .hero-info-group {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+        width: 100%;
+      }
+      .hero-info-card {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 12px 6px;
+        border-radius: 13px;
+        border-width: 1.5px;
+      }
+      .hero-info-card .info-sub {
+        font-size: clamp(12px, 3.4vw, 15px);
+        letter-spacing: -0.3px;
+        white-space: nowrap;
+      }
+      .hero-info-card .info-main {
+        font-size: clamp(16px, 4.6vw, 22px);
+        letter-spacing: -0.4px;
+        white-space: nowrap;
+        margin-top: 2px;
+      }
+
       .section-dark {
         padding: 55px 0;
       }
@@ -1047,10 +1100,6 @@
       }
       .nav-actions .btn-header-sms {
         display: none;
-      }
-      .hero-tag-large {
-        max-width: 100%;
-        flex: 1 1 100%;
       }
     }
   </style>
@@ -1107,19 +1156,19 @@
     </div>
   </section>
 
-  <!-- 2. 메인 HERO 섹션 (배경: 6.jpg & 25% 축소된 3대 문구) -->
+  <!-- 2. 메인 HERO 섹션 (배경: 6.jpg & 모바일 가로 1줄 정렬 지원) -->
   <section id="hero">
     <div class="hero-content">
-      <!-- 핵심 문구 3개: 2줄 개행 & 25% 크기 축소 반영 -->
+      <!-- 핵심 문구 3개: 모바일에서도 가로 한 줄로 나열 -->
       <div class="hero-badge-row">
         <div class="hero-tag-large">
-          총 1,783세대<br>대단지
+          총 1,783세대<br>매머드급 대단지
         </div>
         <div class="hero-tag-large">
           GS건설 1군<br>Xi 랜드마크
         </div>
         <div class="hero-tag-large">
-          GTX-C<br>병점역 연장 수혜
+          GTX-C 노선<br>병점역 연장 수혜
         </div>
       </div>
 
@@ -1132,7 +1181,7 @@
         26층 스카이라운지와 단지 앞 1만평 체육공원을 품은 명품 라이프
       </p>
 
-      <!-- 버튼 기능 제거 후 2줄 표시 정보 카드 -->
+      <!-- 계약 혜택 2개 박스: 모바일에서도 가로 한 줄(50:50)로 나열 -->
       <div class="hero-info-group">
         <div class="hero-info-card primary">
           <span class="info-sub">입주전까지</span>
