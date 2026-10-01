@@ -351,27 +351,30 @@
     }
 
     /* -----------------------------------------------------------
-       4. main.jpg 영역
+       4. 메인화면 다음 첫 이미지(main.jpg) 가로 100% 꽉 차는 풀위드 설정
     ----------------------------------------------------------- */
     .top-visual-banner {
       width: 100%;
       background: #000;
       overflow: hidden;
       border-bottom: 1px solid var(--border-dark);
-      text-align: center;
+      padding: 0;
+      margin: 0;
+      line-height: 0;
     }
     .top-visual-inner {
       width: 100%;
-      max-width: 1920px;
-      margin: 0 auto;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
     }
     .main-top-img {
       width: 100%;
+      max-width: 100%;
       height: auto;
-      max-height: 80vh;
-      object-fit: contain;
       display: block;
-      margin: 0 auto;
+      margin: 0;
+      object-fit: cover;
     }
 
     /* -----------------------------------------------------------
@@ -491,8 +494,36 @@
       background: #080a0f;
     }
 
+    /* -----------------------------------------------------------
+       7. 커뮤니티 전용 스타일 (3단 연결 카드)
+    ----------------------------------------------------------- */
+    .community-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .community-card {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.85);
+      background: #090c12;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .community-card:hover {
+      border-color: var(--gold-primary);
+      transform: translateY(-4px);
+    }
+    .community-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     /* ==========================================================================
-       7. FAQ SECTION
+       8. FAQ SECTION
        ========================================================================== */
     .faq-wrapper {
       max-width: 860px;
@@ -550,7 +581,7 @@
     }
 
     /* -----------------------------------------------------------
-       8. Reservation Form Section
+       9. Reservation Form Section
     ----------------------------------------------------------- */
     #reservation {
       background: linear-gradient(180deg, #05070a 0%, #0c121d 50%, #000000 100%);
@@ -708,7 +739,7 @@
     }
 
     /* -----------------------------------------------------------
-       9. Footer
+       10. Footer
     ----------------------------------------------------------- */
     footer {
       background: #050608;
@@ -737,7 +768,7 @@
     }
 
     /* -----------------------------------------------------------
-       10. Floating Navigation Button (TOP)
+       11. Floating Navigation Button (TOP)
     ----------------------------------------------------------- */
     .floating-nav {
       position: fixed;
@@ -774,7 +805,7 @@
     }
 
     /* -----------------------------------------------------------
-       11. 모바일 2단 고정 영역
+       12. 모바일 2단 고정 영역
     ----------------------------------------------------------- */
     .fixed-bottom-wrap {
       display: none;
@@ -876,7 +907,56 @@
     }
 
     /* -----------------------------------------------------------
-       12. Responsive Media Queries
+       13. Popup Modal (popup.png 적용)
+    ----------------------------------------------------------- */
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .popup-box {
+      max-width: 460px;
+      width: 100%;
+      background: #0b0f17;
+      border: 2px solid var(--gold-primary);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+      position: relative;
+    }
+    .popup-box img {
+      width: 100%;
+      display: block;
+    }
+    .popup-actions {
+      display: flex;
+      border-top: 1px solid #1a2233;
+      background: #0e1420;
+    }
+    .popup-actions .btn-popup-close {
+      flex: 1;
+      padding: 15px 10px;
+      font-size: 15px;
+      font-weight: 800;
+      color: #e2e8f0;
+      background: #141b27;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .popup-actions .btn-popup-close:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+
+    /* -----------------------------------------------------------
+       14. Responsive Media Queries
     ----------------------------------------------------------- */
     @media (max-width: 768px) {
       body {
@@ -1036,7 +1116,7 @@
     </div>
   </section>
 
-  <!-- 2. main.jpg 화면 -->
+  <!-- 2. main.jpg 화면 (가로 화면 100% 꽉 차는 풀위드) -->
   <section class="top-visual-banner" id="about">
     <div class="top-visual-inner">
       <img src="main.jpg" alt="더샵 오산 아크시티 메인 조감도" class="main-top-img">
@@ -1055,13 +1135,13 @@
       <div class="auto-slider-container">
         <div class="slider-track" id="sliderTrack">
           <div class="slide-item active">
-            <img src="2.jpg" alt="광역교통 프리미엄">
+            <img src="2.jpg" alt="오산역 및 오산대역 광역교통 미래가치">
           </div>
           <div class="slide-item">
-            <img src="3.jpg" alt="라이프 프리미엄">
+            <img src="3.jpg" alt="파노라마 조망과 품격 높은 스카이라운지 라이프">
           </div>
           <div class="slide-item">
-            <img src="4.jpg" alt="인프라 프리미엄">
+            <img src="4.jpg" alt="단지 내 7,000평 대형 스트리트몰 상업 인프라">
           </div>
         </div>
         <div class="slider-indicators" id="sliderIndicators">
@@ -1073,53 +1153,57 @@
     </div>
   </section>
 
-  <!-- 4. SPECIAL BENEFIT 4 -->
+  <!-- 4. SPECIAL BENEFIT (benefit.png) -->
   <section id="lifestyle" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
-        <span class="sub-head">SPECIAL BENEFIT 4</span>
+        <span class="sub-head">SPECIAL BENEFIT</span>
         <h2 class="main-head">비교할수록 독보적인 4대 프리미엄</h2>
         <p class="desc-head">GTX-C, 쇼핑 & 전통시장, 의료시설, 쾌적한 수변공원까지 모두 누리는 완벽한 가치</p>
       </div>
       <div class="showcase-box">
         <a href="tel:010-5283-7354" title="010-5283-7354 전화상담 연결">
-          <img src="benefit.png" alt="더샵 오산 아크시티 SPECIAL BENEFIT 4 프리미엄">
+          <img src="benefit.png" alt="원스톱 라이프 종합 입지 인포그래픽">
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 5. UNIT PLAN -->
+  <!-- 5. UNIT PLAN (type.jpg) -->
   <section id="residence" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
         <span class="sub-head">UNIT PLAN</span>
-        <h2 class="main-head">라이프스타일을 담아낸 설계</h2>
-        <p class="desc-head">실속 있는 전용면적 84㎡</p>
+        <h2 class="main-head">라이프스타일을 담아낸 혁신 설계</h2>
+        <p class="desc-head">실거주 선호도가 가장 높은 실속 있는 전용면적 84㎡ (3Room · 2Bath)</p>
       </div>
       <div class="showcase-box">
-        <img src="type.png" alt="더샵 오산 아크시티 전용 84㎡ 평면도">
+        <img src="type.jpg" alt="더샵 오산 아크시티 84A 타입 평면도">
       </div>
     </div>
   </section>
 
-  <!-- 6. PREMIUM COMMUNITY -->
+  <!-- 6. PREMIUM COMMUNITY (community1.jpg / community2.jpg / community3.jpg) -->
   <section id="community" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
         <span class="sub-head">PREMIUM COMMUNITY</span>
         <h2 class="main-head">피트니스, 스크린골프, 독서실 등 다채로운 명품 시설</h2>
-        <p class="desc-head">입주민의 건강과 여유로운 일상을 위한 최고급 커뮤니티 공간</p>
+        <p class="desc-head">입주민의 건강과 여유로운 일상을 위한 최고급 원스톱 커뮤니티 공간</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 24px;">
-        <div class="showcase-box">
-          <img src="community1.png" alt="커뮤니티 시설 1">
+      
+      <div class="community-grid">
+        <!-- 커뮤니티 1: 스포츠 존 -->
+        <div class="community-card">
+          <img src="community1.jpg" alt="더샵 오산 아크시티 스포츠 존 커뮤니티 (골프연습장, 스크린골프, GX룸, 피트니스, 사우나)">
         </div>
-        <div class="showcase-box">
-          <img src="community2.png" alt="커뮤니티 시설 2">
+        <!-- 커뮤니티 2: 에듀 존 -->
+        <div class="community-card">
+          <img src="community2.jpg" alt="더샵 오산 아크시티 에듀 존 커뮤니티 (스터디룸, 북라운지, 오픈스터디, 프라이빗 스터디)">
         </div>
-        <div class="showcase-box">
-          <img src="community3.png" alt="커뮤니티 시설 3">
+        <!-- 커뮤니티 3: 실사 갤러리 -->
+        <div class="community-card">
+          <img src="community3.jpg" alt="더샵 오산 아크시티 피트니스, 스크린골프, 북라운지 시설 안내">
         </div>
       </div>
     </div>
@@ -1346,6 +1430,16 @@
     </div>
   </div>
 
+  <!-- Special Benefit Popup Modal (popup.png 적용) -->
+  <div class="popup-overlay" id="popupModal">
+    <div class="popup-box">
+      <img src="popup.png" alt="입주까지 계약금 5% / 예약 방문 시 상품권 증정">
+      <div class="popup-actions">
+        <button type="button" class="btn-popup-close" onclick="closePopup()">닫기</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script>
     // 1. Mobile Drawer Toggle
@@ -1437,13 +1531,29 @@
       });
     }
 
-    // 6. 페이지 로드 초기화
+    // 6. 팝업창 제어
+    function openPopup() {
+      const modal = document.getElementById('popupModal');
+      if (modal) {
+        modal.style.display = 'flex';
+      }
+    }
+
+    function closePopup() {
+      const modal = document.getElementById('popupModal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // 7. 페이지 로드 초기화
     window.addEventListener('DOMContentLoaded', function() {
+      openPopup();
       showSlide(0);
       startSlideInterval();
     });
 
-    // 7. 디스코드 웹후크 실시간 알림 연동 전송
+    // 8. 디스코드 웹후크 실시간 알림 연동 전송
     async function submitReservation(event) {
       event.preventDefault();
 
