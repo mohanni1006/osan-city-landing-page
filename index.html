@@ -2,171 +2,87 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>더샵 오산역 전용 84㎡ 프리미엄 주거시설</title>
   
-  <!-- SEO & Open Graph (공유 미리보기 타이틀 수정) -->
-  <meta name="description" content="1호선 오산역 약 600m 역세권, 전용 84㎡(3Room·2Bath) 주거형 오피스텔. 단지 내 약 25,000㎡ 대형 상업시설과 함께하는 포스코 더샵 오산역 아크시티 오피스텔(단 90실).">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="더샵 오산역 전용 84㎡&#10;프리미엄 주거시설">
-  <meta property="og:description" content="오산역 도보권, 약 25,000㎡ 스트리트몰 원스톱 라이프, 단 90실 한정 공급. 지금 모델하우스 및 분양 상담을 확인하세요.">
-  <meta property="og:image" content="images/hero.jpg">
-  <meta name="format-detection" content="telephone=no">
+  <title>더샵 오산 아크시티 | 공식 분양홍보관</title>
+  <meta name="description" content="오산역 新주거타운의 중심! 오산시 44층 랜드마크 포스코이앤씨 더샵 오산 아크시티. 84㎡ 단일 90실 희소성 프리미엄.">
+  <meta name="keywords" content="더샵 오산 아크시티, 오산역 포스코더샵, 오산더샵아크시티, 오산역 오피스텔, GTX-C 오산역, 분양가, 모델하우스">
 
-  <!-- Fonts (Pretendard & Cormorant Garamond CDN 연결) -->
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="더샵 오산 아크시티 | 공식 분양홍보관">
+  <meta property="og:description" content="오산역 新주거타운의 중심! 44층 랜드마크 포스코이앤씨 더샵 오산 아크시티 공식 홍보관">
+  <meta property="og:image" content="main.jpg">
 
   <style>
-    /* ==========================================================================
-       1. DESIGN SYSTEM & CSS VARIABLES
-       ========================================================================== */
-    :root {
-      --bg-main: #0B0E14;
-      --bg-card: #131722;
-      --bg-card-alt: #181D2A;
-      --color-gold: #C5A880;
-      --color-gold-light: #E5D5C0;
-      --color-gold-dark: #9F825B;
-      --text-white: #FFFFFF;
-      --text-light: #E2E8F0;
-      --text-muted: #94A3B8;
-      --border-color: rgba(197, 168, 128, 0.2);
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --font-kr: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-      --font-en: "Cormorant Garamond", Georgia, serif;
-      --max-width: 1240px;
-      --header-height: 62px;
-      --bottom-bar-height: 64px;
-
-      --gold-primary: #c5a059;
-      --gold-light: #e5c98d;
-    }
-
-    * {
+    /* -----------------------------------------------------------
+       1. Base & Reset
+    ----------------------------------------------------------- */
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
     }
-
     html {
       scroll-behavior: smooth;
       font-size: 16px;
+      background-color: #000;
+      color: #eaeaea;
     }
-
     body {
-      background-color: var(--bg-main);
-      color: var(--text-light);
-      font-family: var(--font-kr);
-      line-height: 1.65;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      line-height: 1.6;
+      background-color: #000;
+      color: #fff;
       overflow-x: hidden;
-      padding-bottom: var(--bottom-bar-height);
+      word-break: keep-all;
+      padding-top: var(--header-height);
     }
-
-    @media (min-width: 992px) {
-      body {
-        padding-bottom: 0;
-      }
-    }
-
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
-
-    ul, ol {
-      list-style: none;
-    }
-
     img {
       max-width: 100%;
       height: auto;
       display: block;
+      margin: 0 auto;
+    }
+    button, input, select, textarea {
+      font-family: inherit;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    :root {
+      /* 상단바 높이 정의 */
+      --header-height: 62px;
+      --bg-black: #000000;
+      --bg-dark: #0a0c10;
+      --bg-card: #121620;
+      --gold-primary: #c5a059;
+      --gold-light: #e5c98d;
+      --gold-dark: #9a7632;
+      --color-gold: #c5a059;
+      --text-white: #ffffff;
+      --text-light: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-dark: rgba(255, 255, 255, 0.08);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --font-en: "Pretendard", -apple-system, sans-serif;
+      --container-max: 1200px;
     }
 
     .container {
       width: 100%;
-      max-width: var(--max-width);
+      max-width: var(--container-max);
       margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* TYPOGRAPHY */
-    .section-eyebrow {
-      font-family: var(--font-en);
-      font-size: 1.15rem;
-      letter-spacing: 0.25em;
-      color: var(--color-gold);
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      display: inline-block;
-    }
-
-    .section-title {
-      font-size: clamp(1.9rem, 3.8vw, 2.9rem);
-      font-weight: 700;
-      color: var(--text-white);
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
-
-    .section-desc {
-      font-size: clamp(1rem, 1.5vw, 1.15rem);
-      color: var(--text-muted);
-      line-height: 1.7;
-      word-break: keep-all;
-    }
-
-    /* BUTTONS */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 16px 36px;
-      font-size: 1.05rem;
-      font-weight: 600;
-      border-radius: 4px;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .btn-gold {
-      background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
-      color: #0F1218;
-      box-shadow: 0 8px 24px rgba(197, 168, 128, 0.25);
-      border: 1px solid var(--color-gold-light);
-    }
-
-    .btn-gold:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(197, 168, 128, 0.4);
-    }
-
-    /* IMAGE FRAME & HOVER */
-    .image-frame {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid var(--border-subtle);
-      background-color: var(--bg-card);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
-    }
-
-    .image-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .image-frame:hover img {
-      transform: scale(1.03);
+      padding: 0 20px;
     }
 
     /* ==========================================================================
@@ -299,6 +215,7 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+      list-style: none;
     }
 
     .mobile-drawer a {
@@ -312,82 +229,78 @@
       color: var(--color-gold);
     }
 
-    /* ==========================================================================
-       [화면 1] HERO INTRO
-       ========================================================================== */
-    .hero-intro {
+    .btn-gold {
+      display: inline-block;
+      background: linear-gradient(135deg, #c5a059 0%, #e5c98d 50%, #9a7632 100%);
+      color: #000;
+      font-weight: 700;
+      padding: 14px 20px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-gold:hover {
+      opacity: 0.9;
+    }
+
+    /* -----------------------------------------------------------
+       3. 메인 HERO 섹션
+    ----------------------------------------------------------- */
+    #hero {
       position: relative;
+      background: 
+        radial-gradient(ellipse 90% 60% at 50% -10%, rgba(197, 160, 89, 0.22), transparent 70%),
+        radial-gradient(circle at 85% 30%, rgba(0, 104, 153, 0.18), transparent 55%),
+        radial-gradient(circle at 15% 75%, rgba(197, 160, 89, 0.12), transparent 50%),
+        linear-gradient(180deg, #070a11 0%, #0d121c 45%, #05070b 100%);
       min-height: auto;
+      padding: 42px 20px 45px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-top: calc(var(--header-height) + 18px);
-      padding-bottom: 18px;
-      background: radial-gradient(circle at 50% 25%, rgba(28, 38, 56, 0.95) 0%, rgba(11, 14, 20, 1) 90%);
+      text-align: center;
+      border-bottom: 1px solid var(--border-dark);
       overflow: hidden;
-      border-bottom: 1px solid var(--border-subtle);
     }
-
+    #hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.65) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
     .hero-content {
       position: relative;
-      z-index: 3;
-      text-align: center;
-      width: 100%;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .hero-subhead {
-      font-family: var(--font-en);
-      font-size: clamp(0.72rem, 3.4vw, 1.35rem);
-      letter-spacing: clamp(0.06em, 0.4vw, 0.25em);
-      color: var(--color-gold);
-      text-transform: uppercase;
-      margin-bottom: 14px;
-      display: block;
-      white-space: nowrap;
+      z-index: 2;
+      max-width: 1050px;
       width: 100%;
     }
 
     .hero-title {
-      font-size: clamp(2.1rem, 4.8vw, 3.8rem);
-      font-weight: 800;
-      color: var(--text-white);
-      line-height: 1.25;
-      letter-spacing: -0.03em;
+      font-size: clamp(26px, 4.8vw, 48px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.28;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.95);
       margin-bottom: 14px;
-      word-break: keep-all;
-    }
-
-    .hero-title span {
-      background: linear-gradient(135deg, #FFFFFF 30%, var(--color-gold-light) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-highlight {
-      display: inline-block;
-      padding: 7px 22px;
-      background: rgba(197, 168, 128, 0.15);
-      border: 1px solid var(--border-color);
-      border-radius: 40px;
-      font-size: clamp(0.95rem, 1.8vw, 1.25rem);
-      font-weight: 700;
-      color: var(--color-gold-light);
-      margin-bottom: 14px;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.5px;
     }
 
     .hero-desc {
-      font-size: clamp(0.68rem, 2.55vw, 1.15rem);
-      color: var(--text-muted);
-      margin-bottom: 12px;
-      white-space: nowrap;
+      font-size: clamp(13.5px, 1.8vw, 18px);
+      color: #e2e8f0;
+      font-weight: 400;
+      margin-bottom: 24px;
+      line-height: 1.4;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.9);
+    }
+    .hero-desc-line {
       display: block;
-      letter-spacing: -0.03em;
+      white-space: normal;
     }
 
-    /* HERO INFO GROUP */
     .hero-info-group {
       display: flex;
       justify-content: center;
@@ -396,7 +309,6 @@
       max-width: 660px;
       margin: 0 auto;
     }
-
     .hero-info-card {
       padding: 14px 18px;
       border-radius: 16px;
@@ -411,26 +323,22 @@
       cursor: default;
       user-select: none;
     }
-
     .hero-info-card.primary {
       background: linear-gradient(135deg, rgba(197, 160, 89, 0.3), rgba(154, 118, 50, 0.45));
       border: 2px solid var(--gold-primary);
       backdrop-filter: blur(8px);
     }
-
     .hero-info-card.secondary {
       background: rgba(14, 20, 32, 0.85);
       border: 2px solid rgba(255, 255, 255, 0.35);
       backdrop-filter: blur(8px);
     }
-
     .hero-info-card .info-sub {
       font-size: clamp(13px, 1.6vw, 17px);
       color: #cbd5e1;
       font-weight: 600;
       line-height: 1.3;
     }
-
     .hero-info-card .info-main {
       font-size: clamp(20px, 2.5vw, 30px);
       color: var(--gold-light);
@@ -438,664 +346,154 @@
       line-height: 1.3;
       margin-top: 3px;
     }
-
     .hero-info-card.secondary .info-main {
       color: #ffffff;
     }
 
-    @media (max-width: 768px) {
-      .hero-info-group {
-        gap: 8px;
-      }
-      .hero-info-card {
-        padding: 10px 4px;
-        border-radius: 12px;
-        border-width: 1.5px;
-      }
-      .hero-info-card .info-sub {
-        font-size: clamp(11px, 3.2vw, 13.5px);
-        letter-spacing: -0.3px;
-        white-space: nowrap;
-      }
-      .hero-info-card .info-main {
-        font-size: clamp(15px, 4.4vw, 20px);
-        letter-spacing: -0.4px;
-        white-space: nowrap;
-        margin-top: 2px;
-      }
-    }
-
-    /* ==========================================================================
-       [화면 2] SECOND SCREEN: hero.jpg 단독 전경 화면
-       ========================================================================== */
-    .hero-image-screen {
+    /* -----------------------------------------------------------
+       4. main.jpg 영역
+    ----------------------------------------------------------- */
+    .top-visual-banner {
       width: 100%;
-      background-color: var(--bg-main);
-      position: relative;
-      border-bottom: 1px solid var(--border-subtle);
+      background: #000;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-dark);
+      text-align: center;
+    }
+    .top-visual-inner {
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto;
+    }
+    .main-top-img {
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
     }
 
-    .hero-image-screen img {
+    /* -----------------------------------------------------------
+       5. 자동 슬라이드 (2.jpg / 3.jpg / 4.jpg)
+    ----------------------------------------------------------- */
+    .auto-slider-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      box-shadow: 0 16px 45px rgba(0,0,0,0.9);
+      background: #080a0f;
+      position: relative;
+    }
+    .slider-track {
+      position: relative;
+      width: 100%;
+      min-height: auto;
+    }
+    .slide-item {
+      display: none;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .slide-item.active {
+      display: block;
+      opacity: 1;
+    }
+    .slide-item img {
       width: 100%;
       height: auto;
       display: block;
-      object-fit: cover;
     }
 
-    /* ==========================================================================
-       [화면 3] THIRD SCREEN: CORE VALUE
-       ========================================================================== */
-    .core-values {
-      padding: 50px 0;
-      background: var(--bg-card);
-      border-bottom: 1px solid var(--border-subtle);
-      position: relative;
-    }
-
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    @media (min-width: 768px) {
-      .values-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .values-grid {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-
-    .value-item {
-      text-align: center;
-      position: relative;
-      padding: 0 4px;
-    }
-
-    .value-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      right: -10px;
-      top: 20%;
-      height: 60%;
-      width: 1px;
-      background: var(--border-subtle);
-      display: none;
-    }
-
-    @media (min-width: 1024px) {
-      .value-item:not(:last-child)::after {
-        display: block;
-      }
-    }
-
-    .value-num {
-      font-family: var(--font-en);
-      font-size: clamp(2.4rem, 4vw, 3.4rem);
-      font-weight: 700;
-      color: var(--color-gold);
-      line-height: 1;
-      margin-bottom: 5px;
-    }
-
-    .value-unit {
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--color-gold-light);
-      margin-left: 2px;
-    }
-
-    .value-label {
-      font-size: clamp(0.82rem, 2.7vw, 0.95rem);
-      font-weight: 600;
-      color: var(--text-white);
-      margin-bottom: 3px;
-      white-space: nowrap;
-    }
-
-    .value-desc {
-      font-size: clamp(0.72rem, 2.3vw, 0.8rem);
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-
-    /* ==========================================================================
-       [화면 4] PREMIUM 01 — FAST TRAFFIC
-       ========================================================================== */
-    .section-padding {
-      padding: 90px 0;
-    }
-
-    .section-header {
-      margin-bottom: 50px;
-    }
-
-    .section-header.text-center {
-      text-align: center;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    @media (min-width: 992px) {
-      .grid-2 {
-        grid-template-columns: 1.05fr 0.95fr;
-        gap: 60px;
-      }
-    }
-
-    .traffic-main-title {
-      font-size: clamp(1.85rem, 3.6vw, 2.75rem);
-      font-weight: 700;
-      color: var(--text-white);
-      line-height: 1.28;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
-
-    .traffic-main-title .line-en {
-      display: block;
-      font-family: var(--font-en);
-      letter-spacing: 0.05em;
-      margin-bottom: 4px;
-    }
-
-    .traffic-main-title .line-ko {
-      display: block;
-      word-break: keep-all;
-    }
-
-    .traffic-list {
+    .slider-indicators {
       display: flex;
-      flex-direction: column;
-      gap: 18px;
-      margin-top: 30px;
-    }
-
-    .traffic-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 18px 20px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      transition: border-color 0.3s ease;
-    }
-
-    .traffic-item:hover {
-      border-color: var(--border-color);
-    }
-
-    .traffic-icon {
-      flex-shrink: 0;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: rgba(197, 168, 128, 0.1);
-      display: flex;
-      align-items: center;
       justify-content: center;
-      color: var(--color-gold);
+      align-items: center;
+      gap: 8px;
+      padding: 12px 14px;
+      background: #0c1018;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      flex-wrap: nowrap;
+      width: 100%;
     }
-
-    .traffic-item h4 {
-      font-size: 1.1rem;
+    .slider-indicators .indicator {
+      flex: 1 1 0;
+      min-width: 0;
+      padding: 10px 6px;
+      border-radius: 20px;
+      background: #141b27;
+      color: #94a3b8;
+      font-size: 15px;
       font-weight: 700;
-      color: var(--text-white);
-      margin-bottom: 4px;
-    }
-
-    .traffic-item p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      word-break: keep-all;
-    }
-
-    /* PREMIUM 02: ONE STOP LIFE */
-    .title-part {
-      display: inline;
-    }
-    @media (max-width: 768px) {
-      .title-part {
-        display: block;
-      }
-    }
-
-    .infra-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin-top: 30px;
-    }
-
-    @media (min-width: 768px) {
-      .infra-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .infra-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      padding: 20px 12px;
-      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.25s;
+      border: 1px solid var(--border-dark);
+      user-select: none;
       text-align: center;
-    }
-
-    .infra-card h5 {
-      font-size: 1.02rem;
-      font-weight: 700;
-      color: var(--text-white);
-      margin-bottom: 6px;
       white-space: nowrap;
     }
-
-    .infra-card p {
-      font-size: clamp(0.74rem, 2.3vw, 0.85rem);
-      color: var(--text-muted);
-      line-height: 1.45;
+    .slider-indicators .indicator.active {
+      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+      color: #000;
+      border-color: var(--gold-light);
     }
 
-    .infra-card p.nowrap-text {
-      white-space: nowrap;
-    }
-
-    /* PREMIUM 03: COMMERCIAL INDEPENDENT SECTION */
-    .commercial-highlight-section {
-      background: linear-gradient(180deg, #101520 0%, #0B0E14 100%);
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
+    /* -----------------------------------------------------------
+       6. Section 공통 스타일
+    ----------------------------------------------------------- */
+    .section-dark {
+      background-color: var(--bg-black);
+      padding: 70px 0;
+      border-bottom: 1px solid var(--border-dark);
       position: relative;
-      overflow: hidden;
     }
-
-    .commercial-badge {
-      display: inline-block;
-      font-family: var(--font-en);
-      font-size: 1.05rem;
-      letter-spacing: 0.2em;
-      color: var(--color-gold);
-      margin-bottom: 16px;
-    }
-
-    .commercial-huge-number {
-      font-family: var(--font-en);
-      font-size: clamp(3.5rem, 8vw, 6.2rem);
-      font-weight: 700;
-      color: var(--color-gold);
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-
-    .commercial-huge-number span {
-      font-size: 0.4em;
-      color: var(--color-gold-light);
-    }
-
-    /* PREMIUM 04: LIVING SPACE (84㎡) */
-    .floorplan-features {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 16px;
-      margin-top: 24px;
-    }
-
-    @media (min-width: 600px) {
-      .floorplan-features {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .feature-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      padding: 20px 18px;
-      border-radius: 8px;
-      border-left: 3px solid var(--color-gold);
-    }
-
-    .feature-box h4 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-white);
-      margin-bottom: 6px;
-    }
-
-    .feature-box p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* PREMIUM 05: THE SHARP BRAND */
-    .brand-title .brand-line-1 {
-      display: block;
-      margin-bottom: 6px;
-      font-family: var(--font-en);
-      letter-spacing: 0.08em;
-    }
-    .brand-title .brand-line-2 {
-      display: block;
-      word-break: keep-all;
-    }
-
-    /* ONLY 90 SCARCITY IMPACT SECTION */
-    .scarcity-section {
-      background: radial-gradient(circle at center, #1C2333 0%, #0B0E14 80%);
-      padding: 100px 0;
-      text-align: center;
-      position: relative;
-      border-top: 1px solid var(--border-subtle);
+    .section-padding {
+      padding: 70px 0;
       border-bottom: 1px solid var(--border-subtle);
     }
-
-    .only-90-title {
-      font-family: var(--font-en);
-      font-size: clamp(4.5rem, 11vw, 8.5rem);
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      color: transparent;
-      background: linear-gradient(180deg, #FFFFFF 20%, var(--color-gold) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 0.95;
-      margin-bottom: 24px;
-    }
-
-    .scarcity-subhead {
-      font-size: clamp(1.4rem, 3vw, 2.2rem);
-      font-weight: 700;
-      color: var(--text-white);
-      margin-bottom: 20px;
-    }
-
-    .scarcity-desc {
-      max-width: 720px;
-      margin: 0 auto 36px;
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      word-break: keep-all;
-    }
-
-    .scarcity-note {
-      font-size: 0.8rem;
-      color: #64748B;
-      margin-top: 20px;
-    }
-
-    .subscription-cards {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
-      max-width: 900px;
-      margin: 40px auto 0;
-    }
-
-    @media (min-width: 768px) {
-      .subscription-cards {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .sub-card {
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 24px 20px;
+    .section-title-wrap {
       text-align: center;
+      margin-bottom: 45px;
     }
-
-    .sub-card .tag {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--color-gold);
+    .sub-head, .section-eyebrow {
+      color: var(--gold-primary);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 8px;
       display: block;
-    }
-
-    .sub-card h4 {
-      font-size: 1.25rem;
-      color: var(--text-white);
-      margin-bottom: 6px;
-    }
-
-    .sub-card p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* PERFECT VISION & DEMAND */
-    .vision-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    @media (min-width: 768px) {
-      .vision-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .vision-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .vision-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 28px 22px;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .vision-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--border-color);
-      background: var(--bg-card-alt);
-    }
-
-    .vision-stage {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 4px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      background: rgba(197, 168, 128, 0.15);
-      color: var(--color-gold);
-      margin-bottom: 14px;
-    }
-
-    .vision-card h4 {
-      font-size: 1.25rem;
-      color: var(--text-white);
-      margin-bottom: 8px;
-    }
-
-    .vision-card p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .demand-map-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 40px;
-    }
-
-    .demand-items {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin-top: 26px;
-    }
-
-    @media (min-width: 768px) {
-      .demand-items {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .demand-item {
-      border-left: 2px solid var(--color-gold);
-      padding-left: 14px;
-    }
-
-    .demand-item h5 {
-      font-size: 1.05rem;
-      color: var(--text-white);
-      margin-bottom: 4px;
-    }
-
-    .demand-item p {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    /* 5 PREMIUM CARDS */
-    .premium-cards-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-
-    @media (min-width: 768px) {
-      .premium-cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .premium-cards-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .premium-card-item:nth-child(4) {
-        grid-column: span 1;
-      }
-      .premium-card-item:nth-child(5) {
-        grid-column: span 2;
-      }
-    }
-
-    .premium-card-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 32px 28px;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      min-height: 280px;
-      transition: all 0.3s ease;
-    }
-
-    .premium-card-item:hover {
-      border-color: var(--color-gold);
-      transform: translateY(-4px);
-    }
-
-    .card-num {
-      position: absolute;
-      top: 24px;
-      right: 24px;
-      font-family: var(--font-en);
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: rgba(255, 255, 255, 0.08);
-      line-height: 1;
-    }
-
-    .card-eyebrow {
-      font-family: var(--font-en);
-      font-size: 0.95rem;
-      color: var(--color-gold);
-      letter-spacing: 0.2em;
-      margin-bottom: 8px;
-    }
-
-    .card-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text-white);
       margin-bottom: 10px;
     }
-
-    .card-desc {
-      font-size: 0.88rem;
+    .main-head, .section-title {
+      font-size: clamp(24px, 3.8vw, 38px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.3;
+    }
+    .desc-head, .section-desc {
       color: var(--text-muted);
-      line-height: 1.6;
+      font-size: 16px;
+      margin-top: 12px;
+      font-weight: 300;
+    }
+    .text-center {
+      text-align: center;
     }
 
-    /* 13. IMAGE GALLERY */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    @media (min-width: 640px) {
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .gallery-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
-    .gallery-item {
-      position: relative;
-      border-radius: 8px;
+    .showcase-box {
+      border-radius: 16px;
       overflow: hidden;
-      height: 270px;
-      border: 1px solid var(--border-subtle);
-      background-color: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      box-shadow: 0 15px 45px rgba(0,0,0,0.9);
+      background: #080a0f;
     }
 
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.06);
-    }
-
-    .gallery-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 16px 20px;
-      background: linear-gradient(180deg, transparent 0%, rgba(11, 14, 20, 0.9) 100%);
-      color: var(--text-white);
-      font-size: 0.9rem;
-      font-weight: 600;
-      z-index: 2;
-    }
-
-    /* FAQ SECTION */
+    /* ==========================================================================
+       7. FAQ SECTION
+       ========================================================================== */
     .faq-wrapper {
       max-width: 860px;
       margin: 0 auto;
@@ -1151,202 +549,412 @@
       transition: max-height 0.35s ease-in-out;
     }
 
-    /* 방문상담예약 입력폼 섹션 */
-    .reservation-section {
-      background: radial-gradient(circle at 50% 40%, #1A2232 0%, #0B0E14 90%);
-      padding: 90px 0 110px;
-      text-align: center;
-      border-top: 1px solid var(--border-color);
-      scroll-margin-top: calc(var(--header-height) + 20px);
+    /* -----------------------------------------------------------
+       8. Reservation Form Section
+    ----------------------------------------------------------- */
+    #reservation {
+      background: linear-gradient(180deg, #05070a 0%, #0c121d 50%, #000000 100%);
+      padding: 95px 0;
+      position: relative;
     }
-
-    .reservation-form-card {
-      max-width: 560px;
-      margin: 36px auto 0;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 34px 28px;
-      text-align: left;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    .reservation-card {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #0d121d;
+      border: 2px solid var(--gold-primary);
+      border-radius: 24px;
+      padding: 50px 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(197, 160, 89, 0.15);
     }
-
-    .form-group {
-      margin-bottom: 18px;
+    .form-header-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+      color: #000;
+      font-size: 12px;
+      font-weight: 900;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
     }
-
-    .form-label {
-      display: block;
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: var(--text-light);
+    .form-head-title {
+      font-size: 30px;
+      font-weight: 800;
+      color: #fff;
       margin-bottom: 8px;
     }
-
+    .form-head-desc {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 35px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .form-group.full {
+      grid-column: span 2;
+    }
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #cbd5e1;
+      margin-bottom: 8px;
+    }
+    .form-label span.req {
+      color: #ef4444;
+      margin-left: 2px;
+    }
     .form-control {
       width: 100%;
-      padding: 13px 16px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border-subtle);
-      border-radius: 6px;
-      color: var(--text-white);
-      font-size: 0.95rem;
-      font-family: inherit;
-      transition: all 0.2s ease;
-    }
-
-    .form-control:focus {
+      background: #141b27;
+      border: 1px solid #2a364a;
+      color: #fff;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 16px;
       outline: none;
-      border-color: var(--color-gold);
-      background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 0 0 2px rgba(197, 168, 128, 0.2);
+      transition: all 0.2s;
     }
-
+    .form-control:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+    }
     .form-control option {
-      background-color: var(--bg-card);
-      color: var(--text-white);
+      background: #141b27;
+      color: #fff;
     }
-
-    .form-grid-2 {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
+    textarea.form-control {
+      resize: vertical;
+      min-height: 85px;
     }
-
-    @media (min-width: 600px) {
-      .form-grid-2 {
-        grid-template-columns: 1fr 1fr;
-      }
+    .privacy-notice {
+      background: #090d14;
+      border: 1px solid #1a2333;
+      border-radius: 8px;
+      padding: 14px;
+      font-size: 12px;
+      color: #7d889b;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      max-height: 80px;
+      overflow-y: auto;
     }
-
-    .form-agree-wrap {
+    .privacy-agree-label {
       display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin: 22px 0 26px;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    .form-agree-wrap input[type="checkbox"] {
-      margin-top: 3px;
-      width: 16px;
-      height: 16px;
-      accent-color: var(--color-gold);
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #cbd5e1;
+      margin-bottom: 28px;
       cursor: pointer;
     }
-
-    .form-submit-btn {
+    .privacy-agree-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--gold-primary);
+      cursor: pointer;
+    }
+    .btn-submit-reservation {
       width: 100%;
-      padding: 16px;
-      font-size: 1.1rem;
+      background: linear-gradient(135deg, #c5a059 0%, #e5c98d 50%, #9a7632 100%);
+      color: #000;
+      font-size: 18px;
+      font-weight: 900;
+      padding: 18px 24px;
+      border-radius: 35px;
+      box-shadow: 0 10px 25px rgba(197, 160, 89, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-submit-reservation:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(197, 160, 89, 0.6);
+    }
+    .direct-call-box {
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+    }
+    .direct-call-title {
+      font-size: 16px;
+      color: #e2e8f0;
+      margin-bottom: 16px;
+    }
+    .direct-call-btns {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-action-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #141b27;
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      font-size: 18px;
+      font-weight: 800;
+      padding: 12px 32px;
+      border-radius: 30px;
+      transition: all 0.2s;
+    }
+    .btn-action-call:hover {
+      background: var(--gold-primary);
+      color: #000;
+    }
+
+    /* -----------------------------------------------------------
+       9. Footer
+    ----------------------------------------------------------- */
+    footer {
+      background: #050608;
+      border-top: 1px solid var(--border-dark);
+      padding: 60px 0 120px;
+      font-size: 13px;
+      color: #64748b;
+      line-height: 1.8;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .footer-info a {
+      color: var(--gold-light);
       font-weight: 700;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+    }
+    .footer-notes {
+      font-size: 11px;
+      color: #475569;
+      margin-top: 20px;
+      border-top: 1px solid #141820;
+      padding-top: 15px;
     }
 
-    .form-submit-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    /* FOOTER */
-    .footer {
-      background: #080A0E;
-      border-top: 1px solid var(--border-subtle);
-      padding: 40px 0;
-      font-size: 0.8rem;
-      color: #64748B;
-      line-height: 1.7;
-    }
-
-    .footer-content {
+    /* -----------------------------------------------------------
+       10. Floating Navigation Button (TOP)
+    ----------------------------------------------------------- */
+    .floating-nav {
+      position: fixed;
+      right: 20px;
+      bottom: 85px;
+      z-index: 990;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 10px;
+    }
+    .btn-float {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .btn-float:hover {
+      transform: scale(1.08);
+    }
+    .btn-float.top {
+      background: rgba(18, 24, 38, 0.95);
+      color: var(--gold-light);
+      border: 1px solid rgba(197, 160, 89, 0.4);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .btn-float.top:hover {
+      background: var(--gold-primary);
+      color: #000;
     }
 
-    @media (min-width: 768px) {
-      .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
-
-    /* ==========================================================================
-       [모바일 하단 고정바] 좌측: 전화상담, 우측: 방문예약
-       ========================================================================== */
-    .mobile-bottom-bar {
+    /* -----------------------------------------------------------
+       11. 모바일 2단 고정 영역
+    ----------------------------------------------------------- */
+    .fixed-bottom-wrap {
+      display: none;
       position: fixed;
       bottom: 0;
       left: 0;
-      width: 100%;
-      height: var(--bottom-bar-height);
-      background: rgba(14, 18, 26, 0.98);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-top: 1px solid var(--border-color);
+      right: 0;
+      z-index: 1000;
+      flex-direction: column;
+      box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.9);
+    }
+
+    .fixed-top-badges {
       display: flex;
+      gap: 6px;
+      padding: 7px 10px;
+      background: rgba(8, 12, 18, 0.98);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(197, 160, 89, 0.45);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      width: 100%;
+    }
+    .fixed-badge-card {
+      flex: 1 1 0;
+      min-width: 0;
+      background: rgba(16, 22, 34, 0.95);
+      border: 1.5px solid var(--gold-primary);
+      border-radius: 8px;
+      padding: 5px 2px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: stretch;
-      padding: 0;
-      z-index: 998;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    .fixed-badge-card .badge-top {
+      font-size: clamp(10px, 2.75vw, 12px);
+      color: var(--gold-light);
+      font-weight: 800;
+      line-height: 1.2;
+      white-space: nowrap;
+      letter-spacing: -0.3px;
+    }
+    .fixed-badge-card .badge-bottom {
+      font-size: clamp(10px, 2.8vw, 12.5px);
+      color: #ffffff;
+      font-weight: 900;
+      line-height: 1.25;
+      margin-top: 2px;
+      white-space: nowrap;
+      letter-spacing: -0.4px;
     }
 
-    @media (min-width: 992px) {
-      .mobile-bottom-bar {
-        display: none;
-      }
+    .fixed-bottom-bar {
+      display: flex;
+      height: 54px;
+      background: #080b11;
+      width: 100%;
     }
-
-    .bottom-split-btn {
+    .btn-bottom-action {
       flex: 1 1 50%;
       width: 50%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      white-space: nowrap;
-      transition: all 0.2s ease;
-      cursor: pointer;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      user-select: none;
+      transition: background 0.2s;
+    }
+    .btn-bottom-action.call {
+      background: #0f1420;
+      color: var(--gold-light);
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-bottom-action.call svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--gold-primary);
+    }
+    .btn-bottom-action.call:active {
+      background: #192133;
+    }
+    .btn-bottom-action.reserve {
+      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+      color: #000;
+    }
+    .btn-bottom-action.reserve svg {
+      width: 18px;
+      height: 18px;
+      fill: #000;
+    }
+    .btn-bottom-action.reserve:active {
+      opacity: 0.9;
     }
 
-    .btn-consult-split {
-      background: #181D2A;
-      color: var(--color-gold-light);
-      border-right: 1px solid rgba(255, 255, 255, 0.1);
-    }
+    /* -----------------------------------------------------------
+       12. Responsive Media Queries
+    ----------------------------------------------------------- */
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 115px;
+      }
+      #hero {
+        padding: 28px 12px 32px;
+      }
 
-    .btn-consult-split:active {
-      background: #111520;
-      color: var(--color-gold);
-    }
+      .hero-title {
+        font-size: clamp(23px, 6.2vw, 32px);
+        margin-bottom: 8px;
+      }
 
-    .btn-visit-split {
-      background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
-      color: #0F1218;
-    }
+      .hero-desc {
+        font-size: clamp(12px, 3.2vw, 14.5px);
+        letter-spacing: -0.4px;
+        line-height: 1.35;
+        margin-bottom: 18px;
+      }
 
-    .btn-visit-split:active {
-      opacity: 0.92;
-    }
+      .hero-info-group {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        width: 100%;
+      }
+      .hero-info-card {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 10px 4px;
+        border-radius: 12px;
+        border-width: 1.5px;
+      }
+      .hero-info-card .info-sub {
+        font-size: clamp(11px, 3.2vw, 13.5px);
+        letter-spacing: -0.3px;
+        white-space: nowrap;
+      }
+      .hero-info-card .info-main {
+        font-size: clamp(15px, 4.4vw, 20px);
+        letter-spacing: -0.4px;
+        white-space: nowrap;
+        margin-top: 2px;
+      }
 
-    /* SCROLL ANIMATIONS */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+      .slider-indicators {
+        gap: 6px;
+        padding: 10px 8px;
+        flex-wrap: nowrap;
+      }
+      .slider-indicators .indicator {
+        padding: 8px 4px;
+        font-size: clamp(11px, 3.2vw, 14px);
+        letter-spacing: -0.3px;
+        white-space: nowrap;
+      }
 
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
+      .section-dark, .section-padding {
+        padding: 45px 0;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .form-group.full {
+        grid-column: span 1;
+      }
+      .reservation-card {
+        padding: 28px 16px;
+      }
+      
+      .fixed-bottom-wrap {
+        display: flex;
+      }
+      .floating-nav {
+        bottom: 125px;
+        right: 15px;
+      }
     }
   </style>
 </head>
@@ -1406,482 +1014,119 @@
     </div>
   </div>
 
-  <!-- ==========================================================================
-       [첫 번째 화면] 1. HERO INTRO
-       ========================================================================== -->
-  <section class="hero-intro" id="hero">
-    <div class="container">
-      <div class="hero-content fade-up visible">
-        <span class="hero-subhead">THE SHARP OSAN STATION ARCITY</span>
-        
-        <h1 class="hero-title">
-          오산역을 가까이 누리는<br>
-          <span>더샵의 프리미엄 주거공간</span>
-        </h1>
-        
-        <div class="hero-highlight">
-          1호선 역세권
-        </div>
-        
-        <p class="hero-desc">
-          25,000㎡ 초대형 상업시설과 함께하는 POSCO 주거형 오피스텔
-        </p>
-        
-        <div class="hero-info-group">
-          <div class="hero-info-card primary">
-            <span class="info-sub">입주전까지</span>
-            <span class="info-main">계약금 5%</span>
-          </div>
-          <div class="hero-info-card secondary">
-            <span class="info-sub">1차 계약금</span>
-            <span class="info-main">500만원</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       [두 번째 화면] 2. HERO IMAGE SECTION (hero.jpg 단독 전경 화면)
-       ========================================================================== -->
-  <section class="hero-image-screen">
-    <img src="images/hero.jpg" alt="더샵 오산역 아크시티 메인 전경 조감도">
-  </section>
-
-  <!-- ==========================================================================
-       [세 번째 화면] 3. CORE VALUE / FACT NUMBERS
-       ========================================================================== -->
-  <section class="core-values" id="about">
-    <div class="container">
-      <div class="values-grid">
-        <div class="value-item fade-up visible">
-          <div class="value-num"><span class="counter" data-target="90">90</span><span class="value-unit">실</span></div>
-          <div class="value-label">오피스텔 총 90실</div>
-          <div class="value-desc">단지 내 희소 주거가치</div>
-        </div>
-        <div class="value-item fade-up visible">
-          <div class="value-num"><span class="counter" data-target="84">84</span><span class="value-unit">㎡</span></div>
-          <div class="value-label">전용면적 단일 구성</div>
-          <div class="value-desc">선호도 높은 3Room</div>
-        </div>
-        <div class="value-item fade-up visible">
-          <div class="value-num"><span class="counter" data-target="25000">25,000</span><span class="value-unit">㎡</span></div>
-          <div class="value-label">단지 내 대형 상업시설</div>
-          <div class="value-desc">7,500평 복합 스트리트몰</div>
-        </div>
-        <div class="value-item fade-up visible">
-          <div class="value-num"><span class="counter" data-target="600">600</span><span class="value-unit">m</span></div>
-          <div class="value-label">오산역 도보권 거리</div>
-          <div class="value-desc">1호선 오산역 역세권</div>
-        </div>
-        <div class="value-item fade-up visible">
-          <div class="value-num"><span class="counter" data-target="987">987</span><span class="value-unit">세대</span></div>
-          <div class="value-label">대단지 복합타운</div>
-          <div class="value-desc">오피스텔 90실 한정</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       [네 번째 화면] 4. PREMIUM 01 — FAST TRAFFIC
-       ========================================================================== -->
-  <section class="section-padding" id="traffic">
-    <div class="container">
-      <div class="grid-2">
-        <div class="fade-up visible">
-          <span class="section-eyebrow">PREMIUM 01</span>
-          <h2 class="traffic-main-title">
-            <span class="line-en">FAST TRAFFIC</span>
-            <span class="line-ko">오산역에서 시작되는 빠른 일상</span>
-          </h2>
-          <p class="section-desc">
-            도보 거리의 1호선 오산역과 오산IC, 주요 간선도로망으로 수원, 동탄 및 수도권 주요 업무거점으로 신속하게 연결됩니다.
-          </p>
-          <div class="traffic-list">
-            <div class="traffic-item">
-              <div class="traffic-icon">🚆</div>
-              <div>
-                <h4>1호선 오산역 약 600m 역세권</h4>
-                <p>도보 10분내로 1호선 및 급행 열차를 이용하여 수원, 가산, 용산 등 주요 거점 직결 이동 가능</p>
-              </div>
-            </div>
-            <div class="traffic-item">
-              <div class="traffic-icon">🚗</div>
-              <div>
-                <h4>경부고속도로 오산IC 인접</h4>
-                <p>수도권제2순환고속도로, 서부우회도로 등 광역 도로망을 통한 탁월한 자차 접근성 확보</p>
-              </div>
-            </div>
-            <div class="traffic-item">
-              <div class="traffic-icon">🛣️</div>
-              <div>
-                <h4>경부선 철도 횡단도로(예정)</h4>
-                <p>오산 원도심 및 동탄 방면 연계 도로 확충 추진으로 지역 간 차량 이동 편의성 개선 기대</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="fade-up">
-          <div class="image-frame" style="max-height: 480px;">
-            <img src="images/main-con03-bg01.jpg" alt="오산역 중심 광역 입지 및 교통망 지도" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       5. PREMIUM 02 — ONE STOP LIFE
-       ========================================================================== -->
-  <section class="section-padding" style="background: var(--bg-card);" id="lifestyle">
-    <div class="container">
-      <div class="section-header text-center fade-up">
-        <span class="section-eyebrow">PREMIUM 02</span>
-        <h2 class="section-title">
-          ONE STOP LIFE<br>
-          <span class="title-part">생활에 필요한 모든 것이</span>
-          <span class="title-part">가까워지는 곳</span>
-        </h2>
-        <p class="section-desc" style="max-width: 680px; margin: 0 auto;">
-          단지 안 초대형 스트리트몰부터 도심 쇼핑, 의료, 자연 휴식까지 풍부한 생활 인프라가 일상 가까이 펼쳐집니다.
-        </p>
-      </div>
-
-      <div class="infra-grid fade-up">
-        <div class="infra-card">
-          <h5>단지 내 상업시설</h5>
-          <p class="nowrap-text">25,000㎡ 스트리트몰 슬세권</p>
-        </div>
-        <div class="infra-card">
-          <h5>쇼핑 & 전통시장</h5>
-          <p class="nowrap-text">이마트, 롯데마트, 오색시장</p>
-        </div>
-        <div class="infra-card">
-          <h5>종합 의료시설</h5>
-          <p>오산한국병원 및<br>도심 병·의원 인접</p>
-        </div>
-        <div class="infra-card">
-          <h5>쾌적한 수변공원</h5>
-          <p class="nowrap-text">수변산책로, 맑음터공원</p>
-        </div>
-      </div>
-
-      <div style="margin-top: 40px;" class="fade-up">
-        <div class="image-frame" style="max-height: 460px;">
-          <img src="images/888.png" alt="더샵 오산역 아크시티 입지 및 인프라 특장점" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       6. PREMIUM 03 — 25,000㎡ 대형 상업시설
-       ========================================================================== -->
-  <section class="section-padding commercial-highlight-section" id="commercial">
-    <div class="container">
-      <div class="grid-2">
-        <div class="fade-up">
-          <span class="commercial-badge">IN-COMPLEX SHOPPING MALL</span>
-          <div class="commercial-huge-number">25,000<span>㎡</span></div>
-          <h2 class="section-title">단지 안에서 완성되는<br>품격 있는 원스톱 라이프</h2>
-          <p class="section-desc" style="margin-bottom: 24px;">
-            쇼핑, 외식, 트렌디 카페, 생활밀착 편의시설까지 단지 저층부에 조성되는 매머드급 상업시설에서 엘리베이터 하나로 편리하게 누립니다.
-          </p>
-          <ul style="color: var(--text-muted); font-size: 0.95rem; line-height: 2;">
-            <li>✓ 연면적 약 25,000㎡(약 7,500평) 대규모 스트리트형 상가</li>
-            <li>✓ 날씨에 구애받지 않고 누리는 쾌적한 원스톱 슬세권 주거환경</li>
-            <li>✓ 입주민 전용 동선 분리로 프라이버시와 편의성을 동시 충족</li>
-          </ul>
-        </div>
-        <div class="fade-up">
-          <div class="image-frame" style="max-height: 440px;">
-            <img src="images/commercial-mall.png" alt="약 25,000㎡ 단지 내 대형 스트리트 상업시설 투시도" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       7. PREMIUM 04 — 주거공간 (전용 84㎡ 주거형 오피스텔)
-       ========================================================================== -->
-  <section class="section-padding" id="residence">
-    <div class="container">
-      <div class="section-header text-center fade-up">
-        <span class="section-eyebrow">PREMIUM 04</span>
-        <h2 class="section-title">오피스텔의 공간을 다시 생각하다<br>전용 84㎡ · 3ROOM · 2BATH</h2>
-        <p class="section-desc" style="max-width: 720px; margin: 0 auto;">
-          소형 아파트를 대체할 수 있는 실거주 중심의 혁신 평면. 채광과 통풍, 수납을 고려한 실용적인 주거공간을 선사합니다.
-        </p>
-      </div>
-
-      <div class="grid-2" style="margin-bottom: 50px;">
-        <div class="fade-up">
-          <div class="image-frame" style="background: #FFFFFF; padding: 16px;">
-            <img src="images/floorplan-84.jpg" alt="전용 84㎡ 평면도 (3Room 2Bath)" loading="lazy" style="filter: contrast(1.02);">
-          </div>
-        </div>
-
-        <div class="fade-up">
-          <div class="floorplan-features">
-            <div class="feature-box">
-              <h4>3Room · 2Bath</h4>
-              <p>신혼부부 및 2~3인 가구의 쾌적한 주거를 위한 맞춤형 침실 구성</p>
-            </div>
-            <div class="feature-box">
-              <h4>실용적 수납 시스템</h4>
-              <p>드레스룸과 현관 팬트리 등 여유로운 수납으로 깔끔한 공간 연출</p>
-            </div>
-            <div class="feature-box">
-              <h4>채광 및 개방감</h4>
-              <p>거실과 주방의 유기적 맞통풍 연결 구조로 실내 쾌적성 극대화</p>
-            </div>
-          </div>
-          <p style="margin-top: 24px; font-size: 0.85rem; color: #64748B; line-height: 1.6;">
-            * 오피스텔은 발코니 확장이 적용되지 않으므로 실사용 면적은 아파트 전용 59㎡(구 24~25평형)와 유사한 대체 주거상품으로 관심을 받고 있습니다. 세부 마감재 및 옵션은 최종 모집공고를 확인하시기 바랍니다.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       8. PREMIUM 05 — THE SHARP BRAND
-       ========================================================================== -->
-  <section class="section-padding" style="background: var(--bg-card);" id="brand">
-    <div class="container">
-      <div class="grid-2">
-        <div class="fade-up">
-          <span class="section-eyebrow">PREMIUM 05</span>
-          <h2 class="section-title brand-title">
-            <span class="brand-line-1">THE SHARP</span>
-            <span class="brand-line-2">포스코가 완성하는 프리미엄 주거</span>
-          </h2>
-          <p class="section-desc" style="margin-bottom: 24px;">
-            아파트 897세대와 오피스텔 90실, 총 987가구 규모의 랜드마크 복합 브랜드 타운으로 완성됩니다. 검증된 시공 품질과 차별화된 디자인 철학을 경험하십시오.
-          </p>
-          <div style="border-left: 2px solid var(--color-gold); padding-left: 16px; margin-bottom: 24px;">
-            <h4 style="color: var(--text-white); font-size: 1.15rem; margin-bottom: 4px;">총 987 대단지 스케일의 품격</h4>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">단지 내 품격 높은 조경(더샵필드)과 체계적인 관리 시스템, 포스코 스마트 기술 적용</p>
-          </div>
-        </div>
-        <div class="fade-up">
-          <div class="image-frame" style="max-height: 420px;">
-            <img src="images/hero.jpg" alt="포스코 더샵 오산역 아크시티 단지 전경" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       9. ONLY 90 SCARCITY IMPACT SECTION
-       ========================================================================== -->
-  <section class="scarcity-section" id="scarcity">
-    <div class="container">
-      <div class="fade-up">
-        <div class="only-90-title">ONLY 90</div>
-        <h3 class="scarcity-subhead">복합 브랜드 타운 안, 단 90실</h3>
-        <p class="scarcity-desc">
-          대규모 복합 브랜드 타운 안에서 주거형 오피스텔은 단 90실뿐입니다.<br>
-          100실 미만 규모로 조성되어 특별한 희소가치와 주목을 받고 있습니다.
-        </p>
-      </div>
-
-      <div class="subscription-cards fade-up">
-        <div class="sub-card">
-          <span class="tag">CONVENIENCE</span>
-          <h4>청약통장 無</h4>
-          <p>청약통장 가입 여부 및 가점과 무관하게 신청 가능</p>
-        </div>
-        <div class="sub-card">
-          <span class="tag">OPEN ACCESS</span>
-          <h4>거주지역 무관</h4>
-          <p>만 19세 이상이면 전국 어디서나 청약 가능</p>
-        </div>
-        <div class="sub-card">
-          <span class="tag">FAIR SYSTEM</span>
-          <h4>추첨제 공급</h4>
-          <p>100% 추첨 방식으로 동등한 당첨 기회 제공</p>
-        </div>
-      </div>
-
-      <p class="scarcity-note fade-up">
-        * 본 오피스텔은 총 90실(100실 미만) 공급 상품이나, 전매 및 계약 관련 세부 사항은 관계 법령 및 공급계획, 최종 모집공고에 따릅니다.
+  <!-- 1. 메인 HERO 섹션 -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">오산역 新주거타운의 중심<br>더샵 오산 아크시티</h1>
+      <p class="hero-desc">
+        <span class="hero-desc-line">계약금 500만원으로 완성하는 오산역세권 특급 주거 벨트</span>
+        <span class="hero-desc-line">34층 프리미엄 주거시설과 단지 내 7,000평 스트리트몰을 품은 명품 라이프</span>
       </p>
+
+      <div class="hero-info-group">
+        <div class="hero-info-card primary">
+          <span class="info-sub">입주전까지</span>
+          <span class="info-main">계약금 5%</span>
+        </div>
+        <div class="hero-info-card secondary">
+          <span class="info-sub">1차 계약금</span>
+          <span class="info-main">500만원</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       10. PERFECT VISION (미래 교통 / 개발 호재)
-       ========================================================================== -->
-  <section class="section-padding" id="vision">
-    <div class="container">
-      <div class="section-header text-center fade-up">
-        <span class="section-eyebrow">PERFECT VISION</span>
-        <h2 class="section-title">변화를 준비하는 오산의 내일</h2>
-        <p class="section-desc" style="max-width: 680px; margin: 0 auto;">
-          광역 철도망 확충과 대규모 도시개발로 더욱 높아지는 미래가치를 기대할 수 있습니다.
-        </p>
-      </div>
-
-      <div class="vision-grid">
-        <div class="vision-card fade-up">
-          <span class="vision-stage">사업 추진 중</span>
-          <h4>GTX-C 연장</h4>
-          <p>오산역 연장 사업 추진으로 향후 서울 강남권 및 수도권 광역 급행 이동 편의성 개선 기대</p>
-        </div>
-
-        <div class="vision-card fade-up">
-          <span class="vision-stage">사업 추진 중</span>
-          <h4>동탄 도시철도 (트램)</h4>
-          <p>오산역~동탄역~망포역 구간 트램 추진으로 SRT 및 동탄역 생활권 연계 강화</p>
-        </div>
-
-        <div class="vision-card fade-up">
-          <span class="vision-stage">연계 추진</span>
-          <h4>수원발 KTX 연계</h4>
-          <p>오산역 환승 거점화 및 광역 철도망 연계로 광역 교통 허브 도약 기대</p>
-        </div>
-
-        <div class="vision-card fade-up">
-          <span class="vision-stage">지구지정 추진</span>
-          <h4>세교3지구 개발</h4>
-          <p>세교 1·2·3지구 연계를 통한 경기 서남부권 대규모 자족형 신도시 클러스터 완성 기대</p>
-        </div>
-      </div>
-      
-      <p style="margin-top: 24px; font-size: 0.8rem; color: #64748B; text-align: center;">
-        * 상기 교통 및 개발계획은 국가기관 및 지자체의 계획안으로, 인허가 및 공사 상황에 따라 변경되거나 지연될 수 있습니다.
-      </p>
+  <!-- 2. main.jpg 화면 -->
+  <section class="top-visual-banner" id="about">
+    <div class="top-visual-inner">
+      <img src="main.jpg" alt="더샵 오산 아크시티 메인 조감도" class="main-top-img">
     </div>
   </section>
 
-  <!-- ==========================================================================
-       11. 배후수요 섹션 (경기 남부 첨단산업 배후 주거지)
-       ========================================================================== -->
-  <section class="section-padding" style="background: var(--bg-card);">
+  <!-- 3. LOCATION & INFRASTRUCTURE 자동 슬라이드 (2.jpg / 3.jpg / 4.jpg) -->
+  <section id="traffic" class="section-dark">
     <div class="container">
-      <div class="demand-map-card fade-up">
-        <div class="grid-2">
-          <div>
-            <span class="section-eyebrow">INDUSTRIAL HUB</span>
-            <h2 class="section-title">경기 남부 첨단산업의<br>탄탄한 배후 주거지</h2>
-            <p class="section-desc">
-              용인 반도체 메가 클러스터와 평택 첨단산단, 동탄테크노밸리, 오산 산업단지를 잇는 경기 남부 첨단 산업벨트의 중심에서 풍부한 직주근접 수요를 확보합니다.
-            </p>
-            <div class="demand-items">
-              <div class="demand-item">
-                <h5>반도체 클러스터</h5>
-                <p>용인·평택 첨단 반도체 벨트 배후 입지</p>
-              </div>
-              <div class="demand-item">
-                <h5>동탄 생활권 연계</h5>
-                <p>동탄 테크노밸리 및 도심 업무단지 인접</p>
-              </div>
-              <div class="demand-item">
-                <h5>오산 산업단지</h5>
-                <p>가장산단 등 지역 내 탄탄한 직주근접 수요</p>
-              </div>
-            </div>
+      <div class="section-title-wrap">
+        <span class="sub-head">LOCATION & INFRASTRUCTURE</span>
+        <h2 class="main-head">교통·생활·인프라를 한걸음에</h2>
+        <p class="desc-head">원하시는 테마를 클릭하시면 상세 인프라를 확인하실 수 있습니다</p>
+      </div>
+
+      <div class="auto-slider-container">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slide-item active">
+            <img src="2.jpg" alt="광역교통 프리미엄">
           </div>
-          <div>
-            <div class="image-frame" style="max-height: 380px;">
-              <img src="images/traffic-map.jpg" alt="경기 남부 반도체 클러스터 및 주요 산업단지 배후망" loading="lazy">
-            </div>
+          <div class="slide-item">
+            <img src="3.jpg" alt="라이프 프리미엄">
+          </div>
+          <div class="slide-item">
+            <img src="4.jpg" alt="인프라 프리미엄">
           </div>
         </div>
+        <div class="slider-indicators" id="sliderIndicators">
+          <span class="indicator active" onclick="goToSlide(0)">광역교통</span>
+          <span class="indicator" onclick="goToSlide(1)">라이프</span>
+          <span class="indicator" onclick="goToSlide(2)">인프라</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       12. OFFICIAL STYLE 5 PREMIUM CARDS
-       ========================================================================== -->
-  <section class="section-padding">
+  <!-- 4. SPECIAL BENEFIT 4 -->
+  <section id="lifestyle" class="section-dark">
     <div class="container">
-      <div class="section-header text-center fade-up">
-        <span class="section-eyebrow">PREMIUM ADVANTAGE</span>
-        <h2 class="section-title">THE SHARP ARCITY HIGHLIGHTS</h2>
+      <div class="section-title-wrap">
+        <span class="sub-head">SPECIAL BENEFIT 4</span>
+        <h2 class="main-head">비교할수록 독보적인 4대 프리미엄</h2>
+        <p class="desc-head">GTX-C, 쇼핑 & 전통시장, 의료시설, 쾌적한 수변공원까지 모두 누리는 완벽한 가치</p>
       </div>
-
-      <div class="premium-cards-grid">
-        <div class="premium-card-item fade-up">
-          <span class="card-num">01</span>
-          <span class="card-eyebrow">FAST TRAFFIC</span>
-          <h3 class="card-title">오산역과 주요 교통망</h3>
-          <p class="card-desc">1호선 오산역 약 600m 역세권 및 경부고속도로 오산IC로 완성되는 쾌속 교통</p>
-        </div>
-
-        <div class="premium-card-item fade-up">
-          <span class="card-num">02</span>
-          <span class="card-eyebrow">ONE STOP LIFE</span>
-          <h3 class="card-title">약 25,000㎡ 대형 상가</h3>
-          <p class="card-desc">단지 저층부 복합 스트리트몰에서 모든 편의시설을 한 번에 해결하는 슬세권</p>
-        </div>
-
-        <div class="premium-card-item fade-up">
-          <span class="card-num">03</span>
-          <span class="card-eyebrow">NEW CITY</span>
-          <h3 class="card-title">세교3지구 등 주변 개발</h3>
-          <p class="card-desc">세교 1·2·3지구의 완성으로 새롭게 도약하는 경기 남부 신흥 주거타운의 비전</p>
-        </div>
-
-        <div class="premium-card-item fade-up">
-          <span class="card-num">04</span>
-          <span class="card-eyebrow">BRAND</span>
-          <h3 class="card-title">더샵 브랜드 프리미엄</h3>
-          <p class="card-desc">포스코의 신뢰와 기술력으로 짓는 총 987 세대 랜드마크 복합타운</p>
-        </div>
-
-        <div class="premium-card-item fade-up">
-          <span class="card-num">05</span>
-          <span class="card-eyebrow">SPECIAL POINT</span>
-          <h3 class="card-title">단 90실 희소 주거형 아파텔</h3>
-          <p class="card-desc">전용 84㎡ 3Room 맞춤 설계와 100실 미만의 가치를 담은 단 90실 한정 상품</p>
-        </div>
+      <div class="showcase-box">
+        <a href="tel:010-5283-7354" title="010-5283-7354 전화상담 연결">
+          <img src="benefit.png" alt="더샵 오산 아크시티 SPECIAL BENEFIT 4 프리미엄">
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       13. IMAGE GALLERY (4개 이미지 정돈)
-       ========================================================================== -->
-  <section class="section-padding" style="background: var(--bg-card);">
+  <!-- 5. UNIT PLAN -->
+  <section id="residence" class="section-dark">
     <div class="container">
-      <div class="section-header text-center fade-up">
-        <span class="section-eyebrow">GALLERY</span>
-        <h2 class="section-title">단지 및 주거 공간 갤러리</h2>
-        <p class="section-desc">더샵 오산역 아크시티의 완성도 높은 비주얼을 확인하세요.</p>
+      <div class="section-title-wrap">
+        <span class="sub-head">UNIT PLAN</span>
+        <h2 class="main-head">라이프스타일을 담아낸 설계</h2>
+        <p class="desc-head">실속 있는 전용면적 84㎡</p>
       </div>
+      <div class="showcase-box">
+        <img src="type.png" alt="더샵 오산 아크시티 전용 84㎡ 평면도">
+      </div>
+    </div>
+  </section>
 
-      <div class="gallery-grid fade-up">
-        <div class="gallery-item">
-          <img src="images/2.jpg" alt="더샵 오산역 아크시티 단지 배치도 및 동선 계획" loading="lazy">
-          <div class="gallery-caption">단지 배치도 및 동선 계획</div>
+  <!-- 6. PREMIUM COMMUNITY -->
+  <section id="community" class="section-dark">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="sub-head">PREMIUM COMMUNITY</span>
+        <h2 class="main-head">피트니스, 스크린골프, 독서실 등 다채로운 명품 시설</h2>
+        <p class="desc-head">입주민의 건강과 여유로운 일상을 위한 최고급 커뮤니티 공간</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="showcase-box">
+          <img src="community.png" alt="커뮤니티 시설 1">
         </div>
-
-        <div class="gallery-item">
-          <img src="images/mv-07.jpg" alt="단지 주변 야경 및 오산 도심 조망" loading="lazy">
-          <div class="gallery-caption">오산 도심 야경 및 단지 전경</div>
+        <div class="showcase-box">
+          <img src="community2.png" alt="커뮤니티 시설 2">
         </div>
-
-        <div class="gallery-item">
-          <img src="images/main-con04-img04.jpg" alt="프리미엄 라운지" loading="lazy">
-          <div class="gallery-caption">프리미엄 라운지</div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="images/main-con02-img06.png" alt="테라스 도심 조망 라이프스타일" loading="lazy">
-          <div class="gallery-caption">테라스 도심 스카이라인 조망</div>
+        <div class="showcase-box">
+          <img src="community3.png" alt="커뮤니티 시설 3">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       14. FAQ SECTION
+       7. FAQ SECTION
        ========================================================================== -->
   <section class="section-padding" id="faq">
     <div class="container">
@@ -1959,124 +1204,204 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       [마지막 화면] 방문상담예약 입력폼 섹션
-       ========================================================================== -->
-  <section class="reservation-section" id="reservation">
-    <div class="container fade-up">
-      <span class="section-eyebrow">RESERVATION</span>
-      <h2 class="section-title">방문상담예약</h2>
-      <p class="section-desc" style="max-width: 620px; margin: 0 auto;">
-        사전 방문예약 후 내방하시면 모델하우스 관람 및 전문 상담사의 맞춤 안내를 신속하고 편리하게 받아보실 수 있습니다.
-      </p>
+  <!-- 8. 최종 상담 예약 -->
+  <section id="reservation">
+    <div class="container">
+      <div class="reservation-card">
+        <div style="text-align:center;">
+          <span class="form-header-badge">선착순 동·호수 지정 계약 상담</span>
+          <h2 class="form-head-title">원하는 시간에 상담받아보세요</h2>
+          <p class="form-head-desc">
+            전화번호를 남겨주시면 원하시는 시간대에 전문 상담원이 상세히 안내해 드립니다.<br>
+            분양가, 잔여 호실, 모델하우스 방문 예약까지 원스톱으로 지원합니다.
+          </p>
+        </div>
 
-      <div class="reservation-form-card">
-        <form id="reservationForm">
-          <div class="form-group">
-            <label for="resName" class="form-label">이름</label>
-            <input type="text" id="resName" class="form-control" placeholder="성함을 입력해주세요" required>
-          </div>
-
-          <div class="form-group">
-            <label for="resPhone" class="form-label">연락처</label>
-            <input type="tel" id="resPhone" class="form-control" placeholder="010-0000-0000" pattern="[0-9]{3}-?[0-9]{3,4}-?[0-9]{4}" required>
-          </div>
-
-          <div class="form-grid-2">
+        <form id="consultForm" onsubmit="submitReservation(event)">
+          <div class="form-row">
             <div class="form-group">
-              <label for="resDate" class="form-label">방문 희망일</label>
-              <input type="date" id="resDate" class="form-control" required>
+              <label class="form-label">고객 성함 <span class="req">*</span></label>
+              <input type="text" class="form-control" id="formName" name="name" placeholder="홍길동" required>
             </div>
             <div class="form-group">
-              <label for="resTime" class="form-label">방문 희망시간</label>
-              <select id="resTime" class="form-control" required>
-                <option value="">시간 선택</option>
-                <option value="10:00">10:00</option>
-                <option value="11:00">11:00</option>
-                <option value="12:00">12:00</option>
-                <option value="13:00">13:00</option>
-                <option value="14:00">14:00</option>
-                <option value="15:00">15:00</option>
-                <option value="16:00">16:00</option>
-                <option value="17:00">17:00</option>
-                <option value="18:00">18:00</option>
-                <option value="18:00 이후">18:00 이후</option>
+              <label class="form-label">전화번호 <span class="req">*</span></label>
+              <input type="tel" class="form-control" id="formPhone" name="phone" placeholder="010-1234-5678" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">전화 가능 시간대 <span class="req">*</span></label>
+              <select class="form-control" id="formTimeSelect" name="time_slot" onchange="checkCustomTime(this)" required>
+                <option value="오전 09:00 ~ 12:00">오전 09:00 ~ 12:00</option>
+                <option value="오후 12:00 ~ 15:00">오후 12:00 ~ 15:00</option>
+                <option value="오후 15:00 ~ 18:00">오후 15:00 ~ 18:00</option>
+                <option value="오후 18:00 이후">오후 18:00 이후</option>
+                <option value="언제나 가능">언제나 상담 가능</option>
+                <option value="custom">직접 입력</option>
+              </select>
+            </div>
+            <div class="form-group" id="customTimeGroup" style="display:none;">
+              <label class="form-label">직접 입력 시간대</label>
+              <input type="text" class="form-control" id="formCustomTime" placeholder="예: 평일 오후 2시경">
+            </div>
+            <div class="form-group">
+              <label class="form-label">관심 타입</label>
+              <select class="form-control" id="formInterestType" name="interest_type">
+                <option value="84㎡ 단일 타입">전용 84㎡ (주거형 오피스텔 90실)</option>
+                <option value="전체 상세 상담">전체 분양조건 및 상세 상담</option>
               </select>
             </div>
           </div>
 
-          <div class="form-agree-wrap">
-            <input type="checkbox" id="resAgree" required checked>
-            <label for="resAgree">
-              [필수] 개인정보 수집 및 분양상담 목적의 활용에 동의합니다. (수집 항목: 이름, 연락처, 방문일정)
-            </label>
+          <div class="form-group full" style="margin-bottom:20px;">
+            <label class="form-label">문의 내용 (선택)</label>
+            <textarea class="form-control" id="formMemo" name="memo" placeholder="분양가, 잔여 호실, 방문 희망일 등 궁금하신 내용을 편하게 남겨주세요."></textarea>
           </div>
 
-          <button type="submit" class="btn btn-gold form-submit-btn" id="submitBtn">
-            방문상담예약 신청
+          <div class="privacy-notice">
+            [개인정보 수집 및 이용 동의]<br>
+            1. 수집 항목: 성명, 전화번호, 통화 가능 시간, 문의사항<br>
+            2. 수집 및 이용 목적: 더샵 오산 아크시티 분양 상담, 모델하우스 방문 예약 및 분양 정보 안내<br>
+            3. 보유 및 이용 기간: 분양 완료 및 상담 업무 종료 시 즉시 파기<br>
+            ※ 개인정보 수집에 동의하지 않을 권리가 있으며, 거부 시 분양 상담 서비스 제공이 제한될 수 있습니다.
+          </div>
+
+          <label class="privacy-agree-label">
+            <input type="checkbox" id="formAgree" required checked>
+            개인정보 수집 및 분양 상담 안내 이용에 동의합니다. (필수)
+          </label>
+
+          <button type="submit" class="btn-submit-reservation" id="submitBtn">
+            상담 예약 신청
           </button>
         </form>
+
+        <!-- Direct CTA -->
+        <div class="direct-call-box">
+          <p class="direct-call-title">기다림 없이 지금 즉시 상담을 원하시나요?</p>
+          <div class="direct-call-btns">
+            <a href="tel:010-5283-7354" class="btn-action-call" title="010-5283-7354 전화상담 연결">
+              <svg style="width:20px;height:20px;fill:currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              대표문의 010-5283-7354
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
-  <footer class="footer">
+  <!-- Footer -->
+  <footer>
     <div class="container">
-      <div class="footer-content">
-        <div>
-          <p><strong>더샵 오산역 아크시티 오피스텔 분양 안내</strong></p>
-          <p>현장 위치: 경기도 오산시 가수동 일원 (세교2지구 M1블록)</p>
-          <p>※ 본 웹페이지의 CG, 조감도, 일러스트 및 이미지 등은 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다.</p>
-          <p>※ 단지 내 아파트와 오피스텔은 공급 성격 및 조건이 상이하므로 상세 사항은 입주자모집공고 및 계약서를 반드시 확인하시기 바랍니다.</p>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-info">
+            <p><strong>더샵 오산 아크시티 공식 분양홍보관</strong> | 분양문의: <a href="tel:010-5283-7354">010-5283-7354</a></p>
+            <p>시공: 포스코이앤씨</p>
+          </div>
         </div>
-        <div style="font-size: 0.75rem; text-align: right;">
-          <p>© THE SHARP OSAN STATION ARCITY. All Rights Reserved.</p>
+        <div class="footer-desc">
+          <p>※ 본 웹사이트에 사용된 조감도, 투시도, 사진, 일러스트 등은 소비자의 이해를 돕기 위한 이미지 컷으로 실제 시공 시 인허가 과정에 따라 다소 변경될 수 있습니다.</p>
+          <p>※ 교통시설 계획(GTX-C 연장선 등) 및 기반시설 등은 관계기관 및 지자체의 사정에 따라 변경 또는 지연될 수 있습니다.</p>
         </div>
+      </div>
+      <div class="footer-notes">
+        Copyright © 더샵 오산 아크시티. All Rights Reserved.
       </div>
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       [모바일 하단 고정바] 좌측: 전화상담 (tel 연결), 우측: 방문예약 (#reservation 이동)
-       ========================================================================== -->
-  <div class="mobile-bottom-bar">
-    <a href="tel:01052837354" class="bottom-split-btn btn-consult-split">
-      전화상담
-    </a>
-    <a href="#reservation" class="bottom-split-btn btn-visit-split">
-      방문예약
-    </a>
+  <!-- Floating Navigation Button (TOP) -->
+  <div class="floating-nav">
+    <a href="#hero" class="btn-float top" title="맨 위로 이동">TOP</a>
   </div>
 
-  <!-- ==========================================================================
-       JAVASCRIPT: MENU, FAQ ACCORDION, OBSERVER, COUNT-UP & DISCORD WEBHOOK
-       ========================================================================== -->
+  <!-- 모바일 2단 고정 영역 -->
+  <div class="fixed-bottom-wrap" id="fixedBottomWrap">
+    <div class="fixed-top-badges">
+      <div class="fixed-badge-card">
+        <span class="badge-top">오산시 44층</span>
+        <span class="badge-bottom">랜드마크</span>
+      </div>
+      <div class="fixed-badge-card">
+        <span class="badge-top">포스코 이엔씨</span>
+        <span class="badge-bottom">1군건설</span>
+      </div>
+      <div class="fixed-badge-card">
+        <span class="badge-top">GTX-C노선</span>
+        <span class="badge-bottom">연장수혜</span>
+      </div>
+    </div>
+
+    <div class="fixed-bottom-bar" id="fixedBottomBar">
+      <a href="tel:010-5283-7354" class="btn-bottom-action call" title="010-5283-7354 전화상담 연결">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span>전화상담</span>
+      </a>
+      <a href="#reservation" class="btn-bottom-action reserve" title="상담 예약 이동">
+        <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 4H7v-2h2v2zm4-4h-2v2h2v-2z"/></svg>
+        <span>상담예약</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. Mobile Drawer Toggle
-      const menuToggle = document.getElementById('menuToggle');
-      const mobileDrawer = document.getElementById('mobileDrawer');
-      const drawerLinks = document.querySelectorAll('.drawer-link');
+    // 1. Mobile Drawer Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const drawerLinks = document.querySelectorAll('.drawer-link');
 
-      if (menuToggle && mobileDrawer) {
-        menuToggle.addEventListener('click', () => {
-          mobileDrawer.classList.toggle('active');
+    if (menuToggle && mobileDrawer) {
+      menuToggle.addEventListener('click', () => {
+        mobileDrawer.classList.toggle('active');
+      });
+
+      drawerLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileDrawer.classList.remove('active');
         });
+      });
+    }
 
-        drawerLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            mobileDrawer.classList.remove('active');
-          });
-        });
-      }
+    // 2. 자동 슬라이드 (2.jpg / 3.jpg / 4.jpg 무한 반복)
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide-item');
+    const indicators = document.querySelectorAll('.slider-indicators .indicator');
+    const totalSlides = slides.length;
+    let slideTimer = null;
 
-      // 2. FAQ Accordion
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(item => {
-        const questionBtn = item.querySelector('.faq-question');
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+      indicators.forEach((ind, i) => {
+        ind.classList.toggle('active', i === index);
+      });
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentSlide + 1) % totalSlides;
+      showSlide(nextIndex);
+    }
+
+    function startSlideInterval() {
+      if (slideTimer) clearInterval(slideTimer);
+      slideTimer = setInterval(nextSlide, 2000);
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+      startSlideInterval();
+    }
+
+    // 3. FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const questionBtn = item.querySelector('.faq-question');
+      if (questionBtn) {
         questionBtn.addEventListener('click', () => {
           const isActive = item.classList.contains('active');
           faqItems.forEach(i => i.classList.remove('active'));
@@ -2084,126 +1409,118 @@
             item.classList.add('active');
           }
         });
-      });
-
-      // 3. Scroll Fade-up Observer
-      const fadeElements = document.querySelectorAll('.fade-up');
-      const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.15
-      };
-
-      const fadeObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      fadeElements.forEach(el => fadeObserver.observe(el));
-
-      // 4. Number Counter Animation for CORE VALUE
-      const counterElements = document.querySelectorAll('.counter');
-      let counted = false;
-
-      const countObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !counted) {
-            counted = true;
-            counterElements.forEach(counter => {
-              const target = +counter.getAttribute('data-target');
-              const duration = 1500;
-              const stepTime = 20;
-              const totalSteps = duration / stepTime;
-              const increment = target / totalSteps;
-              let current = 0;
-
-              const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                  counter.textContent = target.toLocaleString();
-                  clearInterval(timer);
-                } else {
-                  counter.textContent = Math.floor(current).toLocaleString();
-                }
-              }, stepTime);
-            });
-          }
-        });
-      }, { threshold: 0.3 });
-
-      const coreSection = document.querySelector('.core-values');
-      if (coreSection) {
-        countObserver.observe(coreSection);
-      }
-
-      // 5. 방문상담예약 디스코드 웹후크 전송 처리
-      const reservationForm = document.getElementById('reservationForm');
-      const submitBtn = document.getElementById('submitBtn');
-      const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1555084092532457514/vZ9sVAONe72ceLos_GRsIEgCHYGr4QIYBy6MMoIHf6DMEB6l1jY6J7TUkE7eoBp0_eDP";
-
-      if (reservationForm) {
-        reservationForm.addEventListener('submit', async (e) => {
-          e.preventDefault();
-
-          const name = document.getElementById('resName').value.trim();
-          const phone = document.getElementById('resPhone').value.trim();
-          const date = document.getElementById('resDate').value;
-          const time = document.getElementById('resTime').value;
-
-          if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.textContent = "신청 접수 중...";
-          }
-
-          const payload = {
-            username: "더샵 오산역 아크시티 예약 알림봇",
-            embeds: [
-              {
-                title: "🔔 [신규] 방문상담예약 신청 접수",
-                color: 0xC5A880,
-                fields: [
-                  { name: "👤 고객 성함", value: name || "미입력", inline: true },
-                  { name: "📞 연락처", value: phone || "미입력", inline: true },
-                  { name: "📅 방문 희망일", value: date || "미지정", inline: true },
-                  { name: "⏰ 방문 희망시간", value: time || "미지정", inline: true },
-                  { name: "📝 개인정보 동의", value: "동의 완료", inline: false }
-                ],
-                footer: {
-                  text: "더샵 오산역 아크시티 공식 랜딩페이지"
-                },
-                timestamp: new Date().toISOString()
-              }
-            ]
-          };
-
-          try {
-            await fetch(DISCORD_WEBHOOK_URL, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify(payload)
-            });
-
-            alert(`${name} 고객님, 방문예약 신청이 정상적으로 접수되었습니다.\n담당 상담사가 빠른 시일 내에 연락드리겠습니다.`);
-            reservationForm.reset();
-          } catch (err) {
-            console.error("웹후크 전송 실패:", err);
-            alert(`${name} 고객님, 방문예약 신청이 접수되었습니다.\n빠른 시일 내에 안내 연락을 드리겠습니다.`);
-            reservationForm.reset();
-          } finally {
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.textContent = "방문상담예약 신청";
-            }
-          }
-        });
       }
     });
+
+    // 4. Custom Time Slot Toggle
+    function checkCustomTime(select) {
+      const customGroup = document.getElementById('customTimeGroup');
+      if (select.value === 'custom') {
+        customGroup.style.display = 'block';
+        document.getElementById('formCustomTime').focus();
+      } else {
+        customGroup.style.display = 'none';
+      }
+    }
+
+    // 5. Phone Auto-hyphen
+    const phoneInput = document.getElementById('formPhone');
+    if (phoneInput) {
+      phoneInput.addEventListener('input', function(e) {
+        let val = e.target.value.replace(/[^0-9]/g, '');
+        if (val.length > 3 && val.length <= 7) {
+          val = val.slice(0, 3) + '-' + val.slice(3);
+        } else if (val.length > 7) {
+          val = val.slice(0, 3) + '-' + val.slice(3, 7) + '-' + val.slice(7, 11);
+        }
+        e.target.value = val;
+      });
+    }
+
+    // 6. 페이지 로드 초기화
+    window.addEventListener('DOMContentLoaded', function() {
+      showSlide(0);
+      startSlideInterval();
+    });
+
+    // 7. 디스코드 웹후크 실시간 알림 연동 전송
+    async function submitReservation(event) {
+      event.preventDefault();
+
+      const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1555084092532457514/vZ9sVAONe72ceLos_GRsIEgCHYGr4QIYBy6MMoIHf6DMEB6l1jY6J7TUkE7eoBp0_eDP";
+
+      const agree = document.getElementById('formAgree').checked;
+      if (!agree) {
+        alert('개인정보 수집 및 이용 동의에 체크해 주세요.');
+        return;
+      }
+
+      const name = document.getElementById('formName').value.trim();
+      const phone = document.getElementById('formPhone').value.trim();
+      let timeSlot = document.getElementById('formTimeSelect').value;
+      if (timeSlot === 'custom') {
+        timeSlot = document.getElementById('formCustomTime').value.trim() || '직접 입력 미작성';
+      }
+      const interest = document.getElementById('formInterestType').value;
+      const memo = document.getElementById('formMemo').value.trim() || '없음';
+      const submitTime = new Date().toLocaleString('ko-KR');
+
+      if (!name || !phone) {
+        alert('이름과 전화번호를 정확히 입력해 주세요.');
+        return;
+      }
+
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+      submitBtn.innerText = '상담 접수 전송 중...';
+
+      const discordPayload = {
+        username: "더샵 오산 아크시티 알림봇",
+        embeds: [
+          {
+            title: "📢 신규 상담예약 접수 완료!",
+            color: 12951641,
+            fields: [
+              { name: "👤 고객 성함", value: `**${name}**`, inline: true },
+              { name: "📞 전화번호", value: `**${phone}**`, inline: true },
+              { name: "⏰ 통화 가능 시간", value: timeSlot, inline: true },
+              { name: "🏠 관심 타입", value: interest, inline: true },
+              { name: "📝 문의 내용", value: memo, inline: false },
+              { name: "📅 신청 일시", value: submitTime, inline: false }
+            ],
+            footer: {
+              text: "더샵 오산 아크시티 공식 분양홍보관 (대표문의: 010-5283-7354)"
+            }
+          }
+        ]
+      };
+
+      try {
+        const response = await fetch(DISCORD_WEBHOOK_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(discordPayload)
+        });
+
+        if (response.ok || response.status === 204) {
+          alert("상담 예약이 정상 접수되었습니다.\n담당 전문 상담사가 지정하신 시간대에 신속히 연락드리겠습니다.");
+          document.getElementById('consultForm').reset();
+          if (document.getElementById('customTimeGroup')) {
+            document.getElementById('customTimeGroup').style.display = 'none';
+          }
+        } else {
+          const errText = await response.text();
+          alert("디스코드 전송 중 오류가 발생했습니다. (코드: " + response.status + ")\n" + errText);
+        }
+      } catch (err) {
+        alert("네트워크 통신 오류가 발생했습니다.\n디스코드 웹후크 상태를 확인해 주세요.\n(상세 내용: " + err.message + ")");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = '상담 예약 신청';
+      }
+    }
   </script>
 </body>
 </html>
