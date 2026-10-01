@@ -60,7 +60,7 @@
       font-family: var(--font-kr);
       line-height: 1.65;
       overflow-x: hidden;
-      padding-bottom: var(--bottom-bar-height); /* Space for mobile sticky CTA */
+      padding-bottom: var(--bottom-bar-height);
     }
 
     @media (min-width: 992px) {
@@ -180,7 +180,7 @@
     }
 
     /* ==========================================================================
-       2. HEADER & NAVIGATION (상단바 전화번호 버튼 삭제 적용)
+       2. HEADER & NAVIGATION
        ========================================================================== */
     .header {
       position: fixed;
@@ -331,7 +331,7 @@
     }
 
     /* ==========================================================================
-       [화면 1] HERO INTRO (한 줄 고정 + 3개 박스 가로정렬 + 공백 50% 축소)
+       [화면 1] HERO INTRO
        ========================================================================== */
     .hero-intro {
       position: relative;
@@ -340,7 +340,7 @@
       align-items: center;
       justify-content: center;
       padding-top: calc(var(--header-height) + 36px);
-      padding-bottom: 35px; /* 기존 약 70px에서 약 50% 수준으로 축소 */
+      padding-bottom: 35px;
       background: radial-gradient(circle at 50% 25%, rgba(28, 38, 56, 0.95) 0%, rgba(11, 14, 20, 1) 90%);
       overflow: hidden;
       border-bottom: 1px solid var(--border-subtle);
@@ -355,7 +355,6 @@
       margin: 0 auto;
     }
 
-    /* 2. THE SHARP OSAN STATION ARCITY 한 줄 유지 */
     .hero-subhead {
       font-family: var(--font-en);
       font-size: clamp(0.72rem, 3.4vw, 1.35rem);
@@ -397,7 +396,6 @@
       letter-spacing: -0.01em;
     }
 
-    /* 3. 설명 문구 한 줄 유지 */
     .hero-desc {
       font-size: clamp(0.68rem, 2.55vw, 1.15rem);
       color: var(--text-muted);
@@ -407,18 +405,15 @@
       letter-spacing: -0.03em;
     }
 
-    /* 4. 3개 박스 가로 한 줄 배치 */
     .hero-tags {
       display: flex;
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
       gap: 6px;
-      margin-bottom: 22px;
       width: 100%;
       max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto;
     }
 
     .hero-tag {
@@ -433,13 +428,6 @@
       white-space: nowrap;
       text-align: center;
       letter-spacing: -0.02em;
-    }
-
-    /* 5. 전화상담 버튼 삭제 후 단지안내 버튼 유지 */
-    .hero-actions {
-      display: flex;
-      justify-content: center;
-      margin-top: 6px;
     }
 
     /* ==========================================================================
@@ -538,7 +526,7 @@
     }
 
     /* ==========================================================================
-       [화면 4] PREMIUM 01 — FAST TRAFFIC (두 줄 줄바꿈 구성)
+       [화면 4] PREMIUM 01 — FAST TRAFFIC
        ========================================================================== */
     .section-padding {
       padding: 100px 0;
@@ -1099,11 +1087,11 @@
     }
 
     /* ==========================================================================
-       [화면 마지막] 6 & 8 & 9. 방문상담예약 입력폼 섹션 (가림 방지 처리)
+       방문상담예약 입력폼 섹션
        ========================================================================== */
     .reservation-section {
       background: radial-gradient(circle at 50% 40%, #1A2232 0%, #0B0E14 90%);
-      padding: 90px 0 110px; /* 하단바 가림 방지를 위해 충분한 패딩 확보 */
+      padding: 90px 0 110px;
       text-align: center;
       border-top: 1px solid var(--border-color);
       scroll-margin-top: calc(var(--header-height) + 20px);
@@ -1221,7 +1209,7 @@
     }
 
     /* ==========================================================================
-       [모바일 하단바] 7 & 8. 50:50 분할 예약 전용 바
+       [모바일 하단 고정바] 50:50 분할 예약 바
        ========================================================================== */
     .mobile-bottom-bar {
       position: fixed;
@@ -1297,7 +1285,7 @@
 <body>
 
   <!-- ==========================================================================
-       HEADER (상단바 전화번호 버튼 삭제 반영)
+       HEADER
        ========================================================================== -->
   <header class="header" id="header">
     <div class="container header-inner">
@@ -1320,7 +1308,7 @@
         <a href="#reservation" class="nav-link" style="color: var(--color-gold);">방문상담예약</a>
       </nav>
 
-      <!-- Desktop & Mobile Header CTA (전화번호 버튼 삭제) -->
+      <!-- Desktop & Mobile Header CTA -->
       <div class="header-cta">
         <button class="mobile-menu-toggle" id="menuToggle" aria-label="메뉴 열기">
           <span></span>
@@ -1352,12 +1340,11 @@
   </div>
 
   <!-- ==========================================================================
-       [첫 번째 화면] 1. HERO INTRO (지정 문구 한 줄 + 3개 박스 가로 한 줄 + 전화버튼 삭제)
+       [첫 번째 화면] 1. HERO INTRO
        ========================================================================== -->
   <section class="hero-intro" id="hero">
     <div class="container">
       <div class="hero-content fade-up visible">
-        <!-- 2. 영문 제목 한 줄 고정 -->
         <span class="hero-subhead">THE SHARP OSAN STATION ARCITY</span>
         
         <h1 class="hero-title">
@@ -1369,23 +1356,14 @@
           전용 84㎡ · 3ROOM · 2BATH
         </div>
         
-        <!-- 3. 메인 설명 문구 교체 및 한 줄 고정 -->
         <p class="hero-desc">
           25,000㎡ 초대형 상업시설과 함께하는 POSCO 주거형 오피스텔
         </p>
         
-        <!-- 4. 3개 박스 가로 한 줄 배치 -->
         <div class="hero-tags">
           <span class="hero-tag">총 90실 한정 희소성</span>
           <span class="hero-tag">1호선 오산역 약 600m 역세권</span>
           <span class="hero-tag">원스톱 대규모 슬세권</span>
-        </div>
-        
-        <!-- 5. 전화상담 버튼 삭제 및 단지 상세 안내 버튼 유지 -->
-        <div class="hero-actions">
-          <a href="#about" class="btn btn-outline">
-            단지 상세 안내 보기
-          </a>
         </div>
       </div>
     </div>
@@ -1399,7 +1377,7 @@
   </section>
 
   <!-- ==========================================================================
-       [세 번째 화면] 3. CORE VALUE / FACT NUMBERS (세로 길이 25% 축소)
+       [세 번째 화면] 3. CORE VALUE / FACT NUMBERS (세로 여백 25% 축소)
        ========================================================================== -->
   <section class="core-values" id="about">
     <div class="container">
@@ -1434,7 +1412,7 @@
   </section>
 
   <!-- ==========================================================================
-       [네 번째 화면] 4. PREMIUM 01 — FAST TRAFFIC (두 줄 줄바꿈 구성)
+       [네 번째 화면] 4. PREMIUM 01 — FAST TRAFFIC
        ========================================================================== -->
   <section class="section-padding" id="traffic">
     <div class="container">
@@ -1500,7 +1478,7 @@
           <p>약 25,000㎡ 스트리트몰 슬세권</p>
         </div>
         <div class="infra-card">
-          <h5>쇼핑 &amp; 전통시장</h5>
+          <h5>쇼핑 & 전통시장</h5>
           <p>이마트, 롯데마트 오산점, 오색시장</p>
         </div>
         <div class="infra-card">
@@ -1811,8 +1789,8 @@
         </div>
 
         <div class="gallery-item">
-          <img src="images/main-con04-img04.jpg" alt="프리미엄 리빙 &amp; 다이닝 공간" loading="lazy">
-          <div class="gallery-caption">프리미엄 리빙 &amp; 다이닝</div>
+          <img src="images/main-con04-img04.jpg" alt="프리미엄 리빙 & 다이닝 공간" loading="lazy">
+          <div class="gallery-caption">프리미엄 리빙 & 다이닝</div>
         </div>
 
         <div class="gallery-item">
@@ -1913,7 +1891,7 @@
   </section>
 
   <!-- ==========================================================================
-       [마지막 화면] 6 & 8 & 9. 방문상담예약 입력폼 섹션 (전화번호 제거 & 폼 구축)
+       [마지막 화면] 방문상담예약 입력폼 섹션
        ========================================================================== -->
   <section class="reservation-section" id="reservation">
     <div class="container fade-up">
@@ -1946,11 +1924,14 @@
                 <option value="">시간 선택</option>
                 <option value="10:00">10:00</option>
                 <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
                 <option value="13:00">13:00</option>
                 <option value="14:00">14:00</option>
                 <option value="15:00">15:00</option>
                 <option value="16:00">16:00</option>
                 <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+                <option value="18:00 이후">18:00 이후</option>
               </select>
             </div>
           </div>
@@ -1990,7 +1971,7 @@
   </footer>
 
   <!-- ==========================================================================
-       [모바일 하단 고정바] 7 & 8. 50:50 분할 예약 전용 바
+       [모바일 하단 고정바] 50:50 분할 예약 전용 바
        ========================================================================== -->
   <div class="mobile-bottom-bar">
     <a href="#reservation" class="bottom-split-btn btn-consult-split">
