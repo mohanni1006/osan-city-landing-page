@@ -15,6 +15,11 @@
   <meta property="og:description" content="오산역 新주거타운의 중심! 44층 랜드마크 포스코이앤씨 더샵 오산 아크시티 공식 홍보관">
   <meta property="og:image" content="main.jpg">
 
+  <!-- Google Fonts: Luxury Serif 'Cinzel' & 'Montserrat' -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     /* -----------------------------------------------------------
        1. Base & Reset
@@ -94,7 +99,7 @@
       left: 0;
       width: 100%;
       height: var(--header-height);
-      background: rgba(11, 14, 20, 0.92);
+      background: rgba(11, 14, 20, 0.94);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       z-index: 1000;
@@ -112,15 +117,28 @@
     .brand-logo {
       display: flex;
       align-items: center;
+      text-decoration: none;
     }
 
+    /* THE SHARP 로고 고급 세리프 타이포그래피 */
     .brand-logo .logo-thesharp {
-      font-family: var(--font-en);
-      font-size: 1.45rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      color: var(--color-gold);
+      font-family: 'Cinzel', 'Playfair Display', 'Didot', serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
       line-height: 1;
+      color: var(--color-gold);
+      background: linear-gradient(135deg, #fcedc9 0%, #c5a059 45%, #9a7632 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(197, 160, 89, 0.25));
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .brand-logo:hover .logo-thesharp {
+      opacity: 0.92;
+      transform: translateY(-0.5px);
     }
 
     .nav-menu {
@@ -1045,7 +1063,7 @@
        ========================================================================== -->
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="#" class="brand-logo">
+      <a href="#" class="brand-logo" title="THE SHARP">
         <span class="logo-thesharp">THE SHARP</span>
       </a>
 
@@ -1169,7 +1187,7 @@
     </div>
   </section>
 
-  <!-- 5. UNIT PLAN (type.jpg) -->
+  <!-- 5. UNIT PLAN (type.png로 확장자 수정 완료) -->
   <section id="residence" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1178,12 +1196,12 @@
         <p class="desc-head">실거주 선호도가 가장 높은 실속 있는 전용면적 84㎡ (3Room · 2Bath)</p>
       </div>
       <div class="showcase-box">
-        <img src="type.jpg" alt="더샵 오산 아크시티 84A 타입 평면도">
+        <img src="type.png" alt="더샵 오산 아크시티 84A 타입 평면도">
       </div>
     </div>
   </section>
 
-  <!-- 6. PREMIUM COMMUNITY (community1.jpg / community2.jpg / community3.jpg) -->
+  <!-- 6. PREMIUM COMMUNITY (community1.png / community2.png / community3.png로 확장자 수정 완료) -->
   <section id="community" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1195,15 +1213,15 @@
       <div class="community-grid">
         <!-- 커뮤니티 1: 스포츠 존 -->
         <div class="community-card">
-          <img src="community1.jpg" alt="더샵 오산 아크시티 스포츠 존 커뮤니티 (골프연습장, 스크린골프, GX룸, 피트니스, 사우나)">
+          <img src="community1.png" alt="더샵 오산 아크시티 스포츠 존 커뮤니티 (골프연습장, 스크린골프, GX룸, 피트니스, 사우나)">
         </div>
         <!-- 커뮤니티 2: 에듀 존 -->
         <div class="community-card">
-          <img src="community2.jpg" alt="더샵 오산 아크시티 에듀 존 커뮤니티 (스터디룸, 북라운지, 오픈스터디, 프라이빗 스터디)">
+          <img src="community2.png" alt="더샵 오산 아크시티 에듀 존 커뮤니티 (스터디룸, 북라운지, 오픈스터디, 프라이빗 스터디)">
         </div>
         <!-- 커뮤니티 3: 실사 갤러리 -->
         <div class="community-card">
-          <img src="community3.jpg" alt="더샵 오산 아크시티 피트니스, 스크린골프, 북라운지 시설 안내">
+          <img src="community3.png" alt="더샵 오산 아크시티 피트니스, 스크린골프, 북라운지 시설 안내">
         </div>
       </div>
     </div>
