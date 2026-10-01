@@ -14,7 +14,7 @@
   <meta name="format-detection" content="telephone=no">
 
   <!-- Fonts (Pretendard & Cormorant Garamond CDN 연결) -->
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -40,6 +40,10 @@
       --max-width: 1240px;
       --header-height: 80px;
       --bottom-bar-height: 64px;
+
+      /* 추가: 신규 정보 카드용 컬러 변수 */
+      --gold-primary: #c5a059;
+      --gold-light: #e5c98d;
     }
 
     * {
@@ -386,35 +390,96 @@
     .hero-desc {
       font-size: clamp(0.68rem, 2.55vw, 1.15rem);
       color: var(--text-muted);
-      margin-bottom: 22px;
+      margin-bottom: 24px;
       white-space: nowrap;
       display: block;
       letter-spacing: -0.03em;
     }
 
-    .hero-tags {
+    /* ==========================================================================
+       [신규 추가] HERO INFO GROUP (계약금 5% / 500만원 카드 스타일)
+       ========================================================================== */
+    /* 박스 묶음 컨테이너 */
+    .hero-info-group {
       display: flex;
-      flex-wrap: nowrap;
       justify-content: center;
-      align-items: center;
-      gap: 6px;
+      gap: 16px;
       width: 100%;
-      max-width: 680px;
+      max-width: 660px;
       margin: 0 auto;
     }
 
-    .hero-tag {
+    /* 개별 카드 공통 스타일 */
+    .hero-info-card {
+      padding: 14px 18px;
+      border-radius: 16px;
       flex: 1 1 0;
       min-width: 0;
-      font-size: clamp(0.64rem, 2.2vw, 0.88rem);
-      color: var(--text-light);
-      background: rgba(255, 255, 255, 0.05);
-      padding: 8px 4px;
-      border-radius: 20px;
-      border: 1px solid var(--border-subtle);
-      white-space: nowrap;
       text-align: center;
-      letter-spacing: -0.02em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      cursor: default;
+      user-select: none;
+    }
+
+    /* 좌측 박스 (골드 포인트) */
+    .hero-info-card.primary {
+      background: linear-gradient(135deg, rgba(197, 160, 89, 0.3), rgba(154, 118, 50, 0.45));
+      border: 2px solid var(--gold-primary);
+      backdrop-filter: blur(8px);
+    }
+
+    /* 우측 박스 (다크/화이트 포인트) */
+    .hero-info-card.secondary {
+      background: rgba(14, 20, 32, 0.85);
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(8px);
+    }
+
+    /* 상단 작은 문구 (입주전까지 / 1차 계약금) */
+    .hero-info-card .info-sub {
+      font-size: clamp(13px, 1.6vw, 17px);
+      color: #cbd5e1;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* 하단 큰 문구 (계약금 5% / 500만원) */
+    .hero-info-card .info-main {
+      font-size: clamp(20px, 2.5vw, 30px);
+      color: var(--gold-light);
+      font-weight: 900;
+      line-height: 1.3;
+      margin-top: 3px;
+    }
+    .hero-info-card.secondary .info-main {
+      color: #ffffff;
+    }
+
+    /* 모바일 반응형 (화면 폭 768px 이하) */
+    @media (max-width: 768px) {
+      .hero-info-group {
+        gap: 8px;
+      }
+      .hero-info-card {
+        padding: 10px 4px;
+        border-radius: 12px;
+        border-width: 1.5px;
+      }
+      .hero-info-card .info-sub {
+        font-size: clamp(11px, 3.2vw, 13.5px);
+        letter-spacing: -0.3px;
+        white-space: nowrap;
+      }
+      .hero-info-card .info-main {
+        font-size: clamp(15px, 4.4vw, 20px);
+        letter-spacing: -0.4px;
+        white-space: nowrap;
+        margin-top: 2px;
+      }
     }
 
     /* ==========================================================================
@@ -966,7 +1031,7 @@
     }
 
     /* ==========================================================================
-       [수정] 13. IMAGE GALLERY (4개 사진 최적화)
+       13. IMAGE GALLERY (4개 사진 최적화)
        ========================================================================== */
     .gallery-grid {
       display: grid;
@@ -1346,18 +1411,25 @@
           <span>더샵의 프리미엄 주거공간</span>
         </h1>
         
+        <!-- '전용 84㎡ · 3ROOM · 2BATH' -> '1호선 역세권' 변경 -->
         <div class="hero-highlight">
-          전용 84㎡ · 3ROOM · 2BATH
+          1호선 역세권
         </div>
         
         <p class="hero-desc">
           25,000㎡ 초대형 상업시설과 함께하는 POSCO 주거형 오피스텔
         </p>
         
-        <div class="hero-tags">
-          <span class="hero-tag">총 90실 한정 희소성</span>
-          <span class="hero-tag">1호선 오산역 약 600m 역세권</span>
-          <span class="hero-tag">원스톱 대규모 슬세권</span>
+        <!-- 기존 3개 박스 삭제 후 신규 계약조건 카드 그룹 배치 -->
+        <div class="hero-info-group">
+          <div class="hero-info-card primary">
+            <span class="info-sub">입주전까지</span>
+            <span class="info-main">계약금 5%</span>
+          </div>
+          <div class="hero-info-card secondary">
+            <span class="info-sub">1차 계약금</span>
+            <span class="info-main">500만원</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1761,7 +1833,7 @@
   </section>
 
   <!-- ==========================================================================
-       [수정] 13. IMAGE GALLERY (총 4개 이미지 정돈 & 프리미엄 라운지 변경)
+       13. IMAGE GALLERY (총 4개 이미지 정돈 & 프리미엄 라운지)
        ========================================================================== -->
   <section class="section-padding" style="background: var(--bg-card);">
     <div class="container">
@@ -2073,19 +2145,17 @@
           const date = document.getElementById('resDate').value;
           const time = document.getElementById('resTime').value;
 
-          // 전송 중 버튼 상태 변경
           if (submitBtn) {
             submitBtn.disabled = true;
             submitBtn.textContent = "신청 접수 중...";
           }
 
-          // 디스코드 Embed 메시지 구성
           const payload = {
             username: "더샵 오산역 아크시티 예약 알림봇",
             embeds: [
               {
                 title: "🔔 [신규] 방문상담예약 신청 접수",
-                color: 0xC5A880, // 골드 테마 컬러
+                color: 0xC5A880,
                 fields: [
                   { name: "👤 고객 성함", value: name || "미입력", inline: true },
                   { name: "📞 연락처", value: phone || "미입력", inline: true },
@@ -2114,7 +2184,6 @@
             reservationForm.reset();
           } catch (err) {
             console.error("웹후크 전송 실패:", err);
-            // 네트워크 환경 등의 오류 시에도 사용자 알림 제공
             alert(`${name} 고객님, 방문상담예약 신청이 접수되었습니다.\n빠른 시일 내에 안내 연락을 드리겠습니다.`);
             reservationForm.reset();
           } finally {
