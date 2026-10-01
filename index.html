@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>더샵 오산역 아크시티 오피스텔 | 전용 84㎡ 주거형 오피스텔 (총 90실)</title>
   
@@ -13,11 +13,11 @@
   <meta property="og:image" content="images/hero.jpg">
   <meta name="format-detection" content="telephone=no">
 
-  <!-- Fonts (Pretendard & Cormorant Garamond for Luxury Styling) -->
-  <link rel="stylesheet" as="style" crossorigin="" href="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/pretendard.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/">
-  <link href="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/css2" rel="stylesheet">
+  <!-- Fonts (Pretendard & Cormorant Garamond CDN 연결) -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
@@ -59,7 +59,7 @@
       font-family: var(--font-kr);
       line-height: 1.65;
       overflow-x: hidden;
-      padding-bottom: 76px; /* Space for mobile sticky CTA */
+      padding-bottom: 76px;
     }
 
     @media (min-width: 992px) {
@@ -157,7 +157,7 @@
       color: var(--color-gold);
     }
 
-    /* IMAGE FRAME & HOVER ENHANCEMENT */
+    /* IMAGE FRAME & HOVER */
     .image-frame {
       position: relative;
       border-radius: 8px;
@@ -349,7 +349,7 @@
     }
 
     /* ==========================================================================
-       [화면 1] FIRST SCREEN: HERO INTRO (첫 화면)
+       [화면 1] FIRST SCREEN: HERO INTRO (텍스트 메인 화면)
        ========================================================================== */
     .hero-intro {
       position: relative;
@@ -443,7 +443,7 @@
     }
 
     /* ==========================================================================
-       [화면 2] SECOND SCREEN: hero.jpg 단독 대형 메인 화면
+       [화면 2] SECOND SCREEN: hero.jpg 단독 전경 화면
        ========================================================================== */
     .hero-image-screen {
       width: 100%;
@@ -460,10 +460,10 @@
     }
 
     /* ==========================================================================
-       [화면 3] THIRD SCREEN: CORE VALUE (세로 길이 25% 축소)
+       [화면 3] THIRD SCREEN: CORE VALUE (세로 여백 25% 축소)
        ========================================================================== */
     .core-values {
-      padding: 52px 0; /* 기존 70px에서 약 25% 축소 */
+      padding: 52px 0;
       background: var(--bg-card);
       border-bottom: 1px solid var(--border-subtle);
       position: relative;
@@ -538,7 +538,7 @@
     }
 
     /* ==========================================================================
-       [화면 4] PREMIUM 01 — FAST TRAFFIC (두 줄 줄바꿈 타이틀 최적화)
+       [화면 4] PREMIUM 01 — FAST TRAFFIC (두 줄 줄바꿈 구성)
        ========================================================================== */
     .section-padding {
       padding: 100px 0;
@@ -566,7 +566,6 @@
       }
     }
 
-    /* FAST TRAFFIC 줄바꿈 및 글씨 크기 전용 스타일 */
     .traffic-main-title {
       font-size: clamp(1.85rem, 3.6vw, 2.75rem);
       font-weight: 700;
@@ -1305,12 +1304,10 @@
   </section>
 
   <!-- ==========================================================================
-       [두 번째 화면] 2. HERO IMAGE SECTION (hero.jpg 단독 대형 전경 이미지)
+       [두 번째 화면] 2. HERO IMAGE SECTION (hero.jpg 단독 전경 화면)
        ========================================================================== -->
   <section class="hero-image-screen">
-    <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/hero.jpg" 
-         onerror="this.onerror=null; this.src='images/hero.jpg';" 
-         alt="더샵 오산역 아크시티 메인 전경 조감도">
+    <img src="images/hero.jpg" alt="더샵 오산역 아크시티 메인 전경 조감도">
   </section>
 
   <!-- ==========================================================================
@@ -1349,14 +1346,13 @@
   </section>
 
   <!-- ==========================================================================
-       [네 번째 화면] 4. PREMIUM 01 — FAST TRAFFIC (두 줄 줄바꿈 타이틀)
+       [네 번째 화면] 4. PREMIUM 01 — FAST TRAFFIC (두 줄 줄바꿈 구성)
        ========================================================================== -->
   <section class="section-padding" id="traffic">
     <div class="container">
       <div class="grid-2">
         <div class="fade-up visible">
           <span class="section-eyebrow">PREMIUM 01</span>
-          <!-- FAST TRAFFIC / 오산역에서 시작되는 빠른 일상 두 줄 줄바꿈 구성 -->
           <h2 class="traffic-main-title">
             <span class="line-en">FAST TRAFFIC</span>
             <span class="line-ko">오산역에서 시작되는 빠른 일상</span>
@@ -1390,9 +1386,7 @@
         </div>
         <div class="fade-up">
           <div class="image-frame" style="max-height: 480px;">
-            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con03-bg01.jpg" 
-                 onerror="this.onerror=null; this.src='images/main-con03-bg01.jpg';" 
-                 alt="오산역 중심 광역 입지 및 교통망 지도" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/main-con03-bg01.jpg" alt="오산역 중심 광역 입지 및 교통망 지도" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
@@ -1433,9 +1427,8 @@
 
       <div style="margin-top: 40px;" class="fade-up">
         <div class="image-frame" style="max-height: 460px;">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/888.png" 
-               onerror="this.onerror=null; this.src='images/888.png';" 
-               alt="더샵 오산역 아크시티 입지 및 인프라 특장점" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          <!-- 888.png (PNG 확장자 적용) -->
+          <img src="images/888.png" alt="더샵 오산역 아크시티 입지 및 인프라 특장점" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
         </div>
       </div>
     </div>
@@ -1461,10 +1454,9 @@
           </ul>
         </div>
         <div class="fade-up">
+          <!-- commercial-mall.png (PNG 확장자 적용) -->
           <div class="image-frame" style="max-height: 440px;">
-            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/commercial-mall.png" 
-                 onerror="this.onerror=null; this.src='images/commercial-mall.png';" 
-                 alt="약 25,000㎡ 단지 내 대형 스트리트 상업시설 투시도" loading="lazy">
+            <img src="images/commercial-mall.png" alt="약 25,000㎡ 단지 내 대형 스트리트 상업시설 투시도" loading="lazy">
           </div>
         </div>
       </div>
@@ -1487,9 +1479,7 @@
       <div class="grid-2" style="margin-bottom: 50px;">
         <div class="fade-up">
           <div class="image-frame" style="background: #FFFFFF; padding: 16px;">
-            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/floorplan-84.jpg" 
-                 onerror="this.onerror=null; this.src='images/floorplan-84.jpg';" 
-                 alt="전용 84㎡ 평면도 (3Room 2Bath)" loading="lazy" style="filter: contrast(1.02);">
+            <img src="images/floorplan-84.jpg" alt="전용 84㎡ 평면도 (3Room 2Bath)" loading="lazy" style="filter: contrast(1.02);">
           </div>
         </div>
 
@@ -1535,9 +1525,7 @@
         </div>
         <div class="fade-up">
           <div class="image-frame" style="max-height: 420px;">
-            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/hero.jpg" 
-                 onerror="this.onerror=null; this.src='images/hero.jpg';" 
-                 alt="포스코이앤씨 더샵 오산역 아크시티 단지 전경" loading="lazy">
+            <img src="images/hero.jpg" alt="포스코이앤씨 더샵 오산역 아크시티 단지 전경" loading="lazy">
           </div>
         </div>
       </div>
@@ -1657,9 +1645,7 @@
           </div>
           <div>
             <div class="image-frame" style="max-height: 380px;">
-              <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/traffic-map.jpg" 
-                   onerror="this.onerror=null; this.src='images/traffic-map.jpg';" 
-                   alt="경기 남부 반도체 클러스터 및 주요 산업단지 배후망" loading="lazy">
+              <img src="images/traffic-map.jpg" alt="경기 남부 반도체 클러스터 및 주요 산업단지 배후망" loading="lazy">
             </div>
           </div>
         </div>
@@ -1717,7 +1703,7 @@
   </section>
 
   <!-- ==========================================================================
-       13. IMAGE GALLERY
+       13. IMAGE GALLERY (실제 파일 확장자 1:1 정밀 매칭)
        ========================================================================== -->
   <section class="section-padding" style="background: var(--bg-card);">
     <div class="container">
@@ -1728,45 +1714,39 @@
       </div>
 
       <div class="gallery-grid fade-up">
+        <!-- 갤러리 1: 2.jpg (JPG) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/2.jpg" 
-               onerror="this.onerror=null; this.src='images/2.jpg';" 
-               alt="더샵 오산역 아크시티 단지 배치도 및 동선 계획" loading="lazy">
+          <img src="images/2.jpg" alt="더샵 오산역 아크시티 단지 배치도 및 동선 계획" loading="lazy">
           <div class="gallery-caption">단지 배치도 및 동선 계획</div>
         </div>
 
+        <!-- 갤러리 2: mv-07.jpg (JPG) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/mv-07.jpg" 
-               onerror="this.onerror=null; this.src='images/mv-07.jpg';" 
-               alt="단지 주변 야경 및 오산 도심 조망" loading="lazy">
+          <img src="images/mv-07.jpg" alt="단지 주변 야경 및 오산 도심 조망" loading="lazy">
           <div class="gallery-caption">오산 도심 야경 및 단지 전경</div>
         </div>
 
+        <!-- 갤러리 3: main-con04-img04.jpg (JPG) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con04-img04.jpg" 
-               onerror="this.onerror=null; this.src='images/main-con04-img04.jpg';" 
-               alt="프리미엄 리빙 &amp; 다이닝 공간" loading="lazy">
+          <img src="images/main-con04-img04.jpg" alt="프리미엄 리빙 &amp; 다이닝 공간" loading="lazy">
           <div class="gallery-caption">프리미엄 리빙 &amp; 다이닝</div>
         </div>
 
+        <!-- 갤러리 4: main-con02-img05.png (PNG) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con02-img05.png" 
-               onerror="this.onerror=null; this.src='images/main-con02-img05.png';" 
-               alt="품격 있는 주거 인테리어 디테일" loading="lazy">
+          <img src="images/main-con02-img05.png" alt="품격 있는 주거 인테리어 디테일" loading="lazy">
           <div class="gallery-caption">감각적인 인테리어 디테일</div>
         </div>
 
+        <!-- 갤러리 5: main-con02-img06.png (PNG) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con02-img06.png" 
-               onerror="this.onerror=null; this.src='images/main-con02-img06.png';" 
-               alt="테라스 도심 조망 라이프스타일" loading="lazy">
+          <img src="images/main-con02-img06.png" alt="테라스 도심 조망 라이프스타일" loading="lazy">
           <div class="gallery-caption">테라스 도심 스카이라인 조망</div>
         </div>
 
+        <!-- 갤러리 6: commercial-mall.png (PNG) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/commercial-mall.png" 
-               onerror="this.onerror=null; this.src='images/commercial-mall.png';" 
-               alt="약 25,000㎡ 스트리트 상업시설" loading="lazy">
+          <img src="images/commercial-mall.png" alt="약 25,000㎡ 스트리트 상업시설" loading="lazy">
           <div class="gallery-caption">약 25,000㎡ 스트리트몰</div>
         </div>
       </div>
