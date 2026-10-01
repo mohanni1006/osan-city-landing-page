@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0053)https://mohanni1006.github.io/osan-city-landing-page/ -->
-<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <title>더샵 오산역 아크시티 오피스텔 | 전용 84㎡ 주거형 오피스텔 (총 90실)</title>
   
@@ -21,7 +21,7 @@
 
   <style>
     /* ==========================================================================
-       1. DESIGN SYSTEM & CSS VARIABLES (기존 시스템 완벽 유지)
+       1. DESIGN SYSTEM & CSS VARIABLES
        ========================================================================== */
     :root {
       --bg-main: #0B0E14;
@@ -349,64 +349,26 @@
     }
 
     /* ==========================================================================
-       [신규 추가] 0. TOP MAIN IMAGE (1.jpg 단독 대형 이미지 섹션)
+       [화면 1] FIRST SCREEN: HERO INTRO (첫 화면)
        ========================================================================== */
-    .top-main-image {
-      width: 100%;
-      background-color: var(--bg-main);
-      padding-top: var(--header-height); /* 상단 고정 헤더에 이미지가 가려지지 않도록 안전 공간 확보 */
+    .hero-intro {
       position: relative;
-    }
-
-    .top-main-image img {
-      display: block;
-      width: 100%;
-      height: auto; /* 원본 비율 완벽 유지 및 무왜곡 */
-    }
-
-    /* ==========================================================================
-       3. HERO SECTION (기존 메인 화면 - 100% 원본 유지)
-       ========================================================================== */
-    .hero {
-      position: relative;
-      min-height: 100vh;
+      min-height: calc(100vh - 20px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-top: calc(var(--header-height) + 40px);
-      padding-bottom: 80px;
-      background: radial-gradient(circle at 50% 20%, rgba(24, 33, 49, 0.8) 0%, rgba(11, 14, 20, 1) 90%);
+      padding-top: calc(var(--header-height) + 50px);
+      padding-bottom: 70px;
+      background: radial-gradient(circle at 50% 25%, rgba(28, 38, 56, 0.95) 0%, rgba(11, 14, 20, 1) 90%);
       overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      opacity: 0.38;
-      background-image: url('images/hero.jpg');
-      background-size: cover;
-      background-position: center 30%;
-    }
-
-    .hero-bg-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(180deg, rgba(11,14,20,0.45) 0%, rgba(11,14,20,0.92) 85%, rgba(11,14,20,1) 100%);
-      z-index: 2;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
     .hero-content {
       position: relative;
       z-index: 3;
       text-align: center;
-      max-width: 920px;
+      max-width: 940px;
       margin: 0 auto;
     }
 
@@ -481,12 +443,28 @@
     }
 
     /* ==========================================================================
-       4. CORE VALUE / FACT NUMBERS
+       [화면 2] SECOND SCREEN: hero.jpg 단독 대형 메인 화면
+       ========================================================================== */
+    .hero-image-screen {
+      width: 100%;
+      background-color: var(--bg-main);
+      position: relative;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-image-screen img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* ==========================================================================
+       [화면 3] THIRD SCREEN: CORE VALUE (세로 길이 25% 축소)
        ========================================================================== */
     .core-values {
-      padding: 70px 0;
+      padding: 52px 0; /* 기존 70px에서 약 25% 축소 */
       background: var(--bg-card);
-      border-top: 1px solid var(--border-subtle);
       border-bottom: 1px solid var(--border-subtle);
       position: relative;
     }
@@ -494,7 +472,7 @@
     .values-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 20px;
     }
 
     @media (min-width: 768px) {
@@ -517,7 +495,7 @@
     .value-item:not(:last-child)::after {
       content: '';
       position: absolute;
-      right: -12px;
+      right: -10px;
       top: 20%;
       height: 60%;
       width: 1px;
@@ -533,15 +511,15 @@
 
     .value-num {
       font-family: var(--font-en);
-      font-size: clamp(2.8rem, 4.5vw, 3.8rem);
+      font-size: clamp(2.5rem, 4vw, 3.4rem);
       font-weight: 700;
       color: var(--color-gold);
       line-height: 1;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
     .value-unit {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 500;
       color: var(--color-gold-light);
       margin-left: 2px;
@@ -551,7 +529,7 @@
       font-size: 0.95rem;
       font-weight: 600;
       color: var(--text-white);
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .value-desc {
@@ -560,7 +538,7 @@
     }
 
     /* ==========================================================================
-       5. PREMIUM COMMON SECTIONS
+       [화면 4] PREMIUM 01 — FAST TRAFFIC (두 줄 줄바꿈 타이틀 최적화)
        ========================================================================== */
     .section-padding {
       padding: 100px 0;
@@ -588,7 +566,28 @@
       }
     }
 
-    /* PREMIUM 01: FAST TRAFFIC */
+    /* FAST TRAFFIC 줄바꿈 및 글씨 크기 전용 스타일 */
+    .traffic-main-title {
+      font-size: clamp(1.85rem, 3.6vw, 2.75rem);
+      font-weight: 700;
+      color: var(--text-white);
+      line-height: 1.28;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .traffic-main-title .line-en {
+      display: block;
+      font-family: var(--font-en);
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .traffic-main-title .line-ko {
+      display: block;
+      word-break: keep-all;
+    }
+
     .traffic-list {
       display: flex;
       flex-direction: column;
@@ -736,9 +735,7 @@
       color: var(--text-muted);
     }
 
-    /* ==========================================================================
-       6. ONLY 90 SCARCITY IMPACT SECTION
-       ========================================================================== */
+    /* ONLY 90 SCARCITY IMPACT SECTION */
     .scarcity-section {
       background: radial-gradient(circle at center, #1C2333 0%, #0B0E14 80%);
       padding: 110px 0;
@@ -825,9 +822,7 @@
       color: var(--text-muted);
     }
 
-    /* ==========================================================================
-       7. PERFECT VISION & DEMAND
-       ========================================================================== */
+    /* PERFECT VISION & DEMAND */
     .vision-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -884,7 +879,6 @@
       line-height: 1.6;
     }
 
-    /* DEMAND SECTION */
     .demand-map-card {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
@@ -921,9 +915,7 @@
       color: var(--text-muted);
     }
 
-    /* ==========================================================================
-       8. 5 PREMIUM CARDS (OFFICIAL SITE STYLE)
-       ========================================================================== */
+    /* 5 PREMIUM CARDS */
     .premium-cards-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -999,9 +991,7 @@
       line-height: 1.6;
     }
 
-    /* ==========================================================================
-       9. IMAGE GALLERY
-       ========================================================================== */
+    /* IMAGE GALLERY */
     .gallery-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -1053,9 +1043,7 @@
       z-index: 2;
     }
 
-    /* ==========================================================================
-       10. FAQ SECTION
-       ========================================================================== */
+    /* FAQ SECTION */
     .faq-wrapper {
       max-width: 860px;
       margin: 0 auto;
@@ -1111,9 +1099,7 @@
       transition: max-height 0.35s ease-in-out;
     }
 
-    /* ==========================================================================
-       11. FINAL CTA SECTION & FOOTER
-       ========================================================================== */
+    /* FINAL CTA & FOOTER */
     .final-cta {
       background: radial-gradient(circle at 50% 50%, #19202E 0%, #0B0E14 90%);
       padding: 100px 0;
@@ -1160,9 +1146,7 @@
       }
     }
 
-    /* ==========================================================================
-       12. MOBILE FIXED BOTTOM CTA BAR
-       ========================================================================== */
+    /* MOBILE BOTTOM CTA BAR */
     .mobile-bottom-bar {
       position: fixed;
       bottom: 0;
@@ -1234,22 +1218,22 @@
        ========================================================================== -->
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="https://mohanni1006.github.io/osan-city-landing-page/#" class="brand-logo">
+      <a href="#" class="brand-logo">
         <span class="logo-thesharp">THE SHARP</span>
         <span class="logo-sub">오산역 아크시티 오피스텔</span>
       </a>
 
       <!-- Desktop Navigation Menu -->
       <nav class="nav-menu">
-        <a href="https://mohanni1006.github.io/osan-city-landing-page/#about" class="nav-link">사업안내</a>
-        <a href="https://mohanni1006.github.io/osan-city-landing-page/#traffic" class="nav-link">교통환경</a>
-        <a href="https://mohanni1006.github.io/osan-city-landing-page/#lifestyle" class="nav-link">생활인프라</a>
-        <a href="https://mohanni1006.github.io/osan-city-landing-page/#commercial" class="nav-link">대형상가</a>
-        <a href="https://mohanni1006.github.io/osan-city-landing-page/#residence" class="nav-link">주거공간</a>
-        <a href="https://mohanni1006.github.io/osan-city-landing-page/#brand" class="nav-link">브랜드</a>
-        <a href="https://mohanni1006.github.io/osan-city-landing-page/#scarcity" class="nav-link">90실특장점</a>
-        <a href="https://mohanni1006.github.io/osan-city-landing-page/#vision" class="nav-link">미래가치</a>
-        <a href="https://mohanni1006.github.io/osan-city-landing-page/#faq" class="nav-link">FAQ</a>
+        <a href="#about" class="nav-link">사업안내</a>
+        <a href="#traffic" class="nav-link">교통환경</a>
+        <a href="#lifestyle" class="nav-link">생활인프라</a>
+        <a href="#commercial" class="nav-link">대형상가</a>
+        <a href="#residence" class="nav-link">주거공간</a>
+        <a href="#brand" class="nav-link">브랜드</a>
+        <a href="#scarcity" class="nav-link">90실특장점</a>
+        <a href="#vision" class="nav-link">미래가치</a>
+        <a href="#faq" class="nav-link">FAQ</a>
       </nav>
 
       <!-- Desktop Call CTA Button -->
@@ -1269,15 +1253,15 @@
   <!-- Mobile Drawer Menu -->
   <div class="mobile-drawer" id="mobileDrawer">
     <ul>
-      <li><a href="https://mohanni1006.github.io/osan-city-landing-page/#about" class="drawer-link">사업안내</a></li>
-      <li><a href="https://mohanni1006.github.io/osan-city-landing-page/#traffic" class="drawer-link">교통환경</a></li>
-      <li><a href="https://mohanni1006.github.io/osan-city-landing-page/#lifestyle" class="drawer-link">생활인프라</a></li>
-      <li><a href="https://mohanni1006.github.io/osan-city-landing-page/#commercial" class="drawer-link">대형상가</a></li>
-      <li><a href="https://mohanni1006.github.io/osan-city-landing-page/#residence" class="drawer-link">주거공간</a></li>
-      <li><a href="https://mohanni1006.github.io/osan-city-landing-page/#brand" class="drawer-link">더샵브랜드</a></li>
-      <li><a href="https://mohanni1006.github.io/osan-city-landing-page/#scarcity" class="drawer-link">단 90실 희소성</a></li>
-      <li><a href="https://mohanni1006.github.io/osan-city-landing-page/#vision" class="drawer-link">미래가치</a></li>
-      <li><a href="https://mohanni1006.github.io/osan-city-landing-page/#faq" class="drawer-link">자주묻는질문</a></li>
+      <li><a href="#about" class="drawer-link">사업안내</a></li>
+      <li><a href="#traffic" class="drawer-link">교통환경</a></li>
+      <li><a href="#lifestyle" class="drawer-link">생활인프라</a></li>
+      <li><a href="#commercial" class="drawer-link">대형상가</a></li>
+      <li><a href="#residence" class="drawer-link">주거공간</a></li>
+      <li><a href="#brand" class="drawer-link">더샵브랜드</a></li>
+      <li><a href="#scarcity" class="drawer-link">단 90실 희소성</a></li>
+      <li><a href="#vision" class="drawer-link">미래가치</a></li>
+      <li><a href="#faq" class="drawer-link">자주묻는질문</a></li>
     </ul>
     <div style="margin-top: 30px;">
       <a href="tel:01052837354" class="btn btn-gold" style="width: 100%;">
@@ -1287,20 +1271,9 @@
   </div>
 
   <!-- ==========================================================================
-       [신규 추가] 최상단 1.jpg 단독 대형 이미지 섹션 (정상 문서 흐름 / 겹침 없음)
+       [첫 번째 화면] 1. HERO INTRO SECTION (텍스트 메인 화면)
        ========================================================================== -->
-  <section class="top-main-image">
-    <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/1.jpg" alt="더샵 오산역 아크시티 메인 이미지">
-  </section>
-
-  <!-- ==========================================================================
-       1. HERO SECTION (기존 메인 화면 - images/hero.jpg 및 텍스트 100% 유지)
-       ========================================================================== -->
-  <section class="hero" id="hero">
-    <!-- HERO BACKGROUND IMAGE (제공 이미지: images/hero.jpg 그대로 유지) -->
-    <div class="hero-bg"></div>
-    <div class="hero-bg-overlay"></div>
-
+  <section class="hero-intro" id="hero">
     <div class="container">
       <div class="hero-content fade-up visible">
         <span class="hero-subhead">THE SHARP OSAN STATION ARCITY</span>
@@ -1323,7 +1296,7 @@
           <a href="tel:01052837354" class="btn btn-gold">
             📞 전화상담 010-5283-7354
           </a>
-          <a href="https://mohanni1006.github.io/osan-city-landing-page/#about" class="btn btn-outline">
+          <a href="#about" class="btn btn-outline">
             단지 상세 안내 보기
           </a>
         </div>
@@ -1332,7 +1305,16 @@
   </section>
 
   <!-- ==========================================================================
-       2. CORE VALUE / FACT NUMBERS (FACT INFO)
+       [두 번째 화면] 2. HERO IMAGE SECTION (hero.jpg 단독 대형 전경 이미지)
+       ========================================================================== -->
+  <section class="hero-image-screen">
+    <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/hero.jpg" 
+         onerror="this.onerror=null; this.src='images/hero.jpg';" 
+         alt="더샵 오산역 아크시티 메인 전경 조감도">
+  </section>
+
+  <!-- ==========================================================================
+       [세 번째 화면] 3. CORE VALUE / FACT NUMBERS (세로 길이 25% 축소)
        ========================================================================== -->
   <section class="core-values" id="about">
     <div class="container">
@@ -1367,14 +1349,18 @@
   </section>
 
   <!-- ==========================================================================
-       3. PREMIUM 01 — FAST TRAFFIC
+       [네 번째 화면] 4. PREMIUM 01 — FAST TRAFFIC (두 줄 줄바꿈 타이틀)
        ========================================================================== -->
   <section class="section-padding" id="traffic">
     <div class="container">
       <div class="grid-2">
         <div class="fade-up visible">
           <span class="section-eyebrow">PREMIUM 01</span>
-          <h2 class="section-title">FAST TRAFFIC<br>오산역에서 시작되는 빠른 일상</h2>
+          <!-- FAST TRAFFIC / 오산역에서 시작되는 빠른 일상 두 줄 줄바꿈 구성 -->
+          <h2 class="traffic-main-title">
+            <span class="line-en">FAST TRAFFIC</span>
+            <span class="line-ko">오산역에서 시작되는 빠른 일상</span>
+          </h2>
           <p class="section-desc">
             도보 거리의 1호선 오산역과 오산IC, 주요 간선도로망으로 수원, 동탄 및 수도권 주요 업무거점으로 신속하게 연결됩니다.
           </p>
@@ -1403,9 +1389,10 @@
           </div>
         </div>
         <div class="fade-up">
-          <!-- 제공 이미지: images/main-con03-bg01.jpg (공식 광역 교통 및 입지 지도) -->
           <div class="image-frame" style="max-height: 480px;">
-            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con03-bg01.jpg" alt="오산역 중심 광역 입지 및 교통망 지도" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con03-bg01.jpg" 
+                 onerror="this.onerror=null; this.src='images/main-con03-bg01.jpg';" 
+                 alt="오산역 중심 광역 입지 및 교통망 지도" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
@@ -1413,7 +1400,7 @@
   </section>
 
   <!-- ==========================================================================
-       4. PREMIUM 02 — ONE STOP LIFE
+       5. PREMIUM 02 — ONE STOP LIFE
        ========================================================================== -->
   <section class="section-padding" style="background: var(--bg-card);" id="lifestyle">
     <div class="container">
@@ -1445,16 +1432,17 @@
       </div>
 
       <div style="margin-top: 40px;" class="fade-up">
-        <!-- 제공 이미지: images/888.png (종합 분양 안내 인프라 배너) -->
         <div class="image-frame" style="max-height: 460px;">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/888.png" alt="더샵 오산역 아크시티 입지 및 인프라 특장점" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/888.png" 
+               onerror="this.onerror=null; this.src='images/888.png';" 
+               alt="더샵 오산역 아크시티 입지 및 인프라 특장점" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       5. PREMIUM 03 — 25,000㎡ 대형 상업시설 (독립 섹션)
+       6. PREMIUM 03 — 25,000㎡ 대형 상업시설 (독립 섹션)
        ========================================================================== -->
   <section class="section-padding commercial-highlight-section" id="commercial">
     <div class="container">
@@ -1473,9 +1461,10 @@
           </ul>
         </div>
         <div class="fade-up">
-          <!-- 제공 이미지: images/commercial-mall.png (실제 스트리트몰 조감도) -->
           <div class="image-frame" style="max-height: 440px;">
-            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/commercial-mall.png" alt="약 25,000㎡ 단지 내 대형 스트리트 상업시설 투시도" loading="lazy">
+            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/commercial-mall.png" 
+                 onerror="this.onerror=null; this.src='images/commercial-mall.png';" 
+                 alt="약 25,000㎡ 단지 내 대형 스트리트 상업시설 투시도" loading="lazy">
           </div>
         </div>
       </div>
@@ -1483,7 +1472,7 @@
   </section>
 
   <!-- ==========================================================================
-       6. PREMIUM 04 — 주거공간 (전용 84㎡ 주거형 오피스텔)
+       7. PREMIUM 04 — 주거공간 (전용 84㎡ 주거형 오피스텔)
        ========================================================================== -->
   <section class="section-padding" id="residence">
     <div class="container">
@@ -1497,9 +1486,10 @@
 
       <div class="grid-2" style="margin-bottom: 50px;">
         <div class="fade-up">
-          <!-- 제공 이미지: images/floorplan-84.jpg (전용 84㎡ 평면도) -->
           <div class="image-frame" style="background: #FFFFFF; padding: 16px;">
-            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/floorplan-84.jpg" alt="전용 84㎡ 평면도 (3Room 2Bath)" loading="lazy" style="filter: contrast(1.02);">
+            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/floorplan-84.jpg" 
+                 onerror="this.onerror=null; this.src='images/floorplan-84.jpg';" 
+                 alt="전용 84㎡ 평면도 (3Room 2Bath)" loading="lazy" style="filter: contrast(1.02);">
           </div>
         </div>
 
@@ -1527,7 +1517,7 @@
   </section>
 
   <!-- ==========================================================================
-       7. PREMIUM 05 — THE SHARP BRAND
+       8. PREMIUM 05 — THE SHARP BRAND
        ========================================================================== -->
   <section class="section-padding" style="background: var(--bg-card);" id="brand">
     <div class="container">
@@ -1544,9 +1534,10 @@
           </div>
         </div>
         <div class="fade-up">
-          <!-- 제공 이미지: images/hero.jpg (포스코이앤씨 단지 전경 투시도) -->
           <div class="image-frame" style="max-height: 420px;">
-            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/hero.jpg" alt="포스코이앤씨 더샵 오산역 아크시티 단지 전경" loading="lazy">
+            <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/hero.jpg" 
+                 onerror="this.onerror=null; this.src='images/hero.jpg';" 
+                 alt="포스코이앤씨 더샵 오산역 아크시티 단지 전경" loading="lazy">
           </div>
         </div>
       </div>
@@ -1554,7 +1545,7 @@
   </section>
 
   <!-- ==========================================================================
-       8. ONLY 90 SCARCITY IMPACT SECTION
+       9. ONLY 90 SCARCITY IMPACT SECTION
        ========================================================================== -->
   <section class="scarcity-section" id="scarcity">
     <div class="container">
@@ -1567,7 +1558,6 @@
         </p>
       </div>
 
-      <!-- 청약 특장점 카드 -->
       <div class="subscription-cards fade-up">
         <div class="sub-card">
           <span class="tag">CONVENIENCE</span>
@@ -1593,7 +1583,7 @@
   </section>
 
   <!-- ==========================================================================
-       9. PERFECT VISION (미래 교통 / 개발 호재)
+       10. PERFECT VISION (미래 교통 / 개발 호재)
        ========================================================================== -->
   <section class="section-padding" id="vision">
     <div class="container">
@@ -1638,7 +1628,7 @@
   </section>
 
   <!-- ==========================================================================
-       10. 배후수요 섹션 (경기 남부 첨단산업 배후 주거지)
+       11. 배후수요 섹션 (경기 남부 첨단산업 배후 주거지)
        ========================================================================== -->
   <section class="section-padding" style="background: var(--bg-card);">
     <div class="container">
@@ -1666,9 +1656,10 @@
             </div>
           </div>
           <div>
-            <!-- 제공 이미지: images/traffic-map.jpg (상세 권역 교통 및 산단 입지도) -->
             <div class="image-frame" style="max-height: 380px;">
-              <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/traffic-map.jpg" alt="경기 남부 반도체 클러스터 및 주요 산업단지 배후망" loading="lazy">
+              <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/traffic-map.jpg" 
+                   onerror="this.onerror=null; this.src='images/traffic-map.jpg';" 
+                   alt="경기 남부 반도체 클러스터 및 주요 산업단지 배후망" loading="lazy">
             </div>
           </div>
         </div>
@@ -1677,7 +1668,7 @@
   </section>
 
   <!-- ==========================================================================
-       11. OFFICIAL STYLE 5 PREMIUM CARDS
+       12. OFFICIAL STYLE 5 PREMIUM CARDS
        ========================================================================== -->
   <section class="section-padding">
     <div class="container">
@@ -1726,7 +1717,7 @@
   </section>
 
   <!-- ==========================================================================
-       12. IMAGE GALLERY (제공된 고화질 이미지 6종 배치)
+       13. IMAGE GALLERY
        ========================================================================== -->
   <section class="section-padding" style="background: var(--bg-card);">
     <div class="container">
@@ -1737,39 +1728,45 @@
       </div>
 
       <div class="gallery-grid fade-up">
-        <!-- 갤러리 1: 단지 배치도 (2.jpg) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/2.jpg" alt="더샵 오산역 아크시티 단지 배치도 및 동선 계획" loading="lazy">
+          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/2.jpg" 
+               onerror="this.onerror=null; this.src='images/2.jpg';" 
+               alt="더샵 오산역 아크시티 단지 배치도 및 동선 계획" loading="lazy">
           <div class="gallery-caption">단지 배치도 및 동선 계획</div>
         </div>
 
-        <!-- 갤러리 2: 오산 야경 파노라마 뷰 (mv-07.jpg) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/mv-07.jpg" alt="단지 주변 야경 및 오산 도심 조망" loading="lazy">
+          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/mv-07.jpg" 
+               onerror="this.onerror=null; this.src='images/mv-07.jpg';" 
+               alt="단지 주변 야경 및 오산 도심 조망" loading="lazy">
           <div class="gallery-caption">오산 도심 야경 및 단지 전경</div>
         </div>
 
-        <!-- 갤러리 3: 럭셔리 다이닝 인테리어 (main-con04-img04.jpg) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con04-img04.jpg" alt="프리미엄 리빙 &amp; 다이닝 공간" loading="lazy">
+          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con04-img04.jpg" 
+               onerror="this.onerror=null; this.src='images/main-con04-img04.jpg';" 
+               alt="프리미엄 리빙 &amp; 다이닝 공간" loading="lazy">
           <div class="gallery-caption">프리미엄 리빙 &amp; 다이닝</div>
         </div>
 
-        <!-- 갤러리 4: 감성 가구 연출 (main-con02-img05.png) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con02-img05.png" alt="품격 있는 주거 인테리어 디테일" loading="lazy">
+          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con02-img05.png" 
+               onerror="this.onerror=null; this.src='images/main-con02-img05.png';" 
+               alt="품격 있는 주거 인테리어 디테일" loading="lazy">
           <div class="gallery-caption">감각적인 인테리어 디테일</div>
         </div>
 
-        <!-- 갤러리 5: 도심 스카이라인 조망 (main-con02-img06.png) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con02-img06.png" alt="테라스 도심 조망 라이프스타일" loading="lazy">
+          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/main-con02-img06.png" 
+               onerror="this.onerror=null; this.src='images/main-con02-img06.png';" 
+               alt="테라스 도심 조망 라이프스타일" loading="lazy">
           <div class="gallery-caption">테라스 도심 스카이라인 조망</div>
         </div>
 
-        <!-- 갤러리 6: 단지 내 스트리트몰 (commercial-mall.png) -->
         <div class="gallery-item">
-          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/commercial-mall.png" alt="약 25,000㎡ 스트리트 상업시설" loading="lazy">
+          <img src="./더샵 오산역 아크시티 오피스텔 _ 전용 84㎡ 주거형 오피스텔 (총 90실)_files/commercial-mall.png" 
+               onerror="this.onerror=null; this.src='images/commercial-mall.png';" 
+               alt="약 25,000㎡ 스트리트 상업시설" loading="lazy">
           <div class="gallery-caption">약 25,000㎡ 스트리트몰</div>
         </div>
       </div>
@@ -1777,7 +1774,7 @@
   </section>
 
   <!-- ==========================================================================
-       13. FAQ SECTION
+       14. FAQ SECTION
        ========================================================================== -->
   <section class="section-padding" id="faq">
     <div class="container">
@@ -1856,7 +1853,7 @@
   </section>
 
   <!-- ==========================================================================
-       14. FINAL CALL CTA
+       15. FINAL CALL CTA
        ========================================================================== -->
   <section class="final-cta">
     <div class="container fade-up">
@@ -1882,7 +1879,7 @@
   </section>
 
   <!-- ==========================================================================
-       15. FOOTER
+       16. FOOTER
        ========================================================================== -->
   <footer class="footer">
     <div class="container">
@@ -1901,7 +1898,7 @@
   </footer>
 
   <!-- ==========================================================================
-       16. MOBILE FIXED BOTTOM CTA BAR
+       17. MOBILE FIXED BOTTOM CTA BAR
        ========================================================================== -->
   <div class="mobile-bottom-bar">
     <div class="bar-info">
@@ -2003,5 +2000,5 @@
       }
     });
   </script>
-
-</body></html>
+</body>
+</html>
