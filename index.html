@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>더샵 오산역 아크시티 오피스텔 | 전용 84㎡ 주거형 오피스텔 (총 90실)</title>
+  <title>더샵 오산역 전용 84㎡ 프리미엄 주거시설</title>
   
-  <!-- SEO & Open Graph -->
+  <!-- SEO & Open Graph (공유 미리보기 타이틀 수정) -->
   <meta name="description" content="1호선 오산역 약 600m 역세권, 전용 84㎡(3Room·2Bath) 주거형 오피스텔. 단지 내 약 25,000㎡ 대형 상업시설과 함께하는 포스코 더샵 오산역 아크시티 오피스텔(단 90실).">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="더샵 오산역 아크시티 오피스텔 | 전용 84㎡ 주거형 아파텔">
+  <meta property="og:title" content="더샵 오산역 전용 84㎡&#10;프리미엄 주거시설">
   <meta property="og:description" content="오산역 도보권, 약 25,000㎡ 스트리트몰 원스톱 라이프, 단 90실 한정 공급. 지금 모델하우스 및 분양 상담을 확인하세요.">
   <meta property="og:image" content="images/hero.jpg">
   <meta name="format-detection" content="telephone=no">
@@ -38,10 +38,9 @@
       --font-kr: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
       --font-en: "Cormorant Garamond", Georgia, serif;
       --max-width: 1240px;
-      --header-height: 62px; /* 상단바 세로길이 축소 (기존 80px -> 62px) */
+      --header-height: 62px;
       --bottom-bar-height: 64px;
 
-      /* 신규 정보 카드 컬러 변수 */
       --gold-primary: #c5a059;
       --gold-light: #e5c98d;
     }
@@ -171,7 +170,7 @@
     }
 
     /* ==========================================================================
-       2. HEADER & NAVIGATION (상단바 세로길이 축소 및 서브 문구 삭제)
+       2. HEADER & NAVIGATION
        ========================================================================== */
     .header {
       position: fixed;
@@ -314,7 +313,7 @@
     }
 
     /* ==========================================================================
-       [화면 1] HERO INTRO (상·하단 공백 축소 적용)
+       [화면 1] HERO INTRO
        ========================================================================== */
     .hero-intro {
       position: relative;
@@ -322,9 +321,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      /* 상단 공백 절반 축소 (기존 header-height + 36px -> header-height + 18px) */
       padding-top: calc(var(--header-height) + 18px);
-      /* 하단 공백 50% 축소 (기존 35px -> 18px) */
       padding-bottom: 18px;
       background: radial-gradient(circle at 50% 25%, rgba(28, 38, 56, 0.95) 0%, rgba(11, 14, 20, 1) 90%);
       overflow: hidden;
@@ -352,7 +349,6 @@
       width: 100%;
     }
 
-    /* 1호선 역세권 상단 공백 30% 축소 (margin-bottom: 20px -> 14px) */
     .hero-title {
       font-size: clamp(2.1rem, 4.8vw, 3.8rem);
       font-weight: 800;
@@ -382,7 +378,6 @@
       letter-spacing: -0.01em;
     }
 
-    /* 25,000㎡ 문구 밑 공백 50% 축소 (margin-bottom: 24px -> 12px) */
     .hero-desc {
       font-size: clamp(0.68rem, 2.55vw, 1.15rem);
       color: var(--text-muted);
@@ -392,7 +387,7 @@
       letter-spacing: -0.03em;
     }
 
-    /* HERO INFO GROUP (계약금 카드) */
+    /* HERO INFO GROUP */
     .hero-info-group {
       display: flex;
       justify-content: center;
@@ -488,7 +483,7 @@
     }
 
     /* ==========================================================================
-       [화면 3] THIRD SCREEN: CORE VALUE (모바일 1줄 고정 최적화)
+       [화면 3] THIRD SCREEN: CORE VALUE
        ========================================================================== */
     .core-values {
       padding: 50px 0;
@@ -665,7 +660,7 @@
       word-break: keep-all;
     }
 
-    /* PREMIUM 02: ONE STOP LIFE (모바일 1줄 고정 & 모바일 줄바꿈 전용 클래스) */
+    /* PREMIUM 02: ONE STOP LIFE */
     .title-part {
       display: inline;
     }
@@ -780,7 +775,7 @@
       color: var(--text-muted);
     }
 
-    /* PREMIUM 05: THE SHARP BRAND (2줄 확실 분할) */
+    /* PREMIUM 05: THE SHARP BRAND */
     .brand-title .brand-line-1 {
       display: block;
       margin-bottom: 6px;
@@ -1048,7 +1043,7 @@
       line-height: 1.6;
     }
 
-    /* 13. IMAGE GALLERY (4개 사진 구성) */
+    /* 13. IMAGE GALLERY */
     .gallery-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -1281,7 +1276,9 @@
       }
     }
 
-    /* MOBILE FIXED BOTTOM CTA BAR */
+    /* ==========================================================================
+       [모바일 하단 고정바] 좌측: 전화상담, 우측: 방문예약
+       ========================================================================== */
     .mobile-bottom-bar {
       position: fixed;
       bottom: 0;
@@ -1356,7 +1353,7 @@
 <body>
 
   <!-- ==========================================================================
-       HEADER (오산역 아크시티 오피스텔 문구 삭제 & 높이 축소 완료)
+       HEADER
        ========================================================================== -->
   <header class="header" id="header">
     <div class="container header-inner">
@@ -1410,7 +1407,7 @@
   </div>
 
   <!-- ==========================================================================
-       [첫 번째 화면] 1. HERO INTRO (상하 공백 절반 축소 & 간격 30% 축소)
+       [첫 번째 화면] 1. HERO INTRO
        ========================================================================== -->
   <section class="hero-intro" id="hero">
     <div class="container">
@@ -1422,7 +1419,6 @@
           <span>더샵의 프리미엄 주거공간</span>
         </h1>
         
-        <!-- 1호선 역세권 -->
         <div class="hero-highlight">
           1호선 역세권
         </div>
@@ -1431,7 +1427,6 @@
           25,000㎡ 초대형 상업시설과 함께하는 POSCO 주거형 오피스텔
         </p>
         
-        <!-- 계약금 카드 그룹 (하단 공백 50% 축소 적용) -->
         <div class="hero-info-group">
           <div class="hero-info-card primary">
             <span class="info-sub">입주전까지</span>
@@ -1454,7 +1449,7 @@
   </section>
 
   <!-- ==========================================================================
-       [세 번째 화면] 3. CORE VALUE / FACT NUMBERS (문구 수정 및 모바일 1줄 고정)
+       [세 번째 화면] 3. CORE VALUE / FACT NUMBERS
        ========================================================================== -->
   <section class="core-values" id="about">
     <div class="container">
@@ -1467,28 +1462,21 @@
         <div class="value-item fade-up visible">
           <div class="value-num"><span class="counter" data-target="84">84</span><span class="value-unit">㎡</span></div>
           <div class="value-label">전용면적 단일 구성</div>
-          <!-- '선호도 높은 3Room' 으로 수정 -->
           <div class="value-desc">선호도 높은 3Room</div>
         </div>
         <div class="value-item fade-up visible">
           <div class="value-num"><span class="counter" data-target="25000">25,000</span><span class="value-unit">㎡</span></div>
-          <!-- 핸드폰에서 한 줄 고정 -->
           <div class="value-label">단지 내 대형 상업시설</div>
-          <!-- '7,500평 복합 스트리트몰' 및 핸드폰에서 한 줄 고정 -->
           <div class="value-desc">7,500평 복합 스트리트몰</div>
         </div>
         <div class="value-item fade-up visible">
           <div class="value-num"><span class="counter" data-target="600">600</span><span class="value-unit">m</span></div>
           <div class="value-label">오산역 도보권 거리</div>
-          <!-- '1호선 오산역 역세권' 으로 수정 -->
           <div class="value-desc">1호선 오산역 역세권</div>
         </div>
         <div class="value-item fade-up visible">
-          <!-- '987세대' 로 수정 -->
           <div class="value-num"><span class="counter" data-target="987">987</span><span class="value-unit">세대</span></div>
-          <!-- '대단지 복합타운' 으로 수정 -->
           <div class="value-label">대단지 복합타운</div>
-          <!-- '오피스텔 90실 한정' 으로 수정 -->
           <div class="value-desc">오피스텔 90실 한정</div>
         </div>
       </div>
@@ -1496,7 +1484,7 @@
   </section>
 
   <!-- ==========================================================================
-       [네 번째 화면] 4. PREMIUM 01 — FAST TRAFFIC (문구 수정 반영)
+       [네 번째 화면] 4. PREMIUM 01 — FAST TRAFFIC
        ========================================================================== -->
   <section class="section-padding" id="traffic">
     <div class="container">
@@ -1515,7 +1503,6 @@
               <div class="traffic-icon">🚆</div>
               <div>
                 <h4>1호선 오산역 약 600m 역세권</h4>
-                <!-- '도보 10분내로...' 문구 수정 반영 -->
                 <p>도보 10분내로 1호선 및 급행 열차를 이용하여 수원, 가산, 용산 등 주요 거점 직결 이동 가능</p>
               </div>
             </div>
@@ -1545,13 +1532,12 @@
   </section>
 
   <!-- ==========================================================================
-       5. PREMIUM 02 — ONE STOP LIFE (모바일 2줄 줄바꿈 & 1줄 고정 적용)
+       5. PREMIUM 02 — ONE STOP LIFE
        ========================================================================== -->
   <section class="section-padding" style="background: var(--bg-card);" id="lifestyle">
     <div class="container">
       <div class="section-header text-center fade-up">
         <span class="section-eyebrow">PREMIUM 02</span>
-        <!-- 모바일에서 2줄로 나누어 보이도록 설정 -->
         <h2 class="section-title">
           ONE STOP LIFE<br>
           <span class="title-part">생활에 필요한 모든 것이</span>
@@ -1565,22 +1551,18 @@
       <div class="infra-grid fade-up">
         <div class="infra-card">
           <h5>단지 내 상업시설</h5>
-          <!-- '25,000㎡ 스트리트몰 슬세권' 및 1줄 고정 -->
           <p class="nowrap-text">25,000㎡ 스트리트몰 슬세권</p>
         </div>
         <div class="infra-card">
           <h5>쇼핑 & 전통시장</h5>
-          <!-- '이마트, 롯데마트, 오색시장' 및 1줄 고정 -->
           <p class="nowrap-text">이마트, 롯데마트, 오색시장</p>
         </div>
         <div class="infra-card">
           <h5>종합 의료시설</h5>
-          <!-- '오산한국병원 및 / 도심 병·의원 인접' 줄바꿈 -->
           <p>오산한국병원 및<br>도심 병·의원 인접</p>
         </div>
         <div class="infra-card">
           <h5>쾌적한 수변공원</h5>
-          <!-- '수변산책로, 맑음터공원' 및 1줄 고정 -->
           <p class="nowrap-text">수변산책로, 맑음터공원</p>
         </div>
       </div>
@@ -1665,14 +1647,13 @@
   </section>
 
   <!-- ==========================================================================
-       8. PREMIUM 05 — THE SHARP BRAND (포스코가 완성하는 프리미엄 주거 2줄 표시)
+       8. PREMIUM 05 — THE SHARP BRAND
        ========================================================================== -->
   <section class="section-padding" style="background: var(--bg-card);" id="brand">
     <div class="container">
       <div class="grid-2">
         <div class="fade-up">
           <span class="section-eyebrow">PREMIUM 05</span>
-          <!-- 'THE SHARP / 포스코가 완성하는 프리미엄 주거' 2줄 구성 -->
           <h2 class="section-title brand-title">
             <span class="brand-line-1">THE SHARP</span>
             <span class="brand-line-2">포스코가 완성하는 프리미엄 주거</span>
@@ -1967,7 +1948,7 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-answer">
-            A. 하단의 <strong>방문상담예약</strong> 신청폼을 작성해 주시면 담당 전문 상담사가 상세 일정, 잔여 호실 및 분양 조건 안내를 위해 신속하게 연락을 드립니다.
+            A. 하단의 <strong>방문예약</strong> 신청폼을 작성해 주시면 담당 전문 상담사가 상세 일정, 잔여 호실 및 분양 조건 안내를 위해 신속하게 연락을 드립니다.
           </div>
         </div>
       </div>
@@ -2059,14 +2040,14 @@
   </footer>
 
   <!-- ==========================================================================
-       [모바일 하단 고정바] 50:50 분할 예약 바
+       [모바일 하단 고정바] 좌측: 전화상담 (tel 연결), 우측: 방문예약 (#reservation 이동)
        ========================================================================== -->
   <div class="mobile-bottom-bar">
-    <a href="#reservation" class="bottom-split-btn btn-consult-split">
-      상담예약
+    <a href="tel:01052837354" class="bottom-split-btn btn-consult-split">
+      전화상담
     </a>
     <a href="#reservation" class="bottom-split-btn btn-visit-split">
-      방문상담예약
+      방문예약
     </a>
   </div>
 
@@ -2208,11 +2189,11 @@
               body: JSON.stringify(payload)
             });
 
-            alert(`${name} 고객님, 방문상담예약 신청이 정상적으로 접수되었습니다.\n담당 상담사가 빠른 시일 내에 연락드리겠습니다.`);
+            alert(`${name} 고객님, 방문예약 신청이 정상적으로 접수되었습니다.\n담당 상담사가 빠른 시일 내에 연락드리겠습니다.`);
             reservationForm.reset();
           } catch (err) {
             console.error("웹후크 전송 실패:", err);
-            alert(`${name} 고객님, 방문상담예약 신청이 접수되었습니다.\n빠른 시일 내에 안내 연락을 드리겠습니다.`);
+            alert(`${name} 고객님, 방문예약 신청이 접수되었습니다.\n빠른 시일 내에 안내 연락을 드리겠습니다.`);
             reservationForm.reset();
           } finally {
             if (submitBtn) {
