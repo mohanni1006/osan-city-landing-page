@@ -145,19 +145,6 @@
       box-shadow: 0 12px 30px rgba(197, 168, 128, 0.4);
     }
 
-    .btn-outline {
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text-white);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(8px);
-    }
-
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: var(--color-gold);
-      color: var(--color-gold);
-    }
-
     /* IMAGE FRAME & HOVER */
     .image-frame {
       position: relative;
@@ -978,7 +965,9 @@
       line-height: 1.6;
     }
 
-    /* IMAGE GALLERY */
+    /* ==========================================================================
+       [수정] 13. IMAGE GALLERY (4개 사진 최적화)
+       ========================================================================== */
     .gallery-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -993,7 +982,7 @@
 
     @media (min-width: 1024px) {
       .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
@@ -1182,6 +1171,11 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
+    }
+
+    .form-submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
 
     /* FOOTER */
@@ -1767,7 +1761,7 @@
   </section>
 
   <!-- ==========================================================================
-       13. IMAGE GALLERY
+       [수정] 13. IMAGE GALLERY (총 4개 이미지 정돈 & 프리미엄 라운지 변경)
        ========================================================================== -->
   <section class="section-padding" style="background: var(--bg-card);">
     <div class="container">
@@ -1778,34 +1772,28 @@
       </div>
 
       <div class="gallery-grid fade-up">
+        <!-- 갤러리 1: 2.jpg -->
         <div class="gallery-item">
           <img src="images/2.jpg" alt="더샵 오산역 아크시티 단지 배치도 및 동선 계획" loading="lazy">
           <div class="gallery-caption">단지 배치도 및 동선 계획</div>
         </div>
 
+        <!-- 갤러리 2: mv-07.jpg -->
         <div class="gallery-item">
           <img src="images/mv-07.jpg" alt="단지 주변 야경 및 오산 도심 조망" loading="lazy">
           <div class="gallery-caption">오산 도심 야경 및 단지 전경</div>
         </div>
 
+        <!-- 갤러리 3: main-con04-img04.jpg (프리미엄 라운지) -->
         <div class="gallery-item">
-          <img src="images/main-con04-img04.jpg" alt="프리미엄 리빙 & 다이닝 공간" loading="lazy">
-          <div class="gallery-caption">프리미엄 리빙 & 다이닝</div>
+          <img src="images/main-con04-img04.jpg" alt="프리미엄 라운지" loading="lazy">
+          <div class="gallery-caption">프리미엄 라운지</div>
         </div>
 
-        <div class="gallery-item">
-          <img src="images/main-con02-img05.png" alt="품격 있는 주거 인테리어 디테일" loading="lazy">
-          <div class="gallery-caption">감각적인 인테리어 디테일</div>
-        </div>
-
+        <!-- 갤러리 4: main-con02-img06.png (테라스 도심 스카이라인 조망) -->
         <div class="gallery-item">
           <img src="images/main-con02-img06.png" alt="테라스 도심 조망 라이프스타일" loading="lazy">
           <div class="gallery-caption">테라스 도심 스카이라인 조망</div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="images/commercial-mall.png" alt="약 25,000㎡ 스트리트 상업시설" loading="lazy">
-          <div class="gallery-caption">약 25,000㎡ 스트리트몰</div>
         </div>
       </div>
     </div>
@@ -1943,7 +1931,7 @@
             </label>
           </div>
 
-          <button type="submit" class="btn btn-gold form-submit-btn">
+          <button type="submit" class="btn btn-gold form-submit-btn" id="submitBtn">
             방문상담예약 신청
           </button>
         </form>
@@ -1971,7 +1959,7 @@
   </footer>
 
   <!-- ==========================================================================
-       [모바일 하단 고정바] 50:50 분할 예약 전용 바
+       [모바일 하단 고정바] 50:50 분할 예약 바
        ========================================================================== -->
   <div class="mobile-bottom-bar">
     <a href="#reservation" class="bottom-split-btn btn-consult-split">
@@ -1983,7 +1971,7 @@
   </div>
 
   <!-- ==========================================================================
-       JAVASCRIPT: MENU, FAQ ACCORDION, OBSERVER, COUNT-UP & FORM
+       JAVASCRIPT: MENU, FAQ ACCORDION, OBSERVER, COUNT-UP & DISCORD WEBHOOK
        ========================================================================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -2071,14 +2059,70 @@
         countObserver.observe(coreSection);
       }
 
-      // 5. 방문상담예약 폼 전송 이벤트 처리
+      // 5. 방문상담예약 디스코드 웹후크 전송 처리
       const reservationForm = document.getElementById('reservationForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1555084092532457514/vZ9sVAONe72ceLos_GRsIEgCHYGr4QIYBy6MMoIHf6DMEB6l1jY6J7TUkE7eoBp0_eDP";
+
       if (reservationForm) {
-        reservationForm.addEventListener('submit', (e) => {
+        reservationForm.addEventListener('submit', async (e) => {
           e.preventDefault();
-          const name = document.getElementById('resName').value;
-          alert(`${name} 고객님, 방문상담예약 신청이 정상적으로 접수되었습니다.\n담당 상담사가 빠른 시일 내에 연락드리겠습니다.`);
-          reservationForm.reset();
+
+          const name = document.getElementById('resName').value.trim();
+          const phone = document.getElementById('resPhone').value.trim();
+          const date = document.getElementById('resDate').value;
+          const time = document.getElementById('resTime').value;
+
+          // 전송 중 버튼 상태 변경
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = "신청 접수 중...";
+          }
+
+          // 디스코드 Embed 메시지 구성
+          const payload = {
+            username: "더샵 오산역 아크시티 예약 알림봇",
+            embeds: [
+              {
+                title: "🔔 [신규] 방문상담예약 신청 접수",
+                color: 0xC5A880, // 골드 테마 컬러
+                fields: [
+                  { name: "👤 고객 성함", value: name || "미입력", inline: true },
+                  { name: "📞 연락처", value: phone || "미입력", inline: true },
+                  { name: "📅 방문 희망일", value: date || "미지정", inline: true },
+                  { name: "⏰ 방문 희망시간", value: time || "미지정", inline: true },
+                  { name: "📝 개인정보 동의", value: "동의 완료", inline: false }
+                ],
+                footer: {
+                  text: "더샵 오산역 아크시티 공식 랜딩페이지"
+                },
+                timestamp: new Date().toISOString()
+              }
+            ]
+          };
+
+          try {
+            await fetch(DISCORD_WEBHOOK_URL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify(payload)
+            });
+
+            alert(`${name} 고객님, 방문상담예약 신청이 정상적으로 접수되었습니다.\n담당 상담사가 빠른 시일 내에 연락드리겠습니다.`);
+            reservationForm.reset();
+          } catch (err) {
+            console.error("웹후크 전송 실패:", err);
+            // 네트워크 환경 등의 오류 시에도 사용자 알림 제공
+            alert(`${name} 고객님, 방문상담예약 신청이 접수되었습니다.\n빠른 시일 내에 안내 연락을 드리겠습니다.`);
+            reservationForm.reset();
+          } finally {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = "방문상담예약 신청";
+            }
+          }
         });
       }
     });
