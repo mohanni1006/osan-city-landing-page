@@ -253,7 +253,7 @@
     }
 
     /* -----------------------------------------------------------
-       3. 메인 HERO 섹션 (문구 2줄 최적화)
+       3. 메인 HERO 섹션
     ----------------------------------------------------------- */
     #hero {
       position: relative;
@@ -296,12 +296,11 @@
       letter-spacing: -0.5px;
     }
 
-    /* 2줄 전용 텍스트 스타일 */
     .hero-desc {
       font-size: clamp(14px, 1.85vw, 18.5px);
       color: #e2e8f0;
       font-weight: 500;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
       line-height: 1.55;
       text-shadow: 0 2px 14px rgba(0,0,0,0.9);
     }
@@ -309,6 +308,25 @@
       display: block;
       word-break: keep-all;
       letter-spacing: -0.3px;
+    }
+
+    /* [신규 추가] 좌우 반원 캡슐형 청약 일정 박스 */
+    .hero-schedule-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 26px;
+      margin: 0 auto 24px;
+      border-radius: 9999px; /* 좌우 완벽한 반원 형태 */
+      background: linear-gradient(135deg, rgba(197, 160, 89, 0.22) 0%, rgba(15, 20, 32, 0.85) 100%);
+      border: 1.5px solid var(--gold-primary);
+      color: #ffffff;
+      font-size: clamp(14px, 1.9vw, 17.5px);
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55), 0 0 16px rgba(197, 160, 89, 0.28);
+      user-select: none;
+      backdrop-filter: blur(8px);
     }
 
     .hero-info-group {
@@ -455,13 +473,13 @@
     }
 
     /* -----------------------------------------------------------
-       6. [신규 추가] PREMIUM VALUE (5대 프리미엄 특장점 카드)
+       6. PREMIUM VALUE (5가지 프리미엄 특장점)
     ----------------------------------------------------------- */
     .premium-section {
       width: 100%;
       max-width: 860px;
       margin: 0 auto;
-      padding: 60px 40px;
+      padding: 50px 40px;
       background: radial-gradient(circle at 50% 20%, #1a2030 0%, #11141e 100%);
       border: 1px solid rgba(220, 190, 150, 0.18);
       border-radius: 20px;
@@ -470,63 +488,64 @@
 
     .premium-section-header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     .premium-section-header .sub-badge {
       display: inline-block;
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 13.5px;
+      font-weight: 700;
       letter-spacing: 2.5px;
       color: #dfbe99;
       text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .premium-section-header .main-title {
-      font-size: clamp(23px, 3.6vw, 30px);
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: #ffffff;
-      line-height: 1.3;
+      padding: 4px 14px;
+      border: 1px solid rgba(223, 190, 153, 0.35);
+      border-radius: 20px;
+      background: rgba(223, 190, 153, 0.08);
     }
 
     .features-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 50px;
-      row-gap: 45px;
+      gap: 20px;
     }
 
     .feature-item {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 10px;
-      transition: transform 0.3s ease;
+      padding: 26px 24px;
+      background: rgba(11, 15, 24, 0.65);
+      border: 1px solid rgba(220, 190, 150, 0.22);
+      border-radius: 14px;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
     }
 
     .feature-item:hover {
       transform: translateY(-4px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 16px rgba(197, 160, 89, 0.2);
     }
 
-    /* 5번째 아이템 가로 밸런스 */
     @media (min-width: 641px) {
       .feature-item:last-child {
         grid-column: span 2;
         align-items: center;
         text-align: center;
-        padding-top: 10px;
+      }
+      .feature-item:last-child .feature-line {
+        margin: 12px auto 16px;
       }
     }
 
     .feature-number {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 58px;
+      font-size: 54px;
       line-height: 1;
       font-weight: 600;
       font-style: italic;
-      margin-bottom: 12px;
       background: linear-gradient(135deg, #f7e2c5 0%, #dfbe99 50%, #c4996b 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -535,12 +554,20 @@
 
     .feature-number .unit {
       font-family: 'Pretendard', sans-serif;
-      font-size: 30px;
+      font-size: 28px;
       font-style: normal;
       font-weight: 600;
       letter-spacing: normal;
       margin-left: 2px;
       vertical-align: baseline;
+    }
+
+    .feature-line {
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(90deg, #c5a059, rgba(197, 160, 89, 0.15));
+      margin: 12px 0 16px;
+      border-radius: 2px;
     }
 
     .feature-title {
@@ -562,19 +589,23 @@
 
     @media (max-width: 640px) {
       .premium-section {
-        padding: 40px 20px;
+        padding: 35px 18px;
         border-radius: 16px;
       }
       .features-grid {
         grid-template-columns: 1fr;
-        row-gap: 36px;
+        gap: 16px;
       }
       .feature-item {
         align-items: center;
         text-align: center;
+        padding: 24px 20px;
       }
       .feature-number {
-        font-size: 48px;
+        font-size: 46px;
+      }
+      .feature-line {
+        margin: 10px auto 14px;
       }
       .feature-title {
         font-size: 19px;
@@ -1091,7 +1122,12 @@
         font-size: clamp(12.5px, 3.4vw, 15px);
         letter-spacing: -0.4px;
         line-height: 1.45;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
+      }
+      .hero-schedule-badge {
+        padding: 7px 20px;
+        font-size: clamp(13px, 3.4vw, 15px);
+        margin-bottom: 18px;
       }
       .hero-info-group {
         display: flex;
@@ -1197,17 +1233,21 @@
   </div>
 
   <!-- ==========================================================================
-       1. 메인 HERO 섹션 (문구 수정 및 2줄 정돈 완료)
+       1. 메인 HERO 섹션
        ========================================================================== -->
   <section id="hero">
     <div class="hero-content">
       <h1 class="hero-title">오산역 新주거타운의 중심<br>더샵 오산 아크시티</h1>
       
-      <!-- 수정 요청 반영: 청약금 100만원 문구 및 2줄 구성 -->
       <p class="hero-desc">
         <span class="hero-desc-line">청약금 100만원으로 완성하는 오산역세권 특급 주거 벨트</span>
         <span class="hero-desc-line">34층 프리미엄 주거시설과 단지 내 7,500평 스트리트몰을 품은 명품 라이프</span>
       </p>
+
+      <!-- [신규 추가] 좌우 반원 박스 모양의 청약 일정 배지 -->
+      <div class="hero-schedule-badge">
+        청약 10/12 (1일)
+      </div>
 
       <div class="hero-info-group">
         <div class="hero-info-card primary">
@@ -1264,7 +1304,7 @@
   </section>
 
   <!-- ==========================================================================
-       [신규 추가 화면] 4. PREMIUM VALUE (SPECIAL BENEFIT 바로 위에 추가됨)
+       4. PREMIUM VALUE (요청하신 타이틀 문구 삭제 완료)
        ========================================================================== -->
   <section id="scarcity" class="section-dark" style="background: #090c12;">
     <div class="container">
@@ -1272,13 +1312,13 @@
         
         <div class="premium-section-header">
           <span class="sub-badge">PREMIUM VALUE</span>
-          <h2 class="main-title">압도적인 가치를 완성하는 5가지 프리미엄</h2>
         </div>
 
         <div class="features-grid">
           <!-- 1. 90실 -->
           <div class="feature-item">
             <div class="feature-number">90<span class="unit">실</span></div>
+            <div class="feature-line"></div>
             <div class="feature-title">오피스텔 총 90실</div>
             <div class="feature-desc">단지 내 희소 주거가치</div>
           </div>
@@ -1286,6 +1326,7 @@
           <!-- 2. 84㎡ -->
           <div class="feature-item">
             <div class="feature-number">84<span class="unit">㎡</span></div>
+            <div class="feature-line"></div>
             <div class="feature-title">전용면적 단일 구성</div>
             <div class="feature-desc">선호도 높은 3Room</div>
           </div>
@@ -1293,6 +1334,7 @@
           <!-- 3. 25,000㎡ -->
           <div class="feature-item">
             <div class="feature-number">25,000<span class="unit">㎡</span></div>
+            <div class="feature-line"></div>
             <div class="feature-title">단지 내 대형 상업시설</div>
             <div class="feature-desc">7,500평 복합 스트리트몰</div>
           </div>
@@ -1300,6 +1342,7 @@
           <!-- 4. 600m -->
           <div class="feature-item">
             <div class="feature-number">600<span class="unit">m</span></div>
+            <div class="feature-line"></div>
             <div class="feature-title">오산역 도보권 거리</div>
             <div class="feature-desc">1호선 오산역 역세권</div>
           </div>
@@ -1307,6 +1350,7 @@
           <!-- 5. 987세대 -->
           <div class="feature-item">
             <div class="feature-number">987<span class="unit">세대</span></div>
+            <div class="feature-line"></div>
             <div class="feature-title">대단지 복합타운</div>
             <div class="feature-desc">오피스텔 90실 한정</div>
           </div>
@@ -1316,7 +1360,7 @@
   </section>
 
   <!-- ==========================================================================
-       5. SPECIAL BENEFIT (신규 화면 바로 다음으로 연결)
+       5. SPECIAL BENEFIT
        ========================================================================== -->
   <section id="lifestyle" class="section-dark">
     <div class="container">
