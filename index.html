@@ -15,10 +15,11 @@
   <meta property="og:description" content="오산역 新주거타운의 중심! 44층 랜드마크 포스코이앤씨 더샵 오산 아크시티 공식 홍보관">
   <meta property="og:image" content="main.jpg">
 
-  <!-- Google Fonts: Luxury Serif 'Cinzel' & 'Montserrat' -->
+  <!-- Fonts: Cinzel & Montserrat & Cormorant Garamond & Pretendard -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
   <style>
     /* -----------------------------------------------------------
@@ -37,7 +38,7 @@
       color: #eaeaea;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", system-ui, Roboto, sans-serif;
       line-height: 1.6;
       background-color: #000;
       color: #fff;
@@ -65,7 +66,6 @@
     }
 
     :root {
-      /* 상단바 높이 정의 */
       --header-height: 62px;
       --bg-black: #000000;
       --bg-dark: #0a0c10;
@@ -79,7 +79,6 @@
       --text-muted: #94a3b8;
       --border-dark: rgba(255, 255, 255, 0.08);
       --border-subtle: rgba(255, 255, 255, 0.08);
-      --font-en: "Pretendard", -apple-system, sans-serif;
       --container-max: 1200px;
     }
 
@@ -90,9 +89,9 @@
       padding: 0 20px;
     }
 
-    /* ==========================================================================
+    /* -----------------------------------------------------------
        2. HEADER & NAVIGATION
-       ========================================================================== */
+    ----------------------------------------------------------- */
     .header {
       position: fixed;
       top: 0;
@@ -120,9 +119,8 @@
       text-decoration: none;
     }
 
-    /* THE SHARP 로고 고급 세리프 타이포그래피 */
     .brand-logo .logo-thesharp {
-      font-family: 'Cinzel', 'Playfair Display', 'Didot', serif;
+      font-family: 'Cinzel', serif;
       font-size: 1.5rem;
       font-weight: 800;
       letter-spacing: 0.18em;
@@ -136,11 +134,6 @@
       display: inline-block;
     }
 
-    .brand-logo:hover .logo-thesharp {
-      opacity: 0.92;
-      transform: translateY(-0.5px);
-    }
-
     .nav-menu {
       display: none;
     }
@@ -149,7 +142,7 @@
       .nav-menu {
         display: flex;
         align-items: center;
-        gap: 28px;
+        gap: 24px;
       }
       .nav-link {
         font-size: 0.95rem;
@@ -258,12 +251,9 @@
       text-decoration: none;
       transition: opacity 0.2s;
     }
-    .btn-gold:hover {
-      opacity: 0.9;
-    }
 
     /* -----------------------------------------------------------
-       3. 메인 HERO 섹션
+       3. 메인 HERO 섹션 (문구 2줄 최적화)
     ----------------------------------------------------------- */
     #hero {
       position: relative;
@@ -302,21 +292,23 @@
       color: #fff;
       line-height: 1.28;
       text-shadow: 0 4px 24px rgba(0,0,0,0.95);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       letter-spacing: -0.5px;
     }
 
+    /* 2줄 전용 텍스트 스타일 */
     .hero-desc {
-      font-size: clamp(13.5px, 1.8vw, 18px);
+      font-size: clamp(14px, 1.85vw, 18.5px);
       color: #e2e8f0;
-      font-weight: 400;
+      font-weight: 500;
       margin-bottom: 24px;
-      line-height: 1.4;
+      line-height: 1.55;
       text-shadow: 0 2px 14px rgba(0,0,0,0.9);
     }
     .hero-desc-line {
       display: block;
-      white-space: normal;
+      word-break: keep-all;
+      letter-spacing: -0.3px;
     }
 
     .hero-info-group {
@@ -369,7 +361,7 @@
     }
 
     /* -----------------------------------------------------------
-       4. 메인화면 다음 첫 이미지(main.jpg) 가로 100% 꽉 차는 풀위드 설정
+       4. 풀위드 메인 비주얼
     ----------------------------------------------------------- */
     .top-visual-banner {
       width: 100%;
@@ -396,7 +388,7 @@
     }
 
     /* -----------------------------------------------------------
-       5. 자동 슬라이드 (2.jpg / 3.jpg / 4.jpg)
+       5. 자동 슬라이드
     ----------------------------------------------------------- */
     .auto-slider-container {
       max-width: 1100px;
@@ -463,7 +455,137 @@
     }
 
     /* -----------------------------------------------------------
-       6. Section 공통 스타일
+       6. [신규 추가] PREMIUM VALUE (5대 프리미엄 특장점 카드)
+    ----------------------------------------------------------- */
+    .premium-section {
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 60px 40px;
+      background: radial-gradient(circle at 50% 20%, #1a2030 0%, #11141e 100%);
+      border: 1px solid rgba(220, 190, 150, 0.18);
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .premium-section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .premium-section-header .sub-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      color: #dfbe99;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .premium-section-header .main-title {
+      font-size: clamp(23px, 3.6vw, 30px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 50px;
+      row-gap: 45px;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-4px);
+    }
+
+    /* 5번째 아이템 가로 밸런스 */
+    @media (min-width: 641px) {
+      .feature-item:last-child {
+        grid-column: span 2;
+        align-items: center;
+        text-align: center;
+        padding-top: 10px;
+      }
+    }
+
+    .feature-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 58px;
+      line-height: 1;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #f7e2c5 0%, #dfbe99 50%, #c4996b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1px;
+    }
+
+    .feature-number .unit {
+      font-family: 'Pretendard', sans-serif;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: normal;
+      margin-left: 2px;
+      vertical-align: baseline;
+    }
+
+    .feature-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .feature-desc {
+      font-size: 15px;
+      font-weight: 400;
+      color: #9da6b7;
+      letter-spacing: -0.3px;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 640px) {
+      .premium-section {
+        padding: 40px 20px;
+        border-radius: 16px;
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+        row-gap: 36px;
+      }
+      .feature-item {
+        align-items: center;
+        text-align: center;
+      }
+      .feature-number {
+        font-size: 48px;
+      }
+      .feature-title {
+        font-size: 19px;
+      }
+      .feature-desc {
+        font-size: 14px;
+      }
+    }
+
+    /* -----------------------------------------------------------
+       7. Section 공통 스타일 & SPECIAL BENEFIT
     ----------------------------------------------------------- */
     .section-dark {
       background-color: var(--bg-black);
@@ -513,7 +635,7 @@
     }
 
     /* -----------------------------------------------------------
-       7. 커뮤니티 전용 스타일 (3단 연결 카드)
+       8. 커뮤니티 전용 스타일
     ----------------------------------------------------------- */
     .community-grid {
       display: flex;
@@ -540,18 +662,16 @@
       display: block;
     }
 
-    /* ==========================================================================
-       8. FAQ SECTION
-       ========================================================================== */
+    /* -----------------------------------------------------------
+       9. FAQ SECTION
+    ----------------------------------------------------------- */
     .faq-wrapper {
       max-width: 860px;
       margin: 0 auto;
     }
-
     .faq-item {
       border-bottom: 1px solid var(--border-subtle);
     }
-
     .faq-question {
       width: 100%;
       text-align: left;
@@ -567,22 +687,18 @@
       cursor: pointer;
       transition: color 0.2s ease;
     }
-
     .faq-question:hover {
       color: var(--color-gold);
     }
-
     .faq-icon {
       font-size: 1.5rem;
       transition: transform 0.3s ease;
       color: var(--color-gold);
       font-weight: 300;
     }
-
     .faq-item.active .faq-icon {
       transform: rotate(45deg);
     }
-
     .faq-answer {
       max-height: 0;
       overflow: hidden;
@@ -591,7 +707,6 @@
       font-size: 0.95rem;
       line-height: 1.7;
     }
-
     .faq-item.active .faq-answer {
       max-height: 500px;
       padding-bottom: 24px;
@@ -599,7 +714,7 @@
     }
 
     /* -----------------------------------------------------------
-       9. Reservation Form Section
+       10. Reservation Form Section
     ----------------------------------------------------------- */
     #reservation {
       background: linear-gradient(180deg, #05070a 0%, #0c121d 50%, #000000 100%);
@@ -757,7 +872,7 @@
     }
 
     /* -----------------------------------------------------------
-       10. Footer
+       11. Footer
     ----------------------------------------------------------- */
     footer {
       background: #050608;
@@ -786,7 +901,7 @@
     }
 
     /* -----------------------------------------------------------
-       11. Floating Navigation Button (TOP)
+       12. Floating & Fixed Bars
     ----------------------------------------------------------- */
     .floating-nav {
       position: fixed;
@@ -822,9 +937,6 @@
       color: #000;
     }
 
-    /* -----------------------------------------------------------
-       12. 모바일 2단 고정 영역
-    ----------------------------------------------------------- */
     .fixed-bottom-wrap {
       display: none;
       position: fixed;
@@ -835,7 +947,6 @@
       flex-direction: column;
       box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.9);
     }
-
     .fixed-top-badges {
       display: flex;
       gap: 6px;
@@ -877,7 +988,6 @@
       white-space: nowrap;
       letter-spacing: -0.4px;
     }
-
     .fixed-bottom-bar {
       display: flex;
       height: 54px;
@@ -908,9 +1018,6 @@
       height: 18px;
       fill: var(--gold-primary);
     }
-    .btn-bottom-action.call:active {
-      background: #192133;
-    }
     .btn-bottom-action.reserve {
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
       color: #000;
@@ -920,12 +1027,9 @@
       height: 18px;
       fill: #000;
     }
-    .btn-bottom-action.reserve:active {
-      opacity: 0.9;
-    }
 
     /* -----------------------------------------------------------
-       13. Popup Modal (popup.png 적용)
+       13. Popup Modal
     ----------------------------------------------------------- */
     .popup-overlay {
       position: fixed;
@@ -968,10 +1072,6 @@
       cursor: pointer;
       transition: background 0.2s, color 0.2s;
     }
-    .popup-actions .btn-popup-close:hover {
-      background: rgba(255, 255, 255, 0.12);
-      color: #fff;
-    }
 
     /* -----------------------------------------------------------
        14. Responsive Media Queries
@@ -981,21 +1081,18 @@
         padding-bottom: 115px;
       }
       #hero {
-        padding: 28px 12px 32px;
+        padding: 30px 14px 34px;
       }
-
       .hero-title {
         font-size: clamp(23px, 6.2vw, 32px);
-        margin-bottom: 8px;
+        margin-bottom: 10px;
       }
-
       .hero-desc {
-        font-size: clamp(12px, 3.2vw, 14.5px);
+        font-size: clamp(12.5px, 3.4vw, 15px);
         letter-spacing: -0.4px;
-        line-height: 1.35;
-        margin-bottom: 18px;
+        line-height: 1.45;
+        margin-bottom: 20px;
       }
-
       .hero-info-group {
         display: flex;
         flex-wrap: nowrap;
@@ -1003,38 +1100,30 @@
         width: 100%;
       }
       .hero-info-card {
-        flex: 1 1 0;
-        min-width: 0;
         padding: 10px 4px;
         border-radius: 12px;
         border-width: 1.5px;
       }
       .hero-info-card .info-sub {
         font-size: clamp(11px, 3.2vw, 13.5px);
-        letter-spacing: -0.3px;
         white-space: nowrap;
       }
       .hero-info-card .info-main {
         font-size: clamp(15px, 4.4vw, 20px);
-        letter-spacing: -0.4px;
         white-space: nowrap;
         margin-top: 2px;
       }
-
       .slider-indicators {
         gap: 6px;
         padding: 10px 8px;
-        flex-wrap: nowrap;
       }
       .slider-indicators .indicator {
         padding: 8px 4px;
         font-size: clamp(11px, 3.2vw, 14px);
-        letter-spacing: -0.3px;
         white-space: nowrap;
       }
-
       .section-dark, .section-padding {
-        padding: 45px 0;
+        padding: 48px 0;
       }
       .form-row {
         grid-template-columns: 1fr;
@@ -1045,7 +1134,6 @@
       .reservation-card {
         padding: 28px 16px;
       }
-      
       .fixed-bottom-wrap {
         display: flex;
       }
@@ -1071,12 +1159,10 @@
       <nav class="nav-menu">
         <a href="#about" class="nav-link">사업안내</a>
         <a href="#traffic" class="nav-link">교통환경</a>
-        <a href="#lifestyle" class="nav-link">생활인프라</a>
-        <a href="#commercial" class="nav-link">대형상가</a>
-        <a href="#residence" class="nav-link">주거공간</a>
-        <a href="#brand" class="nav-link">브랜드</a>
         <a href="#scarcity" class="nav-link">90실특장점</a>
-        <a href="#vision" class="nav-link">미래가치</a>
+        <a href="#lifestyle" class="nav-link">생활인프라</a>
+        <a href="#residence" class="nav-link">주거공간</a>
+        <a href="#community" class="nav-link">커뮤니티</a>
         <a href="#faq" class="nav-link">FAQ</a>
         <a href="#reservation" class="nav-link" style="color: var(--color-gold);">방문상담예약</a>
       </nav>
@@ -1097,12 +1183,10 @@
     <ul>
       <li><a href="#about" class="drawer-link">사업안내</a></li>
       <li><a href="#traffic" class="drawer-link">교통환경</a></li>
+      <li><a href="#scarcity" class="drawer-link">90실특장점</a></li>
       <li><a href="#lifestyle" class="drawer-link">생활인프라</a></li>
-      <li><a href="#commercial" class="drawer-link">대형상가</a></li>
       <li><a href="#residence" class="drawer-link">주거공간</a></li>
-      <li><a href="#brand" class="drawer-link">더샵브랜드</a></li>
-      <li><a href="#scarcity" class="drawer-link">단 90실 희소성</a></li>
-      <li><a href="#vision" class="drawer-link">미래가치</a></li>
+      <li><a href="#community" class="drawer-link">커뮤니티</a></li>
       <li><a href="#faq" class="drawer-link">자주묻는질문</a></li>
     </ul>
     <div style="margin-top: 30px;">
@@ -1112,13 +1196,17 @@
     </div>
   </div>
 
-  <!-- 1. 메인 HERO 섹션 -->
+  <!-- ==========================================================================
+       1. 메인 HERO 섹션 (문구 수정 및 2줄 정돈 완료)
+       ========================================================================== -->
   <section id="hero">
     <div class="hero-content">
       <h1 class="hero-title">오산역 新주거타운의 중심<br>더샵 오산 아크시티</h1>
+      
+      <!-- 수정 요청 반영: 청약금 100만원 문구 및 2줄 구성 -->
       <p class="hero-desc">
-        <span class="hero-desc-line">계약금 500만원으로 완성하는 오산역세권 특급 주거 벨트</span>
-        <span class="hero-desc-line">34층 프리미엄 주거시설과 단지 내 7,000평 스트리트몰을 품은 명품 라이프</span>
+        <span class="hero-desc-line">청약금 100만원으로 완성하는 오산역세권 특급 주거 벨트</span>
+        <span class="hero-desc-line">34층 프리미엄 주거시설과 단지 내 7,500평 스트리트몰을 품은 명품 라이프</span>
       </p>
 
       <div class="hero-info-group">
@@ -1134,14 +1222,18 @@
     </div>
   </section>
 
-  <!-- 2. main.jpg 화면 (가로 화면 100% 꽉 차는 풀위드) -->
+  <!-- ==========================================================================
+       2. 메인 조감도 (가로 100% 풀위드)
+       ========================================================================== -->
   <section class="top-visual-banner" id="about">
     <div class="top-visual-inner">
       <img src="main.jpg" alt="더샵 오산 아크시티 메인 조감도" class="main-top-img">
     </div>
   </section>
 
-  <!-- 3. LOCATION & INFRASTRUCTURE 자동 슬라이드 (2.jpg / 3.jpg / 4.jpg) -->
+  <!-- ==========================================================================
+       3. LOCATION & INFRASTRUCTURE 자동 슬라이드
+       ========================================================================== -->
   <section id="traffic" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1159,7 +1251,7 @@
             <img src="3.jpg" alt="파노라마 조망과 품격 높은 스카이라운지 라이프">
           </div>
           <div class="slide-item">
-            <img src="4.jpg" alt="단지 내 7,000평 대형 스트리트몰 상업 인프라">
+            <img src="4.jpg" alt="단지 내 7,500평 대형 스트리트몰 상업 인프라">
           </div>
         </div>
         <div class="slider-indicators" id="sliderIndicators">
@@ -1171,7 +1263,61 @@
     </div>
   </section>
 
-  <!-- 4. SPECIAL BENEFIT (benefit.png) -->
+  <!-- ==========================================================================
+       [신규 추가 화면] 4. PREMIUM VALUE (SPECIAL BENEFIT 바로 위에 추가됨)
+       ========================================================================== -->
+  <section id="scarcity" class="section-dark" style="background: #090c12;">
+    <div class="container">
+      <div class="premium-section">
+        
+        <div class="premium-section-header">
+          <span class="sub-badge">PREMIUM VALUE</span>
+          <h2 class="main-title">압도적인 가치를 완성하는 5가지 프리미엄</h2>
+        </div>
+
+        <div class="features-grid">
+          <!-- 1. 90실 -->
+          <div class="feature-item">
+            <div class="feature-number">90<span class="unit">실</span></div>
+            <div class="feature-title">오피스텔 총 90실</div>
+            <div class="feature-desc">단지 내 희소 주거가치</div>
+          </div>
+
+          <!-- 2. 84㎡ -->
+          <div class="feature-item">
+            <div class="feature-number">84<span class="unit">㎡</span></div>
+            <div class="feature-title">전용면적 단일 구성</div>
+            <div class="feature-desc">선호도 높은 3Room</div>
+          </div>
+
+          <!-- 3. 25,000㎡ -->
+          <div class="feature-item">
+            <div class="feature-number">25,000<span class="unit">㎡</span></div>
+            <div class="feature-title">단지 내 대형 상업시설</div>
+            <div class="feature-desc">7,500평 복합 스트리트몰</div>
+          </div>
+
+          <!-- 4. 600m -->
+          <div class="feature-item">
+            <div class="feature-number">600<span class="unit">m</span></div>
+            <div class="feature-title">오산역 도보권 거리</div>
+            <div class="feature-desc">1호선 오산역 역세권</div>
+          </div>
+
+          <!-- 5. 987세대 -->
+          <div class="feature-item">
+            <div class="feature-number">987<span class="unit">세대</span></div>
+            <div class="feature-title">대단지 복합타운</div>
+            <div class="feature-desc">오피스텔 90실 한정</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. SPECIAL BENEFIT (신규 화면 바로 다음으로 연결)
+       ========================================================================== -->
   <section id="lifestyle" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1187,7 +1333,9 @@
     </div>
   </section>
 
-  <!-- 5. UNIT PLAN (type.png로 확장자 수정 완료) -->
+  <!-- ==========================================================================
+       6. UNIT PLAN
+       ========================================================================== -->
   <section id="residence" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1201,7 +1349,9 @@
     </div>
   </section>
 
-  <!-- 6. PREMIUM COMMUNITY (community1.png / community2.png / community3.png로 확장자 수정 완료) -->
+  <!-- ==========================================================================
+       7. PREMIUM COMMUNITY
+       ========================================================================== -->
   <section id="community" class="section-dark">
     <div class="container">
       <div class="section-title-wrap">
@@ -1211,34 +1361,31 @@
       </div>
       
       <div class="community-grid">
-        <!-- 커뮤니티 1: 스포츠 존 -->
         <div class="community-card">
-          <img src="community1.png" alt="더샵 오산 아크시티 스포츠 존 커뮤니티 (골프연습장, 스크린골프, GX룸, 피트니스, 사우나)">
+          <img src="community1.png" alt="더샵 오산 아크시티 스포츠 존 커뮤니티">
         </div>
-        <!-- 커뮤니티 2: 에듀 존 -->
         <div class="community-card">
-          <img src="community2.png" alt="더샵 오산 아크시티 에듀 존 커뮤니티 (스터디룸, 북라운지, 오픈스터디, 프라이빗 스터디)">
+          <img src="community2.png" alt="더샵 오산 아크시티 에듀 존 커뮤니티">
         </div>
-        <!-- 커뮤니티 3: 실사 갤러리 -->
         <div class="community-card">
-          <img src="community3.png" alt="더샵 오산 아크시티 피트니스, 스크린골프, 북라운지 시설 안내">
+          <img src="community3.png" alt="더샵 오산 아크시티 시설 안내">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       7. FAQ SECTION
+       8. FAQ SECTION
        ========================================================================== -->
   <section class="section-padding" id="faq">
     <div class="container">
-      <div class="section-header text-center fade-up">
+      <div class="section-header text-center">
         <span class="section-eyebrow">FAQ</span>
         <h2 class="section-title">자주 묻는 질문</h2>
         <p class="section-desc">오피스텔 분양에 관해 궁금하신 핵심 사항을 안내해 드립니다.</p>
       </div>
 
-      <div class="faq-wrapper fade-up">
+      <div class="faq-wrapper" style="margin-top: 35px;">
         <div class="faq-item">
           <button class="faq-question">
             <span>Q. 오피스텔은 총 몇 실로 공급되나요?</span>
@@ -1306,7 +1453,9 @@
     </div>
   </section>
 
-  <!-- 8. 최종 상담 예약 -->
+  <!-- ==========================================================================
+       9. 최종 상담 예약
+       ========================================================================== -->
   <section id="reservation">
     <div class="container">
       <div class="reservation-card">
@@ -1379,7 +1528,7 @@
           </button>
         </form>
 
-        <!-- Direct CTA -->
+        <!-- Direct Call -->
         <div class="direct-call-box">
           <p class="direct-call-title">기다림 없이 지금 즉시 상담을 원하시나요?</p>
           <div class="direct-call-btns">
@@ -1393,7 +1542,9 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ==========================================================================
+       10. Footer
+       ========================================================================== -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -1414,7 +1565,7 @@
     </div>
   </footer>
 
-  <!-- Floating Navigation Button (TOP) -->
+  <!-- Floating TOP Button -->
   <div class="floating-nav">
     <a href="#hero" class="btn-float top" title="맨 위로 이동">TOP</a>
   </div>
@@ -1448,7 +1599,7 @@
     </div>
   </div>
 
-  <!-- Special Benefit Popup Modal (popup.png 적용) -->
+  <!-- Special Benefit Popup Modal -->
   <div class="popup-overlay" id="popupModal">
     <div class="popup-box">
       <img src="popup.png" alt="입주까지 계약금 5% / 예약 방문 시 상품권 증정">
@@ -1477,7 +1628,7 @@
       });
     }
 
-    // 2. 자동 슬라이드 (2.jpg / 3.jpg / 4.jpg 무한 반복)
+    // 2. 자동 슬라이드
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide-item');
     const indicators = document.querySelectorAll('.slider-indicators .indicator');
@@ -1564,7 +1715,7 @@
       }
     }
 
-    // 7. 페이지 로드 초기화
+    // 7. 페이지 초기 로드
     window.addEventListener('DOMContentLoaded', function() {
       openPopup();
       showSlide(0);
